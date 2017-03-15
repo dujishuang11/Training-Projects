@@ -1,0 +1,42 @@
+/*body {
+	height: 10rem;
+	background: blue;
+}*/
+
+html,body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+.doger-box {
+	height: 100%;
+}
+
+.doger-wrapper {
+	width: 24rem;
+	height: 100%;
+	white-space:nowrap;
+	background: yellow;
+}
+
+.doger-left {
+	width: 8rem;
+	height: 100%;
+	background: blue;
+	float: left;
+	
+}
+
+.doger-right {
+	width: 16rem;
+	height: 100%;
+	background: red;
+	float: left;
+}
+
+.doger-top {
+	width: 16rem;
+	height: 2.6rem;
+	background: pink;
+}
