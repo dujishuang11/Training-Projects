@@ -1,4 +1,88 @@
-.warpper{
+.zhj_wrapper{
 	width: 100%;
-	height: auto;
+	height:28.4rem;
+	background: url(../images/bj1.png) no-repeat;
+	background-size: 100% 100%;
 }
+.zhj_welcome{
+	width: 100%;
+	height: 3rem;
+	float: left;
+	font-size: 2rem;
+	text-align: center;
+	line-height: 3rem;
+	color:white;
+	font-weight: bold;
+	font-family: "blackadder itc";
+	margin-top: 6rem;
+}
+.zhj_loginName{
+	width: 100%;
+	height: 2.6rem;
+	float: left;
+	font-size: 0.8rem;
+	text-align: center;
+	line-height: 2.6;
+	color:white;
+	font-family: "blackadder itc";
+	font-weight: bold;
+}
+.zhj_userName{
+	width:calc(100% - 20%);
+	height: 1.1rem;
+	margin-left: 10%;
+    float: left;
+    font-size: 0.7rem;
+    color:white;
+    margin-top: 8%;
+    font-weight: bold;
+    font-family: "blackadder itc";
+}
+input:nth-child(4){
+	display: block;
+	width:calc(100% - 20%);
+	height: 0.6rem;
+	padding: 0.8rem 0 0.8rem 0.4rem;
+	float: left;
+	font-size: 0.6rem;
+	color: black;
+	margin-left: 10%;
+	/*margin-top: 1.5rem;*/	
+	background: rgba(255,255,255,0.5);
+}
+input:nth-child(6){
+	display: block;
+	width:calc(100% - 20%);
+	height: 0.6rem;
+	padding: 0.8rem 0 0.8rem 0.4rem;
+	float: left;
+	font-size: 0.6rem;
+	color: black;
+	margin-left: 10%;
+	/*margin-top: 1.5rem;*/	
+	background: rgba(255,255,255,0.5);
+}
+.btn{
+	width: calc(100% - 70%);
+	height: 2rem;
+	font-size: 0.7rem;
+	font-family: "blackadder itc";
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.5rem;
+	margin-left: 35%;
+	margin-top:10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
