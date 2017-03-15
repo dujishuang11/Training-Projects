@@ -1,0 +1,30 @@
+.zhy_wrapper{
+	width: 100%;
+	padding: 0 1rem;
+	background: white;
+}
+.zhy_title{
+	width: 100%;
+	height: 1.7rem;
+	font-size: 0.7rem;
+	border-bottom: 0.2rem solid #ccc;
+}
+.zhy_title_left{
+	text-align: center;
+	line-height: 1.7rem;
+	text-align: center;
+	/*background: red;*/
+	overflow: hidden;
+}
+.zhy_title_left .zhy_p1{
+	padding: 0 0.5rem;
+	float: left;
+}
+.zhy_title_left .zhy_span{
+	display: block;
+	float: left;
+}
+.zhy_title_left .zhy_p2{
+	float: left;
+	padding: 0 0.5rem;
+}
