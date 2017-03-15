@@ -51,5 +51,5 @@ angular
 			url: '/vacate',
 			templateUrl: 'views/vacate.html'
 		})
-		$urlRouterProvider.otherwise('/salary')
+		$urlRouterProvider.otherwise('/styleModality')
 	}]);
