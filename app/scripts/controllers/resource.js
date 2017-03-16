@@ -21,15 +21,19 @@ angular.module('trainingProjectsApp')
 //	$scope.isHide=true;
 //	$scope.toggle=function(){
 //		$scope.isHide=!$scope.isHide;
-//		$scope.find('.zhy_text').css('display','block');
+//		$scope.find('.zhy_tmext').css('display','block');
 //		$scope.find('.txt').css('display','none');
 //	}
   	
-  }).directive('zhyCtrl',function(){
-  	return function(scope,element,attrs){
-  		element.on('touchstart',function(){
-  			alert(1)
-  		});
-  	}
-  	
-  });
+  })
+.directive('zhyCtrl',function(){
+	return function(s,e,a){
+		s.toggle = function(){
+			e.find('.zhy_text').css('display','none');
+//			e.find('.txt').css('display','block');
+			alert(1)
+		}
+	}
+	
+	
+})
