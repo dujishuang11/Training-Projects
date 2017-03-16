@@ -9,5 +9,7 @@
  */
 angular.module('trainingProjectsApp')
   .controller('styleModalityCtrl', function ($scope) {
-    
+    $scope.aaa = function(){
+    	alert('dddddddddd')
+    }
   });
