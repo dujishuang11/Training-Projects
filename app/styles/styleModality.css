@@ -1,0 +1,46 @@
+.djs-content {
+	width: 100%;
+	height: 100%;
+	padding: 0 1rem;
+	background: #f3f3f3;
+}
+.djs-mintitle {
+	width: 100%;
+	height: 1.7rem;
+	line-height: 1.7rem;
+}
+.djs-mintitle i {
+	font-size: 1rem;
+	vertical-align: middle;
+	line-height: 1.7rem;
+}
+.djs-mintitle span {
+	font-size: 0.7rem;
+	margin-left: 0.2rem;
+	line-height: 1.7rem;
+}
+.djs-border {
+	width 100%;
+	height: 0.1rem;
+	background: #ccc;
+	border-radius: 1rem;
+}
+.djs-bgcolor {
+	width: 100%;
+	height: 100%;
+}
+.djs-bgcolor li {
+	width: 23.3%;
+	height: 2rem;
+	margin: 1.5rem 5% 0;
+	background: blue;
+	float: left;
+	text-align: center;
+	line-height: 2rem;
+}
+.djs-button {
+	position: relative;
+	bottom: -10rem;
+	right: 0rem;
+	/*float: right;*/
+}
