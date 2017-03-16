@@ -1,0 +1,158 @@
+.wyh_wrap{
+	width:100%;
+	height:auto;
+	padding: 0.5rem 1rem 1.3rem 1rem;
+}
+.wyh_wrap .wyh_til{
+	width:100%;
+	height:1.7rem;
+}
+.wyh_wrap .wyh_til>span{
+	font-size: 0.7rem;
+	float: left;
+	padding: 0 0.5rem;
+	display: block;
+	line-height:1.7rem;
+}
+.wyh_wrap .wyh_til>span:first-child{
+	background: #cccccc;
+}
+/*.wyh_til>span:last-child{
+	background: #cccccc;
+}*/
+.wyh_underline{
+	width:100%;
+	height:0.08rem;
+	background:#cccccc ;
+	float: left;
+	margin-top:0.05rem;
+}
+/*日程事务*/
+.wyh_content{
+	width:100%;
+	height:auto;
+	/*display: none;*/
+}
+.wyh_content .wyh_date{
+	width:100%;
+	height:1.4rem;
+	margin-top:0.7rem;
+	border:1px solid black;
+	font-size: 0.6rem;
+}
+.wyh_content .wyh_date>span{
+	float: left;
+	height:1.4rem;
+	text-align: center;
+	border-right:1px solid black;
+	line-height: 1.4rem;
+	border-radius: 0.1rem;
+}
+.wyh_content .wyh_date>span:nth-child(1){
+	width:28%;
+}
+.wyh_content .wyh_date>span:nth-child(2){
+	width:52%;
+}
+.wyh_content .wyh_date>span:nth-child(3){
+	width:20%;
+	border-right:none;
+}
+.wyh_task{
+	width:100%;
+	height:1.4rem;
+	border:1px solid black;
+	border-top:none;
+	font-size: 0.6rem;
+}
+.wyh_task>li{
+	float: left;
+	height:1.4rem;
+	text-align: center;
+	border-right:1px solid black;
+	line-height: 1.4rem;
+	border-top:none;
+}
+.wyh_task>li:nth-child(1){
+	width:28%;
+}
+.wyh_task>li:nth-child(2){
+	width:52%;
+}
+.wyh_task>li:nth-child(3){
+	width:20%;
+	border-right:none;
+}
+/*任务分配*/
+.wyh_taskfp{
+	width:100%;
+	height:auto;
+	display: none;
+}
+.wyh_taskfp>.taskfp_til{
+	width:100%;
+	height:1.4rem;
+	margin-top:0.7rem;
+	border:1px solid black;
+	font-size: 0.6rem;
+}
+.wyh_taskfp>.taskfp_til>span{
+	float: left;
+	height:1.4rem;
+	text-align: center;
+	border-right:1px solid black;
+	line-height: 1.4rem;
+}
+.wyh_taskfp>.taskfp_til>span:nth-child(1){
+	width:28%;
+}
+.wyh_taskfp>.taskfp_til>span:nth-child(2){
+	width:52%;
+}
+.wyh_taskfp>.taskfp_til>span:nth-child(3){
+	width:20%;
+	border-right:none;
+}
+.wyh_taskfp>.taskfp_cont{
+	width:100%;
+	height:1.4rem;
+	border:1px solid black;
+	border-top:none;
+	font-size: 0.6rem;
+}
+.wyh_taskfp>.taskfp_cont>li{
+	float: left;
+	height:1.4rem;
+	text-align: center;
+	border-right:1px solid black;
+	line-height: 1.4rem;
+	border-top:none;
+}
+.wyh_taskfp>.taskfp_cont>li:nth-child(1){
+	width:28%;
+}
+.wyh_taskfp>.taskfp_cont>li:nth-child(2){
+	width:52%;
+}
+.wyh_taskfp>.taskfp_cont>li:nth-child(3){
+	width:20%;
+	border-right:none;
+}
+.wyh_taskfp>.taskfp_cont>li:nth-child(1)>.form-control,.wyh_taskfp>.taskfp_cont>li:nth-child(2)>.form-control,.wyh_taskfp>.taskfp_cont>li:nth-child(3)>.form-control{
+	width:100%;
+	height:100%;
+	background: none;
+	border:none;
+	outline:none;
+}
+.wyh_save{
+	margin-top:1rem ;
+}
+.wyh_save>button:nth-child(1).btn{
+	width:3rem;
+	float: left;
+}
+.wyh_save>button:nth-child(2).btn{
+	width:3rem;
+	float: right;
+}
