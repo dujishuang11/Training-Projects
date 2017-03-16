@@ -28,12 +28,10 @@ angular.module('trainingProjectsApp')
   })
 .directive('zhyCtrl',function(){
 	return function(s,e,a){
-		s.toggle = function(){
-			e.find('.zhy_text').css('display','none');
-//			e.find('.txt').css('display','block');
+		e.find('.zhy_text').on('touchstart',function(){
 			alert(1)
-		}
+		})
 	}
 	
 	
-})
+});
