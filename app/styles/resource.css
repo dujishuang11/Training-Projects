@@ -1,13 +1,14 @@
+
 .zhy_wrapper{
 	width: 100%;
-	padding: 0 1rem;
-	background: white;
+	height: 100%;
+	padding: 0.5rem 1rem 1.3rem 1rem;
+	background: #f3f3f3;
 }
 .zhy_title{
 	width: 100%;
 	height: 1.7rem;
 	font-size: 0.7rem;
-	border-bottom: 0.2rem solid #ccc;
 }
 .zhy_title_left{
 	text-align: center;
@@ -19,12 +20,72 @@
 .zhy_title_left .zhy_p1{
 	padding: 0 0.5rem;
 	float: left;
-}
-.zhy_title_left .zhy_span{
-	display: block;
-	float: left;
+	background: #ccc;
 }
 .zhy_title_left .zhy_p2{
 	float: left;
 	padding: 0 0.5rem;
+}
+.zhy-border{
+	width: 100%;
+	height: 0.1rem;
+	background: #CCCCCC;
+	border-radius: 1rem;
+}
+
+
+
+.zhy_text{
+	width: 100%;
+	margin-top: 0.5rem;
+	font-size: 0.8rem;
+}
+.zhy_text .zhy_li{
+	width: 100%;
+	overflow: hidden;
+}
+.zhy_text .zhy_li .zhy_li_left{
+	float: left;
+	width: 30%;
+	text-align: center;
+	line-height: 1.3rem;
+}
+.zhy_text .zhy_li .zhy_li_right{
+	float: left;
+	width: 70%;
+}
+.zhy_text .zhy_li .zhy_li_right input{
+	width: 100%;
+	height: 100%;
+	background: none;
+	border: none;
+	outline: none;
+	font-size: 0.8rem;
+	padding: 0.2rem 0;
+	border-bottom: 1px solid #ccc;
+}
+.zhy_text .zhy_li:nth-child(2){
+	margin-top: 0.7rem;
+}
+
+.zhy_text .zhy_li:nth-child(3){
+	margin-top: 1rem;
+}
+.zhy_text .zhy_li:nth-child(3) .zhy_li_right textarea{
+	width: 100%;
+	height: 5rem;
+	border: 1px solid #ccc;
+}
+.zhy_text .zhy_li:nth-child(4){
+	margin-top: 1rem;
+}
+.zhy_text .zhy_li:nth-child(4) .zhy_li_right textarea{
+	width: 100%;
+	height: 8rem;
+	border: 1px solid #ccc;
+}
+.zhy_foot{
+	width: 100%;
+	text-align: right;
+	margin-top: 3rem;
 }
