@@ -37,5 +37,10 @@
 	float: left;
 	text-align: center;
 	line-height: 2rem;
-	
+}
+.djs-button {
+	position: relative;
+	bottom: -10rem;
+	right: 0rem;
+	/*float: right;*/
 }
