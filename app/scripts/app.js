@@ -52,5 +52,5 @@ angular
 				url: '/vacate',
 				templateUrl: 'views/vacate.html'
 			});
-		$urlRouterProvider.otherwise('/login')
+		$urlRouterProvider.otherwise('/business')
 	}]);
