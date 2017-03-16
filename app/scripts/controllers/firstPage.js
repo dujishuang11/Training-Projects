@@ -7,7 +7,18 @@
  * # MainCtrl
  * Controller of the trainingProjectsApp
  */
-angular.module('trainingProjectsApp')
-  .controller('firstPageCtrl', function () {
-    
-  });
+var app = angular.module('trainingProjectsApp')
+	app.controller('firstPage',["$scope",function($scope) {
+//  	$scope.kan=function($scope){
+//  		alert(1)
+//  	}
+	}])
+	app.directive("lxm",function(){
+		return{
+			restrict:"ECMA",
+//			templateUrl:"http://localhost:9000/#!/firstPage",
+			link:function(s,e,a){
+				e.css("color","red")
+			}
+		}
+	});
