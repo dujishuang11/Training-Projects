@@ -8,6 +8,7 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('businessCtrl', function () {
-    
+  .controller('businessCtrl',function(){
+  	
   });
+

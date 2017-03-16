@@ -61,6 +61,7 @@
 }
 .wyh_center{
 	width: 100%;
+	height:auto;
 	padding:0 1rem 0 1rem;
 	margin-top:0.7rem;
 	float: left;
