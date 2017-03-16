@@ -7,7 +7,16 @@
  * # MainCtrl
  * Controller of the trainingProjectsApp
  */
-angular.module('trainingProjectsApp')
-  .controller('salaryCtrl', function () {
-    
+var zhjMyApp=angular.module('trainingProjectsApp')
+  .controller('salaryCtrl', function ($scope) {
   });
+  
+zhjMyApp.directive('zhjSetDiv',function($filter){
+				return function(scope,element,attrs){
+					scope.toggle=function(){
+				      	var odiv=attrs.zhjSetDiv;
+      	                
+                  }
+				}
+			})
+  

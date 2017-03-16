@@ -12,6 +12,7 @@
 	text-align: center;
 	line-height: 3rem;
 	color:white;
+	text-shadow: 2px 0px 0px #000;
 	font-weight: bold;
 	font-family: "blackadder itc";
 	margin-top: 6rem;
@@ -24,6 +25,7 @@
 	text-align: center;
 	line-height: 2.6;
 	color:white;
+	text-shadow: 2px 0px 0px #000;
 	font-family: "blackadder itc";
 	font-weight: bold;
 }
@@ -34,6 +36,7 @@
     float: left;
     font-size: 0.7rem;
     color:white;
+	text-shadow: 3px 0px 0px #000;
     margin-top: 8%;
     font-weight: bold;
     font-family: "blackadder itc";
@@ -41,10 +44,10 @@
 input:nth-child(4){
 	display: block;
 	width:calc(100% - 20%);
-	height: 0.6rem;
+	height: 0.7rem;
 	padding: 0.8rem 0 0.8rem 0.4rem;
 	float: left;
-	font-size: 0.6rem;
+	font-size: 0.7rem;
 	color: black;
 	margin-left: 10%;
 	/*margin-top: 1.5rem;*/	
@@ -53,10 +56,10 @@ input:nth-child(4){
 input:nth-child(6){
 	display: block;
 	width:calc(100% - 20%);
-	height: 0.6rem;
+	height: 0.7rem;
 	padding: 0.8rem 0 0.8rem 0.4rem;
 	float: left;
-	font-size: 0.6rem;
+	font-size: 0.7rem;
 	color: black;
 	margin-left: 10%;
 	/*margin-top: 1.5rem;*/	
@@ -72,6 +75,8 @@ input:nth-child(6){
 	line-height: 1.5rem;
 	margin-left: 35%;
 	margin-top:10%;
+	color:white;
+	text-shadow: 3px 0px 0px #000;
 }
 
 
