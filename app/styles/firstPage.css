@@ -7,7 +7,7 @@ html,body {
 	width: 100%;
 	height: 100%;
 	font-family: "微软雅黑";
-	/*overflow-x: hidden;*/
+	overflow-x: hidden;
 }
 
 .doger-box {
@@ -19,12 +19,13 @@ html,body {
 	height: calc(100% - 2.6rem);
 	background: yellow;
 	float: left;
+	transform: translateX(-8rem);
+	transition: 1s;
 }
 
 .doger-left {
-	width: 8rem;
+	width: 7.9rem;
 	height: 100%;
-	background: oldlace;
 	float: left;	
 }
 
@@ -71,10 +72,17 @@ html,body {
 }
 
 .doger-right {
-	width: 16rem;
+	width: 16.1rem;
 	height: 100%;
-	background: red;
+	background: aqua;
 	float: left;
+}
+
+.doger-right p:nth-child(1){
+	font-size: 1rem;
+	margin-top: 1rem;
+	margin-left: 1rem;
+	/*font-weight: bold;*/
 }
 
 .doger-top {
@@ -101,4 +109,20 @@ html,body {
 
 .doger-top p {
 	float: left;
+}
+
+.doger-time {
+	width: 80%;
+	margin: .5rem auto 0;
+	background: red;
+	display: flex;
+	justify-content: space-around;
+}
+
+.doger-time img {
+	width: 10%;
+	height: 2.5rem;
+	/*flex: 1;*/
+	/*float: left;*/
+	/*justify-content: center;*/
 }

@@ -7,18 +7,28 @@
  * # MainCtrl
  * Controller of the trainingProjectsApp
  */
-var app = angular.module('trainingProjectsApp')
-	app.controller('firstPage',["$scope",function($scope) {
+var doger_app = angular.module('trainingProjectsApp')
+	doger_app.controller('firstPage',["$scope",function($scope) {
 //  	$scope.kan=function($scope){
 //  		alert(1)
 //  	}
 	}])
-	app.directive("lxm",function(){
+	doger_app.directive("lxm",function(){
 		return{
 			restrict:"ECMA",
-//			templateUrl:"http://localhost:9000/#!/firstPage",
-			link:function(s,e,a){
-				e.css("color","red")
+//			templateUrl:"index.html",
+			link:function(scope,element,attr){
+//				element.find('p').css("color","red");
+				var on = false;
+				element.find('.doger-title').bind('touchstart',function(){
+					if(!on){
+						element.find('.doger-wrapper').css('transform','translateX(0)')
+						on = true
+					}else{
+						element.find('.doger-wrapper').css('transform','translateX(-8rem)')
+						on = false
+					}
+				})
 			}
 		}
 	});
