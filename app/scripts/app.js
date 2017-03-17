@@ -9,6 +9,7 @@
  * Main module of the application.
  */
 angular
+
   .module('trainingProjectsApp', [
     'ngAnimate',
     'ngTouch',
@@ -67,6 +68,6 @@ angular
   		url: '/enroll',
   		templateUrl: 'views/enroll.html'
   	})
-  	$urlRouterProvider.otherwise('/login')
+  	$urlRouterProvider.otherwise('/personinfo')
   }])
   ;

@@ -15,7 +15,7 @@ var lhq_app = angular.module('trainingProjectsApp')
   	return{
   		restrict:"ECMA",
   		link:function(scope,element,attr){
-  			element.find(".button").bind("touchstart",function(){
+  			element.find(".xx-button").bind("touchstart",function(){
   				element.find(".imginput").click();
   				element.find(".imginput").change(function() {
 					var files = this.files[0],

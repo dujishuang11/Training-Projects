@@ -1,3 +1,81 @@
 <div ng-controller="businessCtrl">
-	
+	<wyh-newb>
+	<div class="wyh_wrap">
+		<div class="wyh_til">
+			<span class="wyh_sw" ng-click="togglea()">日程事务</span>
+			<span class="wyh_fp" ng-click="toggleb()">任务分配</span>
+		</div>
+		<div class="wyh_underline"></div>
+		<div class="wyh_content">
+			<div class="wyh_date">
+				<span>日期</span>
+				<span>工作内容</span>
+				<span>执行人</span>
+			</div>
+			<ul class="wyh_task">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="wyh_task">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="wyh_task">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<!--任务分配-->
+		<div class="wyh_taskfp">
+			<div class="taskfp_til">
+				<span>日期</span>
+				<span>工作内容</span>
+				<span>执行人</span>
+			</div>
+			<div class="allul2">
+				<ul class="taskfp_cont">
+					<li>
+						<input type="text" class="form-control"  />
+					</li>
+					<li>
+						<input type="text" class="form-control"  />
+					</li>
+					<li>
+						<input type="text" class="form-control"  />
+					</li>
+				</ul>
+				<ul class="taskfp_cont">
+					<li>
+						<input type="text" class="form-control"  />
+					</li>
+					<li>
+						<input type="text" class="form-control"  />
+					</li>
+					<li>
+						<input type="text" class="form-control"  />
+					</li>
+				</ul>
+				<ul class="taskfp_cont">
+					<li>
+						<input type="text" class="form-control"  />
+					</li>
+					<li>
+						<input type="text" class="form-control"  />
+					</li>
+					<li>
+						<input type="text" class="form-control"  />
+					</li>
+				</ul>
+			</div>
+			
+			<div class="wyh_save">
+				<button class="btn btn-primary newadds">新增</button>
+				<button class="btn btn-info">保存</button>
+			</div>
+		</div>
+	</div>
+	</wyh-newb>
 </div>

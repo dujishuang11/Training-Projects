@@ -1,3 +1,53 @@
 <div ng-controller="salaryCtrl">
-	哈哈
+	 <div class="zhj_header">
+	 	<div class="zhj_check">
+	 		<span class="iconfont icon-kaoqin4"></span>
+	 		<span>在线考勤</span>	 		
+	 	</div>
+	 	<div class="zhj_border"></div>
+<!--包着日期的盒子-->
+	 <div class="zhj_content">
+	 	<ul>
+	 		<li>日期</li>
+	 		<li>上午上班</li>
+	 		<li>上午下班</li>
+	 		<li>下午上班</li>
+	 		<li>下午下班</li>
+	 		<li>
+	 			<span>备注</span>
+	 		    <button zhj-set-div class="btn btn-info zhj_button" ng-click='toggle()'>编辑</button>
+	 		</li>
+	 	</ul>
+	 	<div class="zhj_secondLi">
+	 	<ul>
+	 		<li>11-22</li>
+	 		<li>√</li>
+	 		<li>√</li>
+	 		<li>√</li>
+	 		<li>√</li>
+	 		<input type="text" value="工作良好"/>
+	 	</ul>
+	   </div>
+	   <div class="zhj_secondLi">
+	 	<ul>
+	 		<li>11-22</li>
+	 		<li>×</li>
+	 		<li>×</li>
+	 		<li>×</li>
+	 		<li>×</li>
+	 		<input type="text" value="工作态度差"/>
+	 	</ul>
+	   </div>
+	   <div class="zhj_secondLi">
+	 	<ul>
+	 		<li>11-22</li>
+	 		<li>○</li>
+	 		<li>○</li>
+	 		<li>○</li>
+	 		<li>○</li>
+	 		<input type="text" value="缺勤一天"/>
+	 	</ul>
+	  </div>
+	</div>
+   </div>	
 </div>
