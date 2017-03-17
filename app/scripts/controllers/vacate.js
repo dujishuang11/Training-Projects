@@ -9,5 +9,9 @@
  */
 angular.module('trainingProjectsApp')
   .controller('vacateCtrl', function ($scope) {
+  	
+  	
+  	var now = new  Date();
+  	console.log(now)
     
   });
