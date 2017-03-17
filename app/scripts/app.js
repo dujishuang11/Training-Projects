@@ -55,10 +55,6 @@ angular
   		url: '/vacate',
   		templateUrl: 'views/vacate.html'
   	})
-  	 	$stateProvider.state("detailedInformation",{
-  		url: '/vacate',
-  		templateUrl: 'views/vacate.html'
-  	})
   	$urlRouterProvider.otherwise('/personinfo');
   }])
   ;
