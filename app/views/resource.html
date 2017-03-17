@@ -1,3 +1,78 @@
 <div ng-controller="resourceCtrl">
-	
+	<div class="zhy_wrapper">
+		<!--tab面板-->
+		<div class="zhy_title">
+			<div class="zhy_title_left">
+				<p class="zhy_p1" ng-click="toggle()" zhy-ctrl>办公用品</p>
+				<p class="zhy_p2" ng-click="toggle1()" zhy-ctrl>福&#x3000;利</p>
+			</div>
+		</div>
+		<div class="zhy-border"></div>
+		
+		
+		<div class="zhy_text" zhy-ctrl>
+			<li class="zhy_li">
+				<div class="zhy_li_left">申请人：</div>
+				<div class="zhy_li_right">
+					<input type="text"/>
+				</div>
+			</li>
+			<li class="zhy_li">
+				<div class="zhy_li_left">收件人：</div>
+				<div class="zhy_li_right">
+					<input type="text"/>
+				</div>
+			</li>
+			
+			
+			<li class="zhy_li">
+				<div class="zhy_li_left">物&#x3000;资：</div>
+				<div class="zhy_li_right">
+					<textarea rows="0" cols="0"></textarea>
+				</div>
+			</li>
+			<li class="zhy_li">
+				<div class="zhy_li_left">用&#x3000;途：</div>
+				<div class="zhy_li_right">
+					<textarea rows="0" cols="0"></textarea>
+				</div>
+			</li>
+			
+		</div>
+		<div class="zhy_text txt" style="display: none;" zhy-ctrl>
+			<li class="zhy_li">
+				<div class="zhy_li_left">申请人：</div>
+				<div class="zhy_li_right">
+					<input type="text"/>
+				</div>
+			</li>
+			<li class="zhy_li">
+				<div class="zhy_li_left">收件人：</div>
+				<div class="zhy_li_right">
+					<input type="text"/>
+				</div>
+			</li>
+			
+			<li class="zhy_li">
+				<div class="zhy_li_left">福&#x3000;利：</div>
+				<div class="zhy_li_right">
+					<textarea rows="0" cols="0"></textarea>
+				</div>
+			</li>
+			<li class="zhy_li">
+				<div class="zhy_li_left">原&#x3000;因：</div>
+				<div class="zhy_li_right">
+					<textarea rows="0" cols="0"></textarea>
+				</div>
+			</li>
+			
+		</div>
+		
+		<div class="zhy_foot">
+			<input type="button" value="提交" class="btn-info btn btn-lg" />
+		</div>
+		
+		
+		
+	</div>
 </div>
