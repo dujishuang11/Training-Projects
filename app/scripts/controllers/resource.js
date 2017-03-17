@@ -9,29 +9,19 @@
  */
 angular.module('trainingProjectsApp')
   .controller('resourceCtrl', function ($scope) {
-  	
-//	$('.zhy_p1').bind('touchstart',function(){
-//		$('.zhy_text').css('display','block');
-//		$('.txt').css('display','none')
-//	})
-//	$('.zhy_p2').bind('touchstart',function(){
-//		$('.zhy_text').css('display','none');
-//		$('.txt').css('display','block')
-//	})
-//	$scope.isHide=true;
-//	$scope.toggle=function(){
-//		$scope.isHide=!$scope.isHide;
-//		$scope.find('.zhy_tmext').css('display','block');
-//		$scope.find('.txt').css('display','none');
-//	}
-  	
-  })
-.directive('zhyCtrl',function(){
-	return function(s,e,a){
-		e.find('.zhy_text').on('touchstart',function(){
-			alert(1)
-		})
+
+	$('.zhy_p1').css('background','#ccc')
+	$scope.toggle=function(){
+		$('.zhy_p1').css('background','#ccc')
+		$('.zhy_p2').css('background','');
+		$('.zhy_text').css('display','block');
+		$('.zhy_txt').css('display','none');
 	}
-	
-	
-});
+	$scope.toggle1=function(){
+		$('.zhy_p1').css('background','');
+		$('.zhy_p2').css('background','#ccc');
+		$('.zhy_text').css('display','none');
+		$('.zhy_txt').css('display','block');
+	}
+  	
+ });
