@@ -121,7 +121,16 @@
 	text-align: center;
 	line-height: 1rem;	
 }
-.zhj_secondLi ul li:nth-child(6){
+.zhj_secondLi ul input{
+	width: 28.8%;
+	height: 0.5rem;
+	font-size: 0.5rem;
+	padding: 0.5rem 0 0.45rem 0;
+	float: left;
+	border: 1px solid black;
+	border-top: none;
+	outline: none;
+	margin-left: 0;
 	text-align: center;
 }
 

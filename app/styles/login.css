@@ -15,54 +15,91 @@
 	text-shadow: 2px 0px 0px #000;
 	font-weight: bold;
 	font-family: "blackadder itc";
-	margin-top: 5rem;
+	margin-top: 6rem;
 }
 .zhj_loginName{
 	width: 100%;
-	height: 1.5rem;
+	height: 2rem;
 	float: left;
 	font-size: 0.8rem;
 	text-align: center;
-	line-height: 1.5rem;
+	line-height: 2rem;
 	color:white;
 	text-shadow: 2px 0px 0px #000;
 	font-family: "blackadder itc";
 	font-weight: bold;
+	margin-bottom: 10%;
 }
-.zhj_userName{
-	width:calc(100% - 20%);
-	height: 1.1rem;
-	margin-left: 10%;
+.wraUS{
+	width: 100%;
+	height: 1.7rem;
+	float: left;
+	margin-top:6%;
+}
+.wraUS .zhj_userName{
+	width:auto;
+	height: 1.7rem;
+	margin-left: 6%;
     float: left;
     font-size: 0.7rem;
     color:white;
+    line-height: 1.7rem;
 	text-shadow: 3px 0px 0px #000;
-    margin-top: 8%;
     font-weight: bold;
     font-family: "blackadder itc";
 }
-input:nth-child(4){
-	display: block;
-	width:calc(100% - 20%);
+.wraUS input{
+	display: inline-block;
+	width:calc(100% - 30%);
 	height: 0.7rem;
 	padding: 0.8rem 0 0.8rem 0.4rem;
 	float: left;
 	font-size: 0.7rem;
 	color: black;
-	margin-left: 10%;
-	/*margin-top: 1.5rem;*/	
 	background: rgba(255,255,255,0.5);
 }
-input:nth-child(8){
-	display: block;
-	width:calc(100% - 20%);
+.wraUS:nth-child(2) .zhj_userName{
+	width:auto;
+	height: 1.7rem;
+	margin-left: 6%;
+    float: left;
+    font-size: 0.7rem;
+    color:white;
+    line-height: 1.7rem;
+	text-shadow: 3px 0px 0px #000;
+    font-weight: bold;
+    font-family: "blackadder itc";
+}
+.wraUS:nth-child(2) input{
+	display: inline-block;
+	width:calc(100% - 30%);
 	height: 0.7rem;
 	padding: 0.8rem 0 0.8rem 0.4rem;
 	float: left;
 	font-size: 0.7rem;
 	color: black;
-	margin-left: 10%;
-	/*margin-top: 1.5rem;*/	
+	background: rgba(255,255,255,0.5);
+}
+.wraUS:nth-child(3) .zhj_userName{
+	width:auto;
+	height: 1.7rem;
+	margin-left: 6%;
+    float: left;
+    font-size: 0.7rem;
+    color:white;
+    line-height: 1.7rem;
+	text-shadow: 3px 0px 0px #000;
+    font-weight: bold;
+    font-family: "blackadder itc";
+}
+.wraUS:nth-child(3) input{
+	display: inline-block;
+	width:calc(100% - 30%);
+	height: 0.7rem;
+	padding: 0.8rem 0 0.8rem 0.4rem;
+	float: left;
+	font-size: 0.7rem;
+	color: black;
 	background: rgba(255,255,255,0.5);
 }
 .btn{
@@ -73,25 +110,25 @@ input:nth-child(8){
 	font-weight: bold;
 	text-align: center;
 	line-height: 1.5rem;
-	margin-left: 35%;
+	margin-left: 36%;
 	margin-top:10%;
 	color:white;
 	text-shadow: 3px 0px 0px #000;
 }
-input:nth-child(6){
-	display: block;
-	width:calc(100% - 20%);
-	height: 0.7rem;
-	padding: 0.8rem 0 0.8rem 0.4rem;
-	float: left;
-	font-size: 0.7rem;
-	color: black;
-	margin-left: 10%;
-	/*margin-top: 1.5rem;*/	
-	background: rgba(255,255,255,0.5);
+.zhj_loginText{
+	width: 100%;
+	height: auto;	
+	float: left;	
+	text-align: center;
+	margin-top: 4%;
 }
-
-
+.zhj_loginText a{
+	text-shadow: 3px 0px 0px #000;
+	color: white;
+	font-size: 0.7rem;
+	font-weight: bold;
+	text-decoration:underline;
+}
 
 
 
