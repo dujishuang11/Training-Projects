@@ -55,9 +55,6 @@ angular
   		url: '/vacate',
   		templateUrl: 'views/vacate.html'
   	})
-<<<<<<< HEAD
-  	$urlRouterProvider.otherwise('/personinfo')
-=======
   	$stateProvider.state("particulars",{
   		url: '/particulars',
   		templateUrl: 'views/particulars.html'
@@ -71,6 +68,5 @@ angular
   		templateUrl: 'views/enroll.html'
   	})
   	$urlRouterProvider.otherwise('/styleModality')
->>>>>>> origin/master
   }])
   ;
