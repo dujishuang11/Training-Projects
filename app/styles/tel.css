@@ -21,11 +21,13 @@
 	float: right;
 	margin:0.35rem 0.2rem 0 0 ;
 }
-.wyh_wrapper .btn {
+.wyh_wrapper .wyhadd {
 	text-align: center;
 	width:2.5rem;
 	height:1.2rem;
-	font-size: 0.65rem;
+	font-size: 0.6rem;
+	font-weight: normal;
+	line-height: 0.8rem;
 }
 .wyh_border{
 	width: 90%;
@@ -34,7 +36,6 @@
 	background: #ccc;
 	border-radius: 1rem;
 }
-
 .wyh_search{
 	width: 100%;
 	padding:0 1rem 0 1rem;
@@ -51,13 +52,16 @@
 	display: block;
 	float: left;
 }
-.wyh_search .btn{
+.wyh_search .wyh_bbt{
 	float: left;
-	display: block;
 	margin-left: 0.6rem;
 	height:1.3rem;
 	background: #5CB85C;
 	color:white;
+	width:2.2rem;
+	font-size: 0.6rem;
+	line-height: 0.7rem;
+	margin-top:0;
 }
 .wyh_center{
 	width: 100%;
