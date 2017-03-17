@@ -55,6 +55,6 @@ angular
   		url: '/vacate',
   		templateUrl: 'views/vacate.html'
   	})
-  	$urlRouterProvider.otherwise('/vacate')
+  	$urlRouterProvider.otherwise('/vacate');
   }])
   ;

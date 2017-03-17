@@ -1,3 +1,68 @@
-<div ng-controller="firstPage">
-	
+<div class="doger-box" ng-controller="firstPage">
+	<lxm>
+		<div class="doger-top">
+			<p class="doger-title">
+				<img src="../img/icon.png" class="img-thumbnail" alt="" />
+				<span>Username</span>
+			</p>
+		</div>
+		<div class="doger-wrapper">
+			<div class="doger-left">
+				<ul>
+					<li><span><i class="iconfont icon-kaoqin4"></i>在线考勤</span></li>
+					<li><span><i class="iconfont icon-3333333"></i>个人通讯录</span></li>
+					<li><span><i class="iconfont icon-richeng"></i>日程事务</span></li>
+					<li><span><i class="iconfont icon-youxiang-shoujianxiang"></i>收件箱</span></li>
+					<li><span><i class="iconfont icon-ziyuan"></i>资源申请</span></li>
+					<li><span><i class="iconfont icon-touxiang"></i>个人信息</span></li>
+					<li><span><i class="iconfont icon-shenqing"></i>请假申请</span></li>
+					<li><span><i class="iconfont icon-zhuangxiufengge"></i>风格界面</span></li>
+				</ul>
+			</div>
+			
+			<div class="doger-right">
+				<p>在线考勤</p>
+				<div class="doger-time">
+					<!--<p class="doger-my-time"></p>-->
+					<img/>
+					<img/>
+					<img/>
+					<img/>
+					<img/>
+					<img/>
+					<img/>
+					<img/>
+				</div>
+				<!--<ui-view>-->
+					
+				<!--</ui-view>-->
+			</div>
+			
+		</div>
+	</lxm>
+	<script>
+		setInterval(fnTime, 1000)
+		fnTime();
+		
+		function fnTime() {
+			var myTime = new Date();
+			var iHour = myTime.getHours();
+			var iMin = myTime.getMinutes();
+			var iSec = myTime.getSeconds();
+			var str = ''
+			str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec);
+//			$('.doger-my-time').text(str);
+			for(var i = 0; i < $('.doger-right img').length; i++) {
+				if(i == 2 || i == 5) {
+					$('.doger-right img')[i].src = '../img/time/colon.JPG';
+				} else {
+					$('.doger-right img')[i].src = '../img/time/' + str.charAt(i) + '.JPG'
+				}
+			}
+		}
+		
+		function doub(n) {
+			return n < 10 ? '0' + n : '' + n
+		}
+	</script>
 </div>
