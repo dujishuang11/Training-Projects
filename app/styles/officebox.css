@@ -3,7 +3,6 @@
 	height: 1.7rem;
 	font-size: 0.7rem;
 	line-height:1.7rem;
-	background: #FFFFFF;
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
@@ -22,9 +21,6 @@
 }
 .header-lhq span{
 	font-size: 0.7rem;
-}
-body{
-	/*background: #000000;*/
 }
 .lhq-center{
 	width: 100%;
