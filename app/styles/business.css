@@ -152,17 +152,12 @@
 }
 .wyh_save{
 	margin-top:1rem ;
-	background: red;
-	/*width:100%;*/
-	/*height:3rem;*/
 }
 .wyh_save>.newadds{
 	width:3rem;
-	/*float: left;*/
-	/*display: block;*/
-	
+	float: left;
 }
 .wyh_save>.sav_wyh{
 	width:3rem;
-	/*float: right;*/
+	float: right;
 }
