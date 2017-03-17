@@ -1,10 +1,13 @@
 <div ng-controller="telCtrl">
+	<wyh-new>
+	<wyh-del>
+	<wyh-change>
 	<div class="wyh_wrapper">
 		<div>
 			<i class="iconfont icon-3333333"></i>
 			<span>通讯录</span>
 		</div>
-		<input type="button" class="btn btn-info" value="新增" wyh-new />
+		<input type="button" class="btn btn-info wyhadd" value="新增"  />
 	</div>
 	<div class="wyh_border"></div>
 	<div class="wyh_search">
@@ -12,6 +15,7 @@
 		<input type="text" class="form-control" />
 		<input type="button" value="查询" class="btn"/>
 	</div>
+	
 	<div class="wyh_center">
 		<div class="wyh_titl">
 			<span>姓名</span>
@@ -19,59 +23,100 @@
 			<span>电子邮箱</span>
 			<span>操作</span>
 		</div>
-		<ul class="wyh_ul1">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li>
-				<button class="btn btn-danger wyh_abtn">删除</button>
-				<button class="btn btn-primary wyh_bbtn">编辑</button>
-			</li>
-		</ul>
-		<ul class="wyh_ul1">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li>
-				<button class="btn btn-danger wyh_abtn">删除</button>
-				<button class="btn btn-primary wyh_bbtn">编辑</button>
-			</li>
-		</ul>
-		<ul class="wyh_ul1">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li>
-				<button class="btn btn-danger wyh_abtn">删除</button>
-				<button class="btn btn-primary wyh_bbtn">编辑</button>
-			</li>
-		</ul>
-		<ul class="wyh_ul1">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li>
-				<button class="btn btn-danger wyh_abtn">删除</button>
-				<button class="btn btn-primary wyh_bbtn">编辑</button>
-			</li>
-		</ul>
-		<ul class="wyh_ul1">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li>
-				<button class="btn btn-danger wyh_abtn">删除</button>
-				<button class="btn btn-primary wyh_bbtn">编辑</button>
-			</li>
-		</ul>
-		<ul class="wyh_ul1">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li>
-				<button class="btn btn-danger wyh_abtn">删除</button>
-				<button class="btn btn-primary wyh_bbtn">编辑</button>
-			</li>
-		</ul>
+		<div class="wyh_allul">
+			<ul class="wyh_ul1">
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true"  value="" />
+				</li>
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<button class="btn btn-danger wyh_abtn">删除</button>
+					<button class="btn btn-primary wyh_bbtn">编辑</button>
+				</li>
+			</ul>
+			<ul class="wyh_ul1">
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<button class="btn btn-danger wyh_abtn">删除</button>
+					<button class="btn btn-primary wyh_bbtn">编辑</button>
+				</li>
+			</ul>
+			<ul class="wyh_ul1">
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<button class="btn btn-danger wyh_abtn">删除</button>
+					<button class="btn btn-primary wyh_bbtn">编辑</button>
+				</li>
+			</ul>
+			<ul class="wyh_ul1">
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<button class="btn btn-danger wyh_abtn">删除</button>
+					<button class="btn btn-primary wyh_bbtn">编辑</button>
+				</li>
+			</ul>
+			<ul class="wyh_ul1">
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<button class="btn btn-danger wyh_abtn">删除</button>
+					<button class="btn btn-primary wyh_bbtn">编辑</button>
+				</li>
+			</ul>
+			<ul class="wyh_ul1">
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
+				</li>
+				<li>
+					<button class="btn btn-danger wyh_abtn">删除</button>
+					<button class="btn btn-primary wyh_bbtn">编辑</button>
+				</li>
+			</ul>
+		</div>
 	</div>
+	</wh-change>
+	</wyh-del>
+	</wyh-new>
 </div>
