@@ -8,6 +8,5 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('loginCtrl', function ($scope) {
-    $scope.aa="qwe"
+  .controller('loginCtrl', function () {
   });
