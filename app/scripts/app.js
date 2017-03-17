@@ -55,6 +55,18 @@ angular
   		url: '/vacate',
   		templateUrl: 'views/vacate.html'
   	})
-  	$urlRouterProvider.otherwise('/vacate');
+  	$stateProvider.state("particulars",{
+  		url: '/particulars',
+  		templateUrl: 'views/particulars.html'
+  	})
+  	$stateProvider.state("reply",{
+  		url: '/reply',
+  		templateUrl: 'views/reply.html'
+  	})
+  	$stateProvider.state("enroll",{
+  		url: '/enroll',
+  		templateUrl: 'views/enroll.html'
+  	})
+  	$urlRouterProvider.otherwise('/styleModality')
   }])
   ;
