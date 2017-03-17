@@ -8,10 +8,6 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('vacateCtrl', function ($scope) {
-  	
-  	
-  	var now = new  Date();
-  	console.log(now)
+  .controller('particularsCtrl', function () {
     
   });
