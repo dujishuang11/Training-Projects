@@ -67,6 +67,6 @@ angular
   		url: '/enroll',
   		templateUrl: 'views/enroll.html'
   	})
-  	$urlRouterProvider.otherwise('/styleModality')
+  	$urlRouterProvider.otherwise('/particulars')
   }])
   ;
