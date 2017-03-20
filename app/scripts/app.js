@@ -55,6 +55,6 @@ angular
   		url: '/vacate',
   		templateUrl: 'views/vacate.html'
   	})
-  	$urlRouterProvider.otherwise('/firstPage')
+  	$urlRouterProvider.otherwise('/salary')
   }])
   ;
