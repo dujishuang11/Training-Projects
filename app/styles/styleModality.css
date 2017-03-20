@@ -3,7 +3,6 @@
 	height: 100%;
 	padding: 0 1rem;
 	background: #f3f3f3;
-	overflow: hidden;
 }
 .djs-mintitle {
 	width: 100%;
@@ -28,8 +27,8 @@
 }
 .djs-bgcolor {
 	width: 100%;
-	height: 100%;
 	margin-top: 1rem;
+	overflow: hidden;
 }
 .djs-bgcolor li {
 	width: 23.3%;
@@ -79,7 +78,7 @@
 .djs-bgcolor li:nth-child(12) {
 	background: #9370DB;
 }
-.djs-button {
+.djs-content .djs-button {
 	margin-top: 3rem;
 	float: right;
 }
