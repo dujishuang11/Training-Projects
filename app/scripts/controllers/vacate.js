@@ -12,6 +12,14 @@ angular.module('trainingProjectsApp')
   	
   	
   	var now = new  Date();
+  	var init = new Date();
+
   	console.log(now)
+  	
+  	$scope.data = {
+  		expiry:now.setDate(init.getDate()+3)
+  	}
+  	
+//	$('.zhy_1').val($scope.data.expiry:"yyyy年MM月dd日")
     
   });
