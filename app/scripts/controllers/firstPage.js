@@ -13,11 +13,12 @@ var doger_app = angular.module('trainingProjectsApp')
 //  		alert(1)
 //  	}
 	}])
-	doger_app.directive("lxm_firstPage",function(){
+	doger_app.directive("lxmfrg",function(){
 		return{
 			restrict:"ECMA",
 //			templateUrl:"index.html",
 			link:function(scope,element,attr){
+				console.log(1)
 //				element.find('p').css("color","red");
 				var on = false;
 				var myList = element.find('.doger-list li');

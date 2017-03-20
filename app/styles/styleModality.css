@@ -27,7 +27,8 @@
 }
 .djs-bgcolor {
 	width: 100%;
-	height: 100%;
+	margin-top: 1rem;
+	overflow: hidden;
 }
 .djs-bgcolor li {
 	width: 23.3%;
@@ -38,9 +39,46 @@
 	text-align: center;
 	line-height: 2rem;
 }
-.djs-button {
-	position: relative;
-	bottom: -10rem;
-	right: 0rem;
-	/*float: right;*/
+.djs-bgcolor li:nth-child(1) {
+	background: #7fff00;
+}
+.djs-bgcolor li:nth-child(2) {
+	background: #00FFFF;
+}
+.djs-bgcolor li:nth-child(3) {
+	background: #ff7f00;
+}
+.djs-bgcolor li:nth-child(4) {
+	background: #bc1717;
+	color: white;
+}
+.djs-bgcolor li:nth-child(5) {
+	background: #4d4dff;
+}
+.djs-bgcolor li:nth-child(6) {
+	background: #32cd32;
+}
+.djs-bgcolor li:nth-child(7) {
+	background: yellow;
+}
+.djs-bgcolor li:nth-child(8) {
+	background: #ff2400;
+	color: white;
+}
+.djs-bgcolor li:nth-child(9) {
+	background: #d9d9f3;
+}
+.djs-bgcolor li:nth-child(10) {
+	background: #FF6EC7;
+}
+.djs-bgcolor li:nth-child(11) {
+	background: #2F2F4F;
+	color: white;
+}
+.djs-bgcolor li:nth-child(12) {
+	background: #9370DB;
+}
+.djs-content .djs-button {
+	margin-top: 3rem;
+	float: right;
 }

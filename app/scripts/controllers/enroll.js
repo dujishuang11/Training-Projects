@@ -8,5 +8,6 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('loginCtrl', function () {
+  .controller('enrollCtrl', function () {
+    
   });

@@ -7,7 +7,7 @@ table{border-collapse:collapse}
 li{list-style:none}
 a img{border:none}
 
-body{background-color:#fff}
+html,body{background-color:#f3f3f3;}
 .fl{float:left}.fr{float:right}
 .clear{clear:both;height:0;overflow:hidden}
 .clears:before,.clears:after{content:'';display:table}

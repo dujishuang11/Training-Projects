@@ -1,0 +1,231 @@
+.xiaoqiang-header{
+	width: 100%;
+	height: 1.7rem;
+	font-size: 0.7rem;
+	line-height:1.7rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.lhq-sb{
+	width: 100%;
+	height: 100%;
+	clear: both;
+	overflow: hidden;
+}
+.border{
+	width: 90%;
+	margin: 0 auto;
+	height: 0.1rem;
+	background: #ccc;
+	border-radius: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.xiaoqiang-header i{
+	font-size: 1.2rem;
+	vertical-align: middle;
+	color: #FFFFFF;
+}
+.xiaoqiang-header span{
+	font-size: 0.7rem;
+	margin-left: 0.3rem;
+	color: #FFFFFF;
+}
+.xiaoqiang-left{
+	width: 60%;
+	height: 15rem;
+	float: left;
+	overflow: hidden;
+}
+.xiaoqiang-left p{
+	height: 1rem;
+	line-height: 1rem;
+	margin-top: 0.6rem;
+}
+.xiaoqiang-left p:nth-child(1) span{
+	margin-left: 1rem;
+	font-size: 0.7rem;
+	float: left;
+}
+.xiaoqiang-left p:nth-child(1) input{
+	margin-left: 0.1rem;
+	font-size: 0.5rem;
+	height: 0.5rem;
+	padding-top: 0.45rem;
+	padding-bottom: 0.45rem;
+	width: 4.7rem;
+	display: inline-block;
+	float: left;
+	margin-left: 0.3rem;
+	outline-style: none;
+	border: none;
+	border-radius: 0.3rem;
+}
+.xiaoqiang-left p:nth-child(2) span:nth-child(1){
+	margin-left: 1rem;
+	font-size: 0.7rem;
+	float: left;
+}
+
+.xiaoqiang-left p:nth-child(2) span{
+	height: 1rem;
+	line-height: 1rem;
+	float: left;
+	display: block;
+}
+.xiaoqiang-left p:nth-child(2) input{
+	margin-left: 0.1rem;
+	font-size: 0.6rem;
+	height: 1rem;
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	display: inline-block;
+	float: left;
+	margin-left: 0.3rem;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-right: 0.2rem;
+}
+.xiaoqiang-left p:nth-child(3) span{
+	margin-left: 1rem;
+	font-size: 0.7rem;
+	float: left;
+}
+.xiaoqiang-left p:nth-child(3) input{
+	margin-left: 0.1rem;
+	font-size: 0.5rem;
+	height: .5rem;
+	padding-top: 0.45rem;
+	padding-bottom: 0.45rem;
+	width: 4.7rem;
+	display: inline-block;
+	float: left;
+	margin-left: 0.3rem;
+	outline-style: none;
+	border: none;
+	border-radius: 0.3rem;
+}
+.xiaoqiang-left p:nth-child(4) span{
+	margin-left: 1rem;
+	font-size: 0.7rem;
+	float: left;
+}
+.xiaoqiang-left p:nth-child(4) input{
+	margin-left: 0.1rem;
+	font-size: 0.5rem;
+	height: 0.5rem;
+	padding-top: 0.45rem;
+	padding-bottom: 0.45rem;
+	width: 4.7rem;
+	display: inline-block;
+	float: left;
+	margin-left: 0.3rem;
+	outline-style: none;
+	border: none;
+	border-radius: 0.3rem;
+}
+.xiaoqiang-left p:nth-child(5){
+	height: 2.3rem;
+	overflow: hidden;
+	
+}
+.xiaoqiang-left p:nth-child(5) span{
+	margin-left: 1rem;
+	font-size: 0.7rem;
+	float: left;
+}
+.xiaoqiang-left p:nth-child(5) textarea{
+	margin-left: 0.3rem;
+	width: 4.7rem;
+	outline-style: none;
+	border: none;
+	border-radius: 0.3rem;
+	font-size: 0.5rem;
+}
+.xiaoqiang-left p:nth-child(6) span{
+	margin-left: 1rem;
+	font-size: 0.7rem;
+	float: left;
+}
+.xiaoqiang-left p:nth-child(6) input{
+	font-size: 0.5rem;
+	height: .5rem;
+	padding-top: 0.45rem;
+	padding-bottom: 0.45rem;
+	width: 4.7rem;
+	display: inline-block;
+	float: left;
+	margin-left: 0.1rem;
+	outline-style: none;
+	border: none;
+	border-radius: 0.3rem;
+}
+.xiaoqiang-left p:nth-child(7) span{
+	margin-left: 1rem;
+	font-size: 0.7rem;
+	float: left;
+}
+.xiaoqiang-left p:nth-child(7) input{
+	font-size: 0.5rem;
+	height: .5rem;
+	padding-top: 0.45rem;
+	padding-bottom: 0.45rem;
+	width: 4.7rem;
+	display: inline-block;
+	float: left;
+	margin-left: 0.3rem;
+	outline-style: none;
+	border: none;
+	border-radius: 0.3rem;
+}
+.xiaoqiang-right{
+	width: 40%;
+	height: 15rem;
+	float: left;
+	overflow: hidden;
+}
+
+.img{
+	width: 4rem;
+	height: 4rem;
+	margin: 0 auto;
+	margin-top: 0.5rem;
+	border-radius: 0.5rem;
+	background:url(../img/icon.png) no-repeat center center;
+	background-size:cover ;
+}
+.img img{
+	width: 100%;
+	height: 100%;
+	border-radius:0.5rem;
+}
+.xx-button{
+	width: 4rem;
+	height: 1rem;
+	line-height: 1rem;
+	border: none;
+	outline-style: none;
+	font-size: 0.6rem;
+	letter-spacing: 0.1rem;
+	margin: 0.4rem auto;
+	display: block;
+	border-radius: 0.2rem;
+	background:#5CB85C;
+	color: #FFFFFF
+}
+.xiaoqiang-but{
+	width: 4rem;
+	height: 1.4rem;
+	line-height: 1.4rem;
+	text-align: center;
+	background:#337AB7;
+	color: #FFFFFF;
+	outline-style: none;
+	font-size: 0.7rem;
+	border: none;
+	border-radius: 0.2rem;
+	float: right;
+	margin-right: 1rem;
+	margin-top: 1rem;
+}
+

@@ -1,3 +1,49 @@
-<div ng-controller="personinfoCtrl">
+<div ng-controller="personinfoCtrl" class="lhq-sb">
+	<div class="xiaoqiang-header">
+		<i class="iconfont icon-touxiang"></i>
+    	<span>个人信息</span>
+	</div>
+	<div class="border"></div>
 	
+	<div class="xiaoqiang-left">
+		<p>
+			<span>姓&#x3000;&#x3000;名:</span>
+			<input type="text" class="form-control" />
+		</p>
+		
+		<p>
+			<span>性&#x3000;&#x3000;别:</span>
+			<input type="radio" name="sex"/><span>男</span>
+			<input type="radio" name="sex"/><span>女</span>
+		</p>
+		<p>
+			<span>手&#x3000;&#x3000;机:</span>
+			<input type="text" class="form-control" />
+		</p>
+		<p>
+			<span>电子邮件:</span>
+			<input type="text" class="form-control" />
+		</p>
+		<p>
+			<span>地&#x3000;&#x3000;址:</span>
+			<textarea name="tex" rows="" cols=""></textarea>
+		</p>
+		<p>
+			<span>Q&#x3000;Q&#x3000;号:</span>
+			<input type="text" class="form-control" />
+		</p>
+		<p>
+			<span>其它服务:</span>
+			<input type="text" class="form-control" />
+		</p>
+	</div>
+	<lhq>
+	<div class="xiaoqiang-right" >
+		<div class="img"></div>
+		<input type="file" value="" style="display: none;" class="imginput"/>
+		<button class="xx-button">选择头像</button>
+	</div>
+	</lhq>
+	
+	<input type="button" class="xiaoqiang-but" value="保存"/>
 </div>
