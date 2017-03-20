@@ -153,11 +153,11 @@
 .wyh_save{
 	margin-top:1rem ;
 }
-.wyh_save>button:nth-child(1).btn{
+.wyh_save>.newadds{
 	width:3rem;
 	float: left;
 }
-.wyh_save>button:nth-child(2).btn{
+.wyh_save>.sav_wyh{
 	width:3rem;
 	float: right;
 }
