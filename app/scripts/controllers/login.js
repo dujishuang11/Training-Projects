@@ -8,5 +8,19 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('loginCtrl', function () {
-  });
+  .controller('loginCtrl', function ($scope,$http) {
+  })
+.directive('zhjLogin',function(){
+       return function(s,e,a){
+       	  e.bind('touchstart',function(){
+       	    
+       	  	
+       	  	
+       	  	
+       	  	
+       	  	
+       	  })
+       }
+   
+
+})
