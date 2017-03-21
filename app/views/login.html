@@ -8,16 +8,14 @@
 		</div>
 		<div class="wraUS">
 			<div class="zhj_userName">用户名：</div>
-			<input type="text" class="form-control" />
-		</div>
-		<div class="wraUS">
-			<div class="zhj_userName">职&#x3000位：</div>
-		    <input type="text" class="form-control" />
+			<input type="text" class="form-control useName" ng-blur='loginblur()' placeholder="请输入你的中文名" ng-model='username'/>
+			<div id="zhj_usename" ng-show='loginShow'>请输入你的中文名</div>
 		</div>
 		<div class="wraUS">
 			<div class="zhj_userName">密&#x3000码：</div>
-			<input type="password" class="form-control" />
+			<input type="password" placeholder="请输入数字加英文的字符" class="form-control password" ng-model='passwold' ng-blur='loginpass()'/>
+			<div id="zhj_placeholder" ng-show='passShow'>请输入正确密码</div>
 		</div>		
-		<button class="btn btn-primary   zhj_btnbtn" zhj-login>登录</button>
+		<button class="btn btn-primary   zhj_btnbtn" zhj-login ng-click='logining()'>登录</button>
 	</div>
 </div>
