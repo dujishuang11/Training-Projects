@@ -1,6 +1,4 @@
-
 <div ng-controller="particularsCtrl">
-	<xqq>
 	<div class="header-lhq">
     	<i class="iconfont icon-shoujianxiang"></i>
     	<span>收件箱</span>
@@ -9,37 +7,43 @@
 	<div class="xq-top">
 		<p>
 			<span>发件人:</span>
-			<i></i>
+			<i>{{fusername}}</i>
 		</p>
 		<p>
 			<span>时&#x3000;间:</span>
-			<i></i>
+			<i>{{date}}</i>
 		</p>
 		<p>
 			<span>主&#x3000;题:</span>
-			<i></i>
+			<i>{{title}}</i>
 		</p>
 		<p>
 			<span>内&#x3000;容:</span>
-			<i></i>
+			<i>{{content}}</i>
 		</p>
-		<input type="button" name="" id="hf" value="回复" class="xq-btnn"/>
+		<input type="button" name="" value="回复" class="xq-btnn" ng-click = 'hui()'/>
+		<input type="button" name="" value="返回" class="xqq-btnn" ng-click = 'fanhui()'/>
 	</div>
 	
-	<div class="xq-bottom" style="display: none;">
+	<div class="xq-bottom" ng-show = 'isShow'>
 		<p>
 			<span>发件人:</span>
-			<input type="text" />
+			<input type="text" ng-model ='Sender'/>
 		</p>
 		<p>
 			<span>收件人:</span>
-			<input type="text" />
+			<input type="text"  ng-model='addressee'/>
+		</p>
+		<p>
+			<span>主&#x3000;题:</span>
+			<input type="text"  ng-model='titleLhq'/>
 		</p>
 		<p>
 			<span>内&#x3000;容:</span>
-			<textarea name="" rows="" cols=""></textarea>
+			<textarea name="" rows="" cols="" ng-model = 'contentLhq'></textarea>
 		</p>
-		<input type="button" name="" id="" value="发送" class="xq-bottom-btn"/>
+		
+		<input type="button" name="" id="" value="取消" class="xq-bottom-btn" ng-click = 'qv()'/>
+		<input type="button" name="" id="" value="发送" class="xq-bottom-btn" ng-click = 'fa()'/>
 	</div>
-</xqq>
 </div>

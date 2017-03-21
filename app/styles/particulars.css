@@ -54,6 +54,7 @@
 	font-size: 0.6rem;
 	border-radius:0.3rem;
 	line-height: 1rem;
+	text-indent: 0.5em;
 }
 .xq-top p:nth-child(2) span{
 	font-size: 0.7rem;
@@ -71,6 +72,8 @@
 	border-radius:0.3rem;
 	font-size: 0.6rem;
 	line-height: 1rem;
+	text-indent: 0.5em;
+	
 }
 .xq-top p:nth-child(3) span{
 	font-size: 0.7rem;
@@ -88,6 +91,8 @@
 	border-radius:0.3rem;
 	font-size: 0.6rem;
 	line-height: 1rem;
+	text-indent: 0.5em;
+	
 }
 .xq-top p:nth-child(4) span{
 	font-size: 0.7rem;
@@ -107,11 +112,13 @@
 	border-radius:0.3rem;
 	font-size: 0.6rem;
 	line-height: 1rem;
+	text-indent: 0.5em;
+	
 }
 .xq-btnn{
-	width: 4rem;
-	height: 1.4rem;
-	line-height: 1.4rem;
+	width: 3rem;
+	height: 1.1rem;
+	line-height: 1.1rem;
 	text-align: center;
 	background:#337AB7;
 	color: #FFFFFF;
@@ -122,6 +129,21 @@
 	float: right;
 	margin-right: 1rem;
 	margin-top: 0.8rem;
+}
+.xqq-btnn{
+	width: 3rem;
+	height: 1.1rem;
+	line-height: 1.1rem;
+	text-align: center;
+	background:#337AB7;
+	color: #FFFFFF;
+	outline-style: none;
+	font-size: 0.7rem;
+	border: none;
+	border-radius: 0.2rem;
+	float: right;
+	margin-right: 1rem;
+	margin-top: 0.7rem;
 }
 .xq-bottom{
 	width: 100%;
@@ -143,7 +165,7 @@
 }
 .xq-bottom p:nth-child(1) input{
 	margin-left: 0.1rem;
-	font-size: 0.5rem;
+	font-size: 0.6rem;
 	height: 0.5rem;
 	padding-top: 0.45rem;
 	padding-bottom: 0.45rem;
@@ -155,6 +177,8 @@
 	border: none;
 	border-radius: 0.3rem;
 	border-bottom: 0.1rem solid #CCCCCC;
+	text-indent: 0.5em;
+	
 }
 .xq-bottom p:nth-child(2) span{
 		font-size: 0.7rem;
@@ -162,7 +186,7 @@
 }
 .xq-bottom p:nth-child(2) input{
 	margin-left: 0.1rem;
-	font-size: 0.5rem;
+	font-size: 0.6rem;
 	height: 0.5rem;
 	padding-top: 0.45rem;
 	padding-bottom: 0.45rem;
@@ -174,36 +198,60 @@
 	border: none;
 	border-radius: 0.3rem;
 	border-bottom: 0.1rem solid #CCCCCC;
+	text-indent: 0.5em;
 	
-}
-.xq-bottom p:nth-child(3){
-	height: 2rem;
 }
 .xq-bottom p:nth-child(3) span{
 		font-size: 0.7rem;
 		float: left;
 }
-.xq-bottom p:nth-child(3) textarea{
+.xq-bottom p:nth-child(3) input{
+	margin-left: 0.1rem;
+	font-size: 0.6rem;
+	height: 0.5rem;
+	padding-top: 0.45rem;
+	padding-bottom: 0.45rem;
+	width: 4.7rem;
+	display: inline-block;
+	float: left;
+	margin-left: 0.3rem;
+	outline-style: none;
+	border: none;
+	border-radius: 0.3rem;
+	border-bottom: 0.1rem solid #CCCCCC;
+	text-indent: 0.5em;
+	
+}
+.xq-bottom p:nth-child(4){
+	height: 2rem;
+}
+.xq-bottom p:nth-child(4) span{
+		font-size: 0.7rem;
+		float: left;
+}
+.xq-bottom p:nth-child(4) textarea{
 	margin-left: 0.3rem;
 	width: 4.7rem;
 	outline-style: none;
 	border: none;
 	border-radius: 0.3rem;
-	font-size: 0.5rem;
+	font-size: 0.6rem;
 	border: 0.1rem solid #CCCCCC;
+	text-indent: 0.5em;
 }
 .xq-bottom-btn{
-	width: 4rem;
-	height: 1.4rem;
-	line-height: 1.4rem;
+	width: 3rem;
+	height: 1.1rem;
+	line-height: 1.1rem;
 	text-align: center;
 	background:#337AB7;
 	color: #FFFFFF;
 	outline-style: none;
-	font-size: 0.7rem;
+	font-size: 0.6rem;
 	border: none;
 	border-radius: 0.2rem;
 	float: right;
 	margin-right: 1rem;
-	margin-top: 0.8rem;
+	margin-top: 1.5rem;
 }
+
