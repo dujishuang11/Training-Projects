@@ -9,6 +9,10 @@
  */
 angular.module('trainingProjectsApp')
   .controller('salaryCtrl', function () {
+  	
+  	
+  	
+  	
   })
 .directive('zhjSetDiv',function(){	  
 				return function(s,e,a){
