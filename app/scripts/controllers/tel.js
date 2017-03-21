@@ -9,6 +9,7 @@
  */
 angular.module('trainingProjectsApp')
 	.controller('telCtrl', ["$scope", "$http", "$state", function($scope, $http, $state) {
+		$scope.djsShow = false;
 		$http({
 			url: "http://" + ip + ":401/users",
 			method: "get"
@@ -35,14 +36,16 @@ angular.module('trainingProjectsApp')
 
 		//	所点击数据删除
 		$scope.del = function(idd,index) {
-//			if(sessionStorage.level != '2') {
+			if(sessionStorage.level != '2') {
 				$http({
 					url: "http://" + ip + ":401/users/"+idd,
 					method: "delete"
 				}).then(function(e) {
 					$scope.data.splice(index,1)
 				})
-//			}
+			}else{
+				$scope.djsShow = true;
+			}
 
 		}
 		
