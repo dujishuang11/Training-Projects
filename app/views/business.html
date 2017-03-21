@@ -2,35 +2,48 @@
 	<wyh-newb>
 	<div class="wyh_wrap">
 		<div class="wyh_til">
-			<span class="wyh_sw" ng-click="togglea()">日程事务</span>
-			<span class="wyh_fp" ng-click="toggleb()">任务分配</span>
+			<span class="wyh_sw" ng-click="togglea()" ng-class={color1:bool,color2:bool}>日程事务</span>
+			<span class="wyh_fp" ng-click="toggleb()" ng-class={color3:bools,color4:bools}>任务分配</span>
 		</div>
 		<div class="wyh_underline"></div>
-		<div class="wyh_content">
+		<div class="wyh_content" ng-hide="!isHide">
 			<div class="wyh_date">
 				<span>日期</span>
 				<span>工作内容</span>
 				<span>执行人</span>
 			</div>
-			<ul class="wyh_task">
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-			<ul class="wyh_task">
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-			<ul class="wyh_task">
-				<li></li>
-				<li></li>
-				<li></li>
+			<ul class="wyh_task" ng-repeat="item in items | orderBy:Paixu">
+				<li>{{item.date | date:'yyyy-MM-dd'}}</li>
+				<li>{{item.content}}</li>
+				<li>{{item.uid}}</li>
 			</ul>
 		</div>
 		<!--任务分配-->
-		<div class="wyh_taskfp">
-			<div class="taskfp_til">
+		<div class="wyh_taskfp" ng-hide="isHide">
+			<div class="wyh_dat">
+				<span>选择日期：</span>
+				<input type="date" value="2017/3/20" class="wyh_tim" ng-model="wyh_dates" />
+			</div>
+			<div class="wyh_cont">
+				<span>工作内容：</span>
+				<textarea name="" rows="" cols="" ng-model="wyh_cont"></textarea>
+			</div>
+			<div class="wyh_Ren">
+				<span>执&nbsp;行&nbsp;人：</span>
+				<!--<input type="text"  ng-model="wyh_uid"/>-->
+				<!--<select class="wyh_peopl" ng-model="wyh_uid">
+					<option value=""></option>
+				</select>-->
+				<select  ng-model="a" ng-options=" item.name for item in arr">
+					<!--<option value=""></option>-->
+				</select>
+			</div>
+			<div class="wyh_save">
+				<button class="btn btn-info sav_wyh" ng-click="wyhSave()">保存</button>
+			</div>
+			
+			
+			<!--<div class="taskfp_til">
 				<span>日期</span>
 				<span>工作内容</span>
 				<span>执行人</span>
@@ -38,44 +51,26 @@
 			<div class="allul2">
 				<ul class="taskfp_cont">
 					<li>
-						<input type="text" class="form-control"  />
+						<input type="text" class="form-control" ng-model="wyh_dates" value=""  />
 					</li>
 					<li>
-						<input type="text" class="form-control"  />
+						<input type="text" class="form-control" ng-model="wyh_cont" value=""  />
 					</li>
 					<li>
-						<input type="text" class="form-control"  />
-					</li>
-				</ul>
-				<ul class="taskfp_cont">
-					<li>
-						<input type="text" class="form-control"  />
-					</li>
-					<li>
-						<input type="text" class="form-control"  />
-					</li>
-					<li>
-						<input type="text" class="form-control"  />
-					</li>
-				</ul>
-				<ul class="taskfp_cont">
-					<li>
-						<input type="text" class="form-control"  />
-					</li>
-					<li>
-						<input type="text" class="form-control"  />
-					</li>
-					<li>
-						<input type="text" class="form-control"  />
+						<input type="text" class="form-control" ng-model="wyh_uid" value=""  />
 					</li>
 				</ul>
 			</div>
 			
 			<div class="wyh_save">
-				<button class="btn btn-primary newadds">新增</button>
-				<button class="btn btn-info sav_wyh">保存</button>
-			</div>
+				<button class="btn btn-primary newadds" ng-click="newAdd()">新增</button>
+				<button class="btn btn-info sav_wyh" ng-click="wyhSave()">保存</button>
+			</div>-->
 		</div>
+	</div>
+	<div class="wyh_tan" ng-show = "isShow">
+		<p>输入的内容不能为空</p><br />
+		<button class="btn-info btn btn-xs wyh_sue" ng-click="wyh_none()">确定</button>
 	</div>
 	</wyh-newb>
 </div>

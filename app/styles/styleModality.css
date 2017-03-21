@@ -34,10 +34,10 @@
 	width: 23.3%;
 	height: 2rem;
 	margin: 1.5rem 5% 0;
-	background: blue;
 	float: left;
 	text-align: center;
 	line-height: 2rem;
+	border-radius: 0.2rem;
 }
 .djs-bgcolor li:nth-child(1) {
 	background: #7fff00;

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>lhq-sb</name>
+=======
+	<name>xinagmua</name>
+>>>>>>> origin/master
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +20,11 @@
 	</natures>
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
 			<id>1490005919103</id>
+=======
+			<id>1490055482922</id>
+>>>>>>> origin/master
 			<name></name>
 			<type>26</type>
 			<matcher>

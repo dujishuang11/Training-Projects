@@ -70,4 +70,3 @@ angular
   	})
   	$urlRouterProvider.otherwise('/officebox')
   }])
-  ;

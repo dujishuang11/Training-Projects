@@ -14,12 +14,12 @@
 	display: block;
 	line-height:1.7rem;
 }
-/*.wyh_wrap .wyh_til>span:first-child{
+.color1{
 	background: #cccccc;
-}*/
-/*.wyh_til>span:last-child{
+}
+.color3{
 	background: #cccccc;
-}*/
+}
 .wyh_underline{
 	width:100%;
 	height:0.08rem;
@@ -87,9 +87,121 @@
 .wyh_taskfp{
 	width:100%;
 	height:auto;
-	display: none;
+	background: #f3f3f3;
+	padding:0 0.5rem;
 }
-.wyh_taskfp>.taskfp_til{
+.wyh_taskfp>.wyh_dat{
+	padding:2rem 0 1rem 0;
+}
+.wyh_dat>span{
+	font-size: 0.8rem;
+	margin-right:1rem;
+}
+.wyh_dat>.wyh_tim{
+	border: :none;
+	width:7rem;
+	font-size: 0.7rem;
+	background: white;
+	border-radius: 0.2rem;
+}
+.wyh_taskfp>.wyh_cont{
+	padding:1rem 0;
+	overflow: hidden;
+}
+.wyh_cont>span{
+	font-size: 0.8rem;
+	margin-right:1rem;
+	display: block;
+	float: left;
+}
+.wyh_cont>textarea{
+	width:7.5rem;
+	height:4rem;
+	background: white;
+	border-radius: 0.2rem;
+	border:none;
+	float: left;
+}
+.wyh_taskfp>.wyh_Ren{
+	padding:1rem 0;
+	overflow: hidden;
+}
+.wyh_Ren>span{
+	font-size: 0.8rem;
+	margin-right:1.2rem;
+	display: block;
+	float: left;
+}
+.wyh_Ren>.wyh_peopl{
+	float: left;
+	width:6rem;
+	height:1.2rem
+}
+.wyh_taskfp>.wyh_save{
+	padding:3rem 0 5rem 0;
+	height:2rem;
+}
+.wyh_save>.sav_wyh{
+	width:3rem;
+	float: right;
+}
+
+
+/*.zhy_text{
+	width: 100%;
+	margin-top: 0.5rem;
+	font-size: 0.8rem;
+}
+.zhy_text .zhy_li{
+	width: 100%;
+	overflow: hidden;
+}
+.zhy_text .zhy_li .zhy_li_left{
+	float: left;
+	width: 30%;
+	text-align: center;
+	line-height: 1.3rem;
+}
+.zhy_text .zhy_li .zhy_li_right{
+	float: left;
+	width: 70%;
+}
+.zhy_text .zhy_li .zhy_li_right input{
+	width: 100%;
+	height: 100%;
+	background: none;
+	border: none;
+	outline: none;
+	font-size: 0.8rem;
+	padding: 0.2rem 0;
+	border-bottom:0.1rem solid #ccc;
+}
+.zhy_text .zhy_li:nth-child(2){
+	margin-top: 0.7rem;
+}
+
+.zhy_text .zhy_li:nth-child(3){
+	margin-top: 1rem;
+}
+.zhy_text .zhy_li:nth-child(3) .zhy_li_right textarea{
+	width: 100%;
+	height: 5rem;
+	border: 1px solid #ccc;
+}
+.zhy_text .zhy_li:nth-child(4){
+	margin-top: 1rem;
+}
+.zhy_text .zhy_li:nth-child(4) .zhy_li_right textarea{
+	width: 100%;
+	height: 8rem;
+	border: 1px solid #ccc;
+}*/
+
+
+
+
+
+/*.wyh_taskfp>.taskfp_til{
 	width:100%;
 	height:1.4rem;
 	margin-top:0.7rem;
@@ -160,4 +272,24 @@
 .wyh_save>.sav_wyh{
 	width:3rem;
 	float: right;
+}*/
+.wyh_tan{
+	width: 100%;
+	height: 100%;
+	line-height: 100%;
+	font-size: 1rem;
+	background: rgba(0,0,0,.6);
+	text-align: center;
+	position: absolute;
+	padding-top: 10rem;
+	color:white;
+	top: 0;
+	left: 0;
+}
+.wyh_tan>.wyh_sue{
+	width:2.3rem;
+	height:1.5rem;
+	padding:0.3rem;
+	line-height: 0.3rem;
+	font-size: 0.7rem;
 }
