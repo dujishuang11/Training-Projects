@@ -98,6 +98,7 @@
 .wyh_allul{
 	width:100%;
 	height:auto;
+	
 }
 .wyh_center>.wyh_allul>.wyh_ul1{
 	width:100%;
@@ -105,6 +106,7 @@
 	border:1px solid black;
 	border-top:none;
 	font-size: 0.55rem;
+	border-right:none;
 }
 .wyh_center>.wyh_allul>.wyh_ul1>li{
 	float: left;
@@ -125,7 +127,7 @@
 }
 .wyh_ul1>li:nth-child(4){
 	width:29%;
-	border-right:none;
+	
 }
 .wyh_ul1>li:nth-child(4)>button{
 	height:1rem;

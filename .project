@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>trainingProjects</name>
+=======
+<<<<<<< HEAD
+	<name>lhq-sb</name>
+=======
+	<name>xinagmua</name>
+>>>>>>> origin/master
+>>>>>>> origin/master
 	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
-		<buildCommand>
-			<name>com.aptana.editor.php.aptanaPhpBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 		<buildCommand>
 			<name>com.aptana.ide.core.unifiedBuilder</name>
 			<arguments>
@@ -18,11 +21,18 @@
 	</buildSpec>
 	<natures>
 		<nature>com.aptana.projects.webnature</nature>
-		<nature>com.aptana.editor.php.phpNature</nature>
 	</natures>
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
 			<id>1490055640427</id>
+=======
+<<<<<<< HEAD
+			<id>1490005919103</id>
+=======
+			<id>1490055482922</id>
+>>>>>>> origin/master
+>>>>>>> origin/master
 			<name></name>
 			<type>26</type>
 			<matcher>
