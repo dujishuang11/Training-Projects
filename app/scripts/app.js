@@ -69,5 +69,5 @@ angular
   		templateUrl: 'views/enroll.html'
   	})
 	$urlRouterProvider.otherwise('/salary')
+
   }])
-  ;

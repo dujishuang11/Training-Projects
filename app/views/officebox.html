@@ -12,52 +12,17 @@
 			<p>时间</p>
 		</div>
 		
-		<ul>
-			<li>
-				<span></span>
-				<span></span>
-				<span></span>
-			</li>
-			<li>
-				<span></span>
-				<span></span>
-				<span></span>
-			</li>
-			<li>
-				<span></span>
-				<span></span>
-				<span></span>
-			</li>
-			<li>
-				<span></span>
-				<span></span>
-				<span></span>
-			</li>
-			<li>
-				<span></span>
-				<span></span>
-				<span></span>
-			</li>
-			<li>
-				<span></span>
-				<span></span>
-				<span></span>
-			</li>
-			<li>
-				<span></span>
-				<span></span>
-				<span></span>
-			</li>
-			<li>
-				<span></span>
-				<span></span>
-				<span></span>
+		<ul class="ul-ul-lhq">
+			<li ng-repeat = "q in lhq" ng-click="clicking(q)">
+				<span>{{q.fusername}}</span>
+				<span>{{q.title}}</span>
+				<span>{{q.date}}</span>
 			</li>
 		</ul>
 	</div>
 	
 	<div class="lhq-footer">
-		<input type="button" value="上一页"/>
-		<input type="button" value="下一页"/>
+		<input type="button" value="上一页" ng-click = 'top_lhq()'/>
+		<input type="button" value="下一页" ng-click = 'bottom_lhq()'/>
 	</div>
 </div>
