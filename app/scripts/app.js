@@ -68,6 +68,5 @@ angular
   		url: '/enroll',
   		templateUrl: 'views/enroll.html'
   	})
-	$urlRouterProvider.otherwise('/login')
+  	$urlRouterProvider.otherwise('/officebox')
   }])
-  ;
