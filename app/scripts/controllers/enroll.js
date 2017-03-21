@@ -8,7 +8,7 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('enrollCtrl', ['$scope','$http',function ($scope,$http) {
+  .controller('enrollCtrl', ['$scope','$http','$state',function ($scope,$http,$state) {
 //    验证用户名
 	 var userName= /[\u4e00-\u9fa5]/;
 	 $scope.isShow = false;
@@ -111,6 +111,7 @@ angular.module('trainingProjectsApp')
 			}
 		}).then(function(e){
 			console.log(e)
+			$state.go('login')
 		})
   	}
   	
