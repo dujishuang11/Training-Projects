@@ -8,18 +8,14 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('vacateCtrl', function ($scope) {
+  .controller('vacateCtrl', ['$scope','$http','$filter',function ($scope,$http,$filter) {
+  	$scope.init = new Date();
+	$scope.zhy_time = $filter("date")($scope.init, "yyyy/MM/dd HH:mm:ss");
+	
+	console.log($scope.zhy_time)
+  	console.log($scope.init)
+//	if(){}
   	
   	
-  	var now = new  Date();
-  	var init = new Date();
-
-  	console.log(now)
-  	
-  	$scope.data = {
-  		expiry:now.setDate(init.getDate()+3)
-  	}
-  	
-//	$('.zhy_1').val($scope.data.expiry:"yyyy年MM月dd日")
     
-  });
+  }]);
