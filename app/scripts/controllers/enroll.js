@@ -17,10 +17,29 @@ angular.module('trainingProjectsApp')
   	 		$scope.isShow = true;
   	 	}else if(!(userName.test($scope.enusername)==true)){
   	 		$scope.isShow = true;
+  	 	}else if($scope.enusername == $scope.myNewName){
+  	 		$scope.isShow = false;
   	 	}else{
   	 		$scope.isShow = false;
   	 	}
   	 }
+  	  	 
+//     真实姓名  
+      $scope.nameSow=false;
+      $scope.NewName=function(){
+      	 if($scope.myNewName == ''){
+      	 	$scope.nameSow=true;
+      	 }else if(!(userName.test($scope.myNewName))){
+      	 	$scope.nameSow=true;
+      	 }
+      	 else if($scope.enusername != $scope.myNewName){
+      	 	$scope.nameSow=true;
+      	 }else{
+      	 	$scope.nameSow = false;
+      	 }
+      }
+      
+  	 
 
 //   验证密码
     var pasExp = /^(?!\d+$)(?![A-Za-z]+$)[a-zA-Z0-9]{6,}$/;
@@ -107,38 +126,21 @@ angular.module('trainingProjectsApp')
 				"qq":$scope.QQ,
 				"others":$scope.otherphone,
 				"address":$scope.enAddr,
-				"name":$scope.enName
+				"name":$scope.myNewName
 			}
 		}).then(function(e){
-			console.log(e)
-			$state.go('login')
+			console.log(e)	
+			$scope.enusername='';
+			$scope.enpasswold='';
+			$scope.enposition='';
+			$scope.sex='';
+			$scope.enemail='';
+			$scope.ennphone='';
+			$scope.QQ='';
+			$scope.otherphone='';
+			$scope.myNewName='';
+			$scope.enAddr='';	
+			$state.go('login');
 		})
-  	}
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	 
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+     }   
   }]);
