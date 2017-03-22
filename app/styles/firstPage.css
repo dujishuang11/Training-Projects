@@ -1,7 +1,3 @@
-/*body {
-	height: 10rem;
-	background: blue;
-}*/
 
 html,body {
 	width: 100%;
@@ -200,6 +196,8 @@ html,body {
 .doger-work button {
 	width: 100%;
 	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
 	border-radius: .3rem;
 	background: #603813;
 	color: white;
@@ -211,7 +209,8 @@ html,body {
 	background: -moz-linear-gradient(to left, #403B4A, #9D9B89);
 	background: -o-linear-gradient(to left, #403B4A, #9D9B89);
 	background: -webkit-gradient(linear, 0 0, 100% 0, from(#403B4A), to(#9D9B89));
-	background: linear-gradient(to left, #403B4A, #9D9B89); /* Chrome 10-25, Safari 5.1-6 */	 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+	background: linear-gradient(to left, #403B4A, #9D9B89); /* Chrome 10-25, Safari 5.1-6 */
+	 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
 
 .doger-map p:nth-child(1) i {
@@ -226,14 +225,6 @@ html,body {
 	text-align: center;
 	font-size: .8rem;
 }
-
-/*.doger_tip {
-	width: 50%;
-}*/
-
-/*.doger_tip p {
-	text-align: center;
-}*/
 
 .doger_tip {
 	width: 100%;
@@ -297,3 +288,18 @@ html,body {
 	bottom: .5rem;
 	background: rgba(0,0,0,1);
 }
+
+.doger_tip_content p:nth-child(4) a {
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+

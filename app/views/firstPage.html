@@ -18,7 +18,7 @@
 					<li><span><i class="iconfont icon-youxiang-shoujianxiang"></i>收件箱</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.officebox'></a></li>
 					<li><span><i class="iconfont icon-ziyuan"></i>资源申请</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.resource'></a></li>
 					<li><span><i class="iconfont icon-touxiang"></i>个人信息</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.personinfo'></a></li>
-					<li><span><i class="iconfont icon-shenqing"></i>请假申请</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.vacate'></a></li>
+					<li><span><i class="iconfont icon-shenqing"></i>请假申请</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.vacate'></a><>
 					<li><span><i class="iconfont icon-zhuangxiufengge"></i>风格界面</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.styleModality'></a></li>
 				</ul>
 			</div>
@@ -41,15 +41,15 @@
 					<lxmlow>
 					<div class="doger-map">
 						<p><i class="iconfont icon-dizhi2"></i>当前位置</p>
-						<p class="doger_my_map"></p>
+						<p class="doger_my_map">北京</p>
 						<p class="doger_my_map_nan" ng-show = "isShow">正在获取当前位置</p>
 					</div>
 					</lxmlow>
 					<div class="doger-work">
-						<button ng-click = 'lxmtipOne()'>上午上班</button>
-						<button ng-click = 'lxmtipTwo()'>上午下班</button><br><br><br>
-						<button ng-click = 'lxmtipThree()'>下午上班</button>
-						<button ng-click = 'lxmtipFour()'>下午下班</button>
+						<button ng-click = 'lxmtipOne()'>上午上班<tton>
+						<button ng-click = 'lxmtipTwo()'>上午下班<tton><br><br><br>
+						<button ng-click = 'lxmtipThree()'>下午上班<tton>
+						<button ng-click = 'lxmtipFour()'>下午下班<tton>
 					</div>
 					
 				</div>
@@ -66,10 +66,11 @@
 				<i class="iconfont icon-guanbi" ng-click = "lxmclo()"></i>
 				<p class="doger_succ">签到成功</p>
 				<p class="doger_erro">错误:404</p>
-				<p>立即查看</p>
+				<p><a ui-sref = '.salary' ng-click = "lxmclo()">立即查看</a></p>
 			</div>
 		</div>
 	</lxmfrg>
+	
 	<script>
 		//时间
 		setInterval(fnTime, 1000)
@@ -82,11 +83,11 @@
 			var str = ''
 			str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec);
 //			$('.doger-my-time').text(str);
-			for(var i = 0; i < $('.doger-right img').length; i++) {
+			for(var i = 0; i < $('.doger-time img').length; i++) {
 				if(i == 2 || i == 5) {
-					$('.doger-right img')[i].src = '../img/time/colon.JPG';
+					$('.doger-time img')[i].src = '../img/time/colon.JPG';
 				} else {
-					$('.doger-right img')[i].src = '../img/time/' + str.charAt(i) + '.JPG'
+					$('.doger-time img')[i].src = '../img/time/' + str.charAt(i) + '.JPG'
 				}
 			}
 		}
@@ -150,3 +151,10 @@
 		
 	</script>
 </div>
+
+
+
+
+
+
+
