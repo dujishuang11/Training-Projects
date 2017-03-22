@@ -41,7 +41,8 @@ html,body {
 	font-size: .6rem;
 	/*line-height: 3rem;*/
 	/*vertical-align: middle;*/
-	background: #252628;
+	background: #252628;\
+	/*background: red;*/
 	position: relative;
 	border-top: 1px rgba(255,255,255,.2) solid;
 }
@@ -88,7 +89,7 @@ html,body {
 .doger-top {
 	width: 16rem;
 	height: 2.6rem;
-	background: pink;
+	/*background: gold;*/
 	float: left;
 }
 
@@ -125,4 +126,54 @@ html,body {
 	/*flex: 1;*/
 	/*float: left;*/
 	/*justify-content: center;*/
+}
+
+
+.Pgl{
+	background: #7fff00;
+	color:black;
+}
+.Fxh{
+	background: #00FFFF;
+	color:black;
+}
+.Zgc{
+	background: #ff7f00;
+	color:black;
+}
+.Wsh{
+	background: #bc1717;
+	color: white;
+}
+.Bcl{
+	background: #4d4dff;
+	color:black;
+}
+.Dyl{
+	background: #32cd32;
+	color:black;
+}
+.Meh{
+	background: yellow;
+	color:black;
+}
+.Slh{
+	background: #ff2400;
+	color: white;
+}
+.Hyh{
+	background: #d9d9f3;
+	color:black;
+}
+.Mhf{
+	background: #FF6EC7;
+	color:black;
+}
+.Zqs{
+	background: #2F2F4F;
+	color: white;
+}
+.Lhz{
+	background: #9370DB;
+	color:black;
 }
