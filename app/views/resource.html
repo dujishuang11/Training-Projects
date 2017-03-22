@@ -10,7 +10,7 @@
 		<div class="zhy-border"></div>
 		
 		
-		<div class="zhy_text" ng-hide="!isHide">
+		<div class="zhy_text" ng-hide="!ZhyisHide">
 			<li class="zhy_li">
 				<div class="zhy_li_left">申请人：</div>
 				<div class="zhy_li_right">
@@ -22,6 +22,7 @@
 				<div class="zhy_li_right">
 					<select ng-model="shoujianren">
 						<option ng-repeat="a in data">{{a.username}}</option>
+						<option ng-repeat="b in data1">{{b.username}}</option>
 					</select>
 				</div>
 			</li>
@@ -44,18 +45,19 @@
 			</div>
 		</div>
 		
-		<div class="zhy_txt" ng-hide="isHide">
+		<div class="zhy_txt" ng-hide="ZhyisHide">
 			<li class="zhy_li">
 				<div class="zhy_li_left">申请人：</div>
 				<div class="zhy_li_right">
-					<input type="text"/>
+					<input type="text"  ng-model="shenqingren" disabled="disabled"/>
 				</div>
 			</li>
 			<li class="zhy_li">
 				<div class="zhy_li_left">收件人：</div>
 				<div class="zhy_li_right">
-					<select>
-						<option></option>
+					<select ng-model="shoujianren">
+						<!--<option ng-repeat="a in data">{{a.username}}</option>-->
+						<option ng-repeat="b in data1">{{b.username}}</option>
 					</select>
 				</div>
 			</li>
@@ -63,13 +65,13 @@
 			<li class="zhy_li">
 				<div class="zhy_li_left">福&#x3000;利：</div>
 				<div class="zhy_li_right">
-					<textarea rows="0" cols="0"></textarea>
+					<textarea rows="0" cols="0" ng-model="wuzi"></textarea>
 				</div>
 			</li>
 			<li class="zhy_li">
 				<div class="zhy_li_left">原&#x3000;因：</div>
 				<div class="zhy_li_right">
-					<textarea rows="0" cols="0"></textarea>
+					<textarea rows="0" cols="0" ng-model="yongtu"></textarea>
 				</div>
 			</li>
 			<div class="zhy_foot2">
@@ -77,21 +79,31 @@
 			</div>
 		</div>
 		
-		
-		
-		<div class="zhy_mb" ng-show = "isShow">
-			<p>输入的内容不能为空</p>
-			<button class="btn-info btn btn-xs" ng-click="zhy_dis()">确定</button>
-		</div>
-		
-		<div class="zhy_mb" ng-show = "zhy_show">
-			<p>对不起，您没有访问权限</p>
-			<button class="btn-info btn btn-xs" ng-click="zhy_display()">确定</button>
-		</div>
-		
-		
-		
-		
-		
 	</div>
+	
+	<div class="lhq-zezao" ng-show = "ZhyisShow">
+		<div class="lhq-zezaobox modal-content">
+			<i class="iconfont icon-guanbi"  ng-click="zhy_dis()"></i>
+			<p>友情提示</p>
+			<span>输入内容不能为空</span>
+		</div>
+	</div>
+		
+	<div class="lhq-zezao" ng-show = "zhy_show">
+		<div class="lhq-zezaobox modal-content">
+			<i class="iconfont icon-guanbi"  ng-click="zhy_display()"></i>
+			<p>友情提示</p>
+			<span>您没有访问权限</span>
+		</div>
+	</div>
+	
+	<div class="lhq-zezao" ng-show = "zhy_ss">
+		<div class="lhq-zezaobox modal-content">
+			<i class="iconfont icon-guanbi"  ng-click="zhy_pa()"></i>
+			<p>友情提示</p>
+			<span>您是Boss,不用申请</span>
+		</div>
+	</div>
+	
+	
 </div>

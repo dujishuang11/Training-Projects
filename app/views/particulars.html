@@ -26,7 +26,7 @@
 		<input type="button" name="" value="返回" class="xqq-btnn" ng-click = 'fanhui()'/>
 	</div>
 	
-	<div class="xq-bottom" ng-show = 'isShow'>
+	<div class="xq-bottom" ng-show = 'lhqisShow'>
 		<p>
 			<span>发件人:</span>
 			<input type="text" ng-model ='Sender'/>
@@ -47,11 +47,11 @@
 		<input type="button" name="" id="" value="取消" class="xq-bottom-btn" ng-click = 'qv()'/>
 		<input type="button" name="" id="" value="发送" class="xq-bottom-btn" ng-click = 'fa()'/>
 	</div>
-	<div class="lhq-zezao">
+	<div class="lhq-zezao" ng-show="lhqShow">
 		<div class="lhq-zezaobox modal-content">
-			<i class="iconfont icon-guanbi"></i>
-			<p>小强欧巴</p>
-			<span>请输入完整信息！</span>
+			<i class="iconfont icon-guanbi" ng-click = "xxx()"></i>
+			<p>{{lhq_xiaoxi}}</p>
+			<span>{{lhq_span}}</span>
 		</div>
 	</div>
 </div>
