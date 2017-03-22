@@ -44,12 +44,15 @@ angular.module('trainingProjectsApp')
   	}
 
 //    点击登录   
+     $scope.username='';
+     $scope.passwold ='';
      $scope.logining = function() {
-		if($('.useName').val() == '') {
-			alert('用户名为空！');
+     	$scope.loginshow = false;
+		if($scope.username=='') {
+			$scope.loginshow = true;
 		}
-		else if($('.password').val() == '') {
-			alert('密码为空！');
+		else if($scope.passwold =='') {
+			$scope.loginshow = true;
 		} 
          else {
 			$http({
@@ -60,6 +63,7 @@ angular.module('trainingProjectsApp')
 					'password': $scope.passwold
 				}
 			}).then(function(e) {
+				console.log(e)
 				sessionStorage.username = $scope.username;
 				var a = e.data.uid;
 				$http({
@@ -75,12 +79,14 @@ angular.module('trainingProjectsApp')
 					} else {
 						console.log('员工')
 					}
-
-	//   	  	$state.go('firstPage');
+	   	  	       $state.go('firstPage');
 				})
 			})
 		}
-       
-        
      }
+     $scope.loginHide=function(){
+     	$scope.loginshow = false;
+     }
+     
+     
   }])

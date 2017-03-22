@@ -112,8 +112,23 @@ angular.module('trainingProjectsApp')
   	
   	
 // 点击注册的时候
-  	$scope.register=function(){
-		$http({
+$scope.enusername='';
+$scope.enpasswold ='';
+$scope.enposition ='';
+$scope.sex ='';
+$scope.enemail ='';
+$scope.ennphone ='';
+$scope.QQ ='';
+$scope.otherphone ='';
+$scope.myNewName ='';
+$scope.enAddr ='';
+
+$scope.enShodowshow=false;
+  	$scope.enregister=function(e){
+  		if($scope.enusername=='' || $scope.enpasswold =='' || $scope.enposition =='' || $scope.sex =='' || $scope.enemail =='' || $scope.ennphone =='' || $scope.QQ =='' || $scope.otherphone =='' || $scope.myNewName =='' || $scope.enAddr == ''){
+  			$scope.enShodowshow=true;
+  		}else{
+			$http({
 			url:"http://"+ip+":401/users",
 			method:"post",
 			data:{
@@ -139,8 +154,14 @@ angular.module('trainingProjectsApp')
 			$scope.QQ='';
 			$scope.otherphone='';
 			$scope.myNewName='';
-			$scope.enAddr='';	
-			$state.go('login');
-		})
-     }   
+			$scope.enAddr='';				
+			$state.go('tel');
+		})		
+  	   }
+     }
+  	  
+  	  $scope.enrollHide=function(){
+  	  	$scope.enShodowshow=false;
+  	  }
+  	
   }]);
