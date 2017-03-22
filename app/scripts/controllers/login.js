@@ -79,7 +79,7 @@ angular.module('trainingProjectsApp')
 					} else {
 						console.log('员工')
 					}
-	   	  	       $state.go('firstPage');
+//	   	  	       $state.go('firstPage');
 				})
 			})
 		}

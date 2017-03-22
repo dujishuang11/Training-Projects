@@ -68,10 +68,5 @@ angular
   		url: '/enroll',
   		templateUrl: 'views/enroll.html'
   	})
-<<<<<<< HEAD
-	$urlRouterProvider.otherwise('/enroll')
-
-=======
-  	$urlRouterProvider.otherwise('/tel')
->>>>>>> origin/master
+	$urlRouterProvider.otherwise('/login')
   }])
