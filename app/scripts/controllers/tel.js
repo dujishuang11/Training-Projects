@@ -15,7 +15,6 @@ angular.module('trainingProjectsApp')
 			method: "get"
 		}).then(function(e) {
 			$scope.data = e.data;
-//			console.log($scope.data)
 		})
 
 		//	点击每条数据跳转到此数据的详情页
@@ -47,7 +46,6 @@ angular.module('trainingProjectsApp')
 					$scope.data.splice(index,1)
 				})
 			}
-
 		}
 		
 //		点击新增
@@ -55,7 +53,7 @@ angular.module('trainingProjectsApp')
 			if(sessionStorage.level == '2') {
 				$state.go("enroll")
 			}else{
-//				$scope.djsHtml = "您没有访问权限";
+				$scope.djsHtml = "您没有访问权限";
 				$scope.djsShow = true;
 			}
 		}

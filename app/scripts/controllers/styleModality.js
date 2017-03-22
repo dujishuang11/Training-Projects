@@ -8,27 +8,41 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('styleModalityCtrl', function ($scope) {
-  		
-  })
-  .directive("wyhStyle",function(){
-  		return function(s,e,a){
-//			console.log(e.find(".djs-bgcolor").children()[0].css("backgound","#7fff00"))
-			
-  			
-  			
-	    	for(var i=0;i<e.find(".djs-bgcolor").children().length;i++){
-	    		e.find(".djs-bgcolor").children()[i].index = i;
-//	    		console.log(e.find(".djs-bgcolor").children()[i])
-				e.find(".djs-bgcolor").children()[i].addEventListener("touchstart",function(){
-//					 var finalStyle = myDiv.currentStyle ? myDiv.currentStyle : document.defaultView.getComputedStyle(myDiv, null);
-					console.log(e.find(".djs-bgcolor").children()[this.index].currentStyle)
-//					e.find(".djs-border").css("background","red")
-//					console.log(e.find(".djs-border"))
-					
-					
-//					console.log(e.find(".djs-bgcolor").children()[this.index].style.background)
-				})
-	    	}
-	    }
-  })
+  .controller('styleModalityCtrl', ["$scope","$state",function ($scope,$state) {
+  		$scope.pingguolv=function(){
+			$scope.isPgl=true;
+		}
+  		$scope.fanxinglan=function(){
+			$scope.isFxh=true;
+  		}
+  		$scope.zhuguangcheng=function(){
+			$scope.isZgc=true;
+  		}
+  		$scope.wenshahong=function(){
+			$scope.isWsh=true;
+  		}
+  		$scope.bingchuanlan=function(){
+			$scope.isBcl=true;
+  		}
+  		$scope.dianyalv=function(){
+			$scope.isDyl=true;
+  		}
+  		$scope.mingehuang=function(){
+			$scope.isMeh=true;
+  		}
+  		$scope.shiliuhong=function(){
+			$scope.isSlh=true;
+  		}
+  		$scope.husnxinghui=function(){
+			$scope.isHyh=true;
+  		}
+  		$scope.mihongfen=function(){
+			$scope.isMhf=true;
+  		}
+  		$scope.zangqingse=function(){
+			$scope.isZqs=true;
+  		}
+  		$scope.lanhuazi=function(){
+			$scope.isLhz=true;
+  		}
+  }])
