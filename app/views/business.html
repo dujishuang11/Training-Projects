@@ -41,13 +41,27 @@
 			</div>
 		</div>
 	</div>
-	<div class="wyh_tan" ng-show = "wyh_isShow">
+	<!--<div class="wyh_tan" ng-show = "wyh_isShow">
 		<p>输入的内容不能为空</p><br />
 		<button class="btn-info btn btn-xs wyh_sue" ng-click="wyh_none()">确定</button>
+	</div>-->
+	<div class="lhq-zezao" ng-show = "wyh_isShow">
+		<div class="lhq-zezaobox modal-content">
+			<i class="iconfont icon-guanbi" ng-click="wyh_none()"></i>
+			<p>友情提示</p>
+			<span>输入的内容不能为空！</span>
+		</div>
 	</div>
-	<div class="wyh_tto" ng-show = "wyh_toShow">
+	<div class="lhq-zezao" ng-show = "wyh_toShow">
+		<div class="lhq-zezaobox modal-content">
+			<i class="iconfont icon-guanbi" ng-click="wyh_fw()"></i>
+			<p>友情提示</p>
+			<span>员工没有权限访问任务分配！</span>
+		</div>
+	</div>
+	<!--<div class="wyh_tto" ng-show = "wyh_toShow">
 		<p>员工没有权限访问任务分配</p><br />
 		<button class="btn-info btn btn-xs wyh_nofw" ng-click="wyh_fw()">确定</button>
-	</div>
+	</div>-->
 	</wyh-newb>
 </div>
