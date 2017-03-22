@@ -109,7 +109,8 @@ angular.module('trainingProjectsApp')
 						content:$scope.wuzi,
 						date:$scope.dt2,
 						uid:$scope.shoujianren,
-						yongtu:$scope.yongtu
+						yongtu:$scope.yongtu,
+						read:'false'
 					}
 			}).then(function(e){
 				console.log(e)
@@ -139,7 +140,8 @@ angular.module('trainingProjectsApp')
 						content:$scope.wuzi,
 						date:$scope.dt2,
 						uid:$scope.shoujianren,
-						yongtu:$scope.yongtu
+						yongtu:$scope.yongtu,
+						read:'false'
 					}
 			}).then(function(e){
 				console.log(e)
