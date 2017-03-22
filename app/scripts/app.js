@@ -40,9 +40,21 @@ angular
   		url: '/resource',
   		templateUrl: 'views/resource.html'
   	})
-  	$stateProvider.state("salary",{
+  	$stateProvider.state("firstPage.salary",{
   		url: '/salary',
-  		templateUrl: 'views/salary.html'
+  		views:{
+  			content:{
+  				templateUrl: 'views/salary.html'		
+  			}
+  		}
+  		
+//		url: '/salary',
+//		views:{
+//			main:{
+//				templateUrl: 'views/firstPage.html',
+//				controller:"salaryCtrl"
+//			}
+//		}
   	})
   	$stateProvider.state("styleModality",{
   		url: '/styleModality',
@@ -68,6 +80,6 @@ angular
   		url: '/enroll',
   		templateUrl: 'views/enroll.html'
   	})
-  	$urlRouterProvider.otherwise('/salary')
+  	$urlRouterProvider.otherwise('/firstPage')
   }])
   ;
