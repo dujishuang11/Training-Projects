@@ -11,16 +11,16 @@ angular.module('trainingProjectsApp')
   .controller('enrollCtrl', ['$scope','$http','$state',function ($scope,$http,$state) {
 //    验证用户名
 	 var userName= /[\u4e00-\u9fa5]/;
-	 $scope.isShow = false;
+	 $scope.enuserShow = false;
   	 $scope.chang=function(){
   	 	if($scope.enusername==''){
-  	 		$scope.isShow = true;
+  	 		$scope.enuserShow = true;
   	 	}else if(!(userName.test($scope.enusername)==true)){
-  	 		$scope.isShow = true;
+  	 		$scope.enuserShow = true;
   	 	}else if($scope.enusername == $scope.myNewName){
-  	 		$scope.isShow = false;
+  	 		$scope.enuserShow = false;
   	 	}else{
-  	 		$scope.isShow = false;
+  	 		$scope.enuserShow = false;
   	 	}
   	 }
   	  	 
