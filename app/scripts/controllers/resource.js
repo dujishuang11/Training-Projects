@@ -9,13 +9,26 @@
  */
 angular.module('trainingProjectsApp')
   .controller('resourceCtrl', ["$scope","$http","$filter",function ($scope,$http,$filter) {
+  	$http({
+  		url:"http://"+ip+":401/users/?level=1",
+  		method:'get'
+  		
+  	}).then(function(e){
+  		
+		$scope.data = e.data;
+		console.log($scope.data)
+	})
+  	
+  	
+  	
   	//设置每个input的值为空
-  	$scope.shenqingren = '';
+  	$scope.shenqingren = sessionStorage.username;
 	$scope.shoujianren = '';
 	$scope.wuzi = '';
 	$scope.yongtu = '';
 	$scope.isShow = false;
 	$scope.isHide = true;
+	$scope.zhy_show = false;
 	
 	$scope.now = new Date();
 	$scope.dt2 = $filter("date")($scope.now, "yyyy/MM/dd HH:mm:ss");
@@ -31,10 +44,19 @@ angular.module('trainingProjectsApp')
 		$scope.bg2 = false;
 	}
 	$scope.toggle1=function(){
-		$scope.isHide = false;
-		$scope.bg1 = false;
-		$scope.bg2 = true;
-//		if(){}
+		
+		if(sessionStorage.level==2){
+			console.log(sessionStorage.level)
+			$scope.isHide = true;
+			$scope.bg1 = true;
+			$scope.bg2 = false;
+			$scope.zhy_show = true;
+		}else{
+			$scope.zhy_show = false;
+			$scope.isHide = false;
+			$scope.bg1 = false;
+			$scope.bg2 = true;
+		}
 		
 		
 	}
@@ -43,41 +65,44 @@ angular.module('trainingProjectsApp')
 	$scope.zhy_dis = function(){
 		$scope.isShow = !$scope.isShow
 	}
+	$scope.zhy_display = function(){
+		$scope.zhy_show = !$scope.zhy_show
+	}
 	$scope.zhy_btn1 = function(){
 		console.log($scope.shenqingren)
 		console.log($scope.shoujianren)
 		console.log($scope.wuzi)
 		console.log($scope.yongtu)
 		if($scope.shenqingren==''||$scope.shoujianren==''||$scope.wuzi==''||$scope.yongtu==''){
-			$scope.isShow = !$scope.isShow
+			$scope.isShow = !$scope.isShow;
 		}else{
-//			$http({
-//				url:"http://"+ip+":401/shoujianxiang",
-//				method:'post',
-//				data:{
-//						fusername:$scope.shenqingren,
-//						title:"办公用品",
-//						content:$scope.wuzi,
-//						date:$scope.dt2,
-//						uid:$scope.shoujianren
-//					}
-//			}).then(function(e){
-//				console.log(e)
-////				$scope
-//			})
+			$http({
+				url:"http://"+ip+":401/shoujianxiang",
+				method:'post',
+				data:{
+						fusername:$scope.shenqingren,
+						title:"办公用品申请",
+						content:$scope.wuzi,
+						date:$scope.dt2,
+						uid:$scope.shoujianren,
+						yongtu:$scope.yongtu
+					}
+			}).then(function(e){
+				console.log(e)
+				$scope.shenqingren = sessionStorage.username;
+				$scope.shoujianren = '';
+				$scope.wuzi = '';
+				$scope.yongtu = '';
+			})
 			
 			
 		}
 		
 	}
+	
+	//点击福利的提交按钮
 	$scope.zhy_btn2 = function(){
-		if($('.zhy_b1').val()==''||$('.zhy_b2').val()==''||$('.zhy_b3').val()==''||$('.zhy_b4').val()==''){
-			$('.zhy_mb').css('display','block');
-			$('.zhy_btn').bind('touchstart',function(){
-				$('.zhy_mb').css('display','none');
-			})
-			
-		}
+		
 		
 	}
 	
