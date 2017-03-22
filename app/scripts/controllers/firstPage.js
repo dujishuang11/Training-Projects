@@ -77,7 +77,7 @@ var doger_app = angular.module('trainingProjectsApp')
 //		var iHour = myTime.getHours();
 //		var iMin = myTime.getMinutes();
 //		var str = doub(iHour) + ':' + doub(iMin);
-		
+		console.log(sessionStorage.username)
 		$scope.myShow = false;
 		$scope.isShow = true;
 		var my_on = false;
@@ -125,7 +125,7 @@ var doger_app = angular.module('trainingProjectsApp')
 							time3:bafu,
 							time4:bafn,
 							summary:"",
-							uid:"蔺慧强"
+							uid:sessionStorage.username
 						}
 					}).then(function(data){
 						my_id = data.data.id
@@ -143,7 +143,7 @@ var doger_app = angular.module('trainingProjectsApp')
 							time3:aafn,
 							time4:aafu,
 							summary:"",
-							uid:"蔺慧强"
+							uid:sessionStorage.username
 						}
 					}).then(function(data){
 //						my_big_id = my_id
