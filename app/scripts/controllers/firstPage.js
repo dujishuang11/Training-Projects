@@ -83,7 +83,7 @@ var doger_app = angular.module('trainingProjectsApp')
 		var my_on = false;
 		var my_id = '';
 //		var my_big_id = '';
-		wtf("","","","");
+//		wtf("","","","");
 //		var my_map = document.getElementsByClassName('doger_my_map');
 //		$scope.aa = my_map;
 //		console.log($scope.aa[0].innerHTML)
