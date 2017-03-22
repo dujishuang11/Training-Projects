@@ -47,6 +47,17 @@
 .zhy_content_li:nth-child(2){
 	margin-top: 0.7rem;
 }
+.zhy_content_li:nth-child(2) .zhy_content_li_r select{
+	width: 80%;
+	height: 100%;
+	padding: 0.2rem 0;
+	/*background: none;*/
+	/*border: none;*/
+	outline: none;
+	font-size: 0.8rem;
+	border:0.1rem solid #ccc;
+}
+
 .zhy_content_li:nth-child(3){
 	margin-top: 1rem;
 }
