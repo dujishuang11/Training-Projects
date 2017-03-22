@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 <<<<<<< HEAD
+	<name>Kabosu</name>
+=======
+<<<<<<< HEAD
 	<name>lhq-sb</name>
 =======
-	<name>xinagmua</name>
+	<name>trainingProjects</name>
+>>>>>>> origin/master
 >>>>>>> origin/master
 	<comment></comment>
 	<projects>
@@ -18,13 +22,13 @@
 	<natures>
 		<nature>com.aptana.projects.webnature</nature>
 	</natures>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 	<filteredResources>
 		<filter>
-<<<<<<< HEAD
-			<id>1490005919103</id>
-=======
-			<id>1490055482922</id>
->>>>>>> origin/master
+			<id>1490055640427</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -33,4 +37,6 @@
 			</matcher>
 		</filter>
 	</filteredResources>
+>>>>>>> origin/master
+>>>>>>> origin/master
 </projectDescription>

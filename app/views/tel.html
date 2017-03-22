@@ -1,21 +1,18 @@
 <div ng-controller="telCtrl">
-	<wyh-new>
-	<wyh-del>
-	<wyh-change>
 	<div class="wyh_wrapper">
 		<div>
 			<i class="iconfont icon-3333333"></i>
 			<span>通讯录</span>
 		</div>
-		<input type="button" class="btn btn-info wyhadd" value="新增"  />
+		<input type="button" class="btn btn-info wyhadd" value="新增" ng-click="telAdd()" />
 	</div>
 	<div class="wyh_border"></div>
 	<div class="wyh_search">
 		<div>关键字：</div>
-		<input type="text" class="form-control" />
-		<input type="button" value="查询" class="btn wyh_bbt"/>
+		<input type="text" class="form-control" ng-model="mainkey" />
+		<input type="button" value="查询" class="btn wyh_bbt" ng-click="sousuo()" />
 	</div>
-	
+
 	<div class="wyh_center">
 		<div class="wyh_titl">
 			<span>姓名</span>
@@ -24,99 +21,22 @@
 			<span>操作</span>
 		</div>
 		<div class="wyh_allul">
-			<ul class="wyh_ul1">
+			<ul class='wyh_ul1' ng-repeat="ddata in data" ng-click='xiangqing(ddata)'>
+				<li>{{ddata.name}}</li>
+				<li>{{ddata.tel}}</li>
+				<li>{{ddata.email}}</li>
 				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true"  value="" />
-				</li>
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<button class="btn btn-danger wyh_abtn">删除</button>
-					<button class="btn btn-primary wyh_bbtn">编辑</button>
-				</li>
-			</ul>
-			<ul class="wyh_ul1">
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<button class="btn btn-danger wyh_abtn">删除</button>
-					<button class="btn btn-primary wyh_bbtn">编辑</button>
-				</li>
-			</ul>
-			<ul class="wyh_ul1">
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<button class="btn btn-danger wyh_abtn">删除</button>
-					<button class="btn btn-primary wyh_bbtn">编辑</button>
-				</li>
-			</ul>
-			<ul class="wyh_ul1">
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<button class="btn btn-danger wyh_abtn">删除</button>
-					<button class="btn btn-primary wyh_bbtn">编辑</button>
-				</li>
-			</ul>
-			<ul class="wyh_ul1">
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<button class="btn btn-danger wyh_abtn">删除</button>
-					<button class="btn btn-primary wyh_bbtn">编辑</button>
-				</li>
-			</ul>
-			<ul class="wyh_ul1">
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<input type="text" class="form-control wyh_dis" disabled="true" value="" />
-				</li>
-				<li>
-					<button class="btn btn-danger wyh_abtn">删除</button>
-					<button class="btn btn-primary wyh_bbtn">编辑</button>
+					<button class='btn btn-danger wyh_abtn' ng-click="del(ddata.id,$index)">删除</button>
+					<button class='btn btn-primary wyh_bbtn' ng-click="bianji(ddata.id)">编辑</button>
 				</li>
 			</ul>
 		</div>
 	</div>
-	</wh-change>
-	</wyh-del>
-	</wyh-new>
+	<div class="lhq-zezao" ng-show="djsShow">
+		<div class="lhq-zezaobox modal-content">
+			<i class="iconfont icon-guanbi" ng-click="djsGuan()"></i>
+			<p>小强欧巴</p>
+			<span>请输入完整信息！</span>
+		</div>
+	</div>
 </div>
