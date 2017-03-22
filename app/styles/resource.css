@@ -75,7 +75,7 @@
 	/*border: none;*/
 	outline: none;
 	font-size: 0.8rem;
-	border-bottom:0.1rem solid #ccc;
+	border:0.1rem solid #ccc;
 }
 .zhy_text .zhy_li:nth-child(2) select option{
 	width: 10%;
@@ -138,7 +138,7 @@
 	/*border: none;*/
 	outline: none;
 	font-size: 0.8rem;
-	border-bottom:0.1rem solid #ccc;
+	border:0.1rem solid #ccc;
 }
 
 .zhy_txt .zhy_li:nth-child(3){
