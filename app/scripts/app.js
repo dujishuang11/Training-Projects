@@ -22,7 +22,7 @@ angular
   	})
   	$stateProvider.state("business",{
   		url: '/business',
-  		templateUrl: 'views/business.html'
+  		templateUrl: 'views/firstPage.html'
   	})
   	$stateProvider.state("firstPage",{
   		url: '/firstPage',
@@ -34,7 +34,7 @@ angular
   	})
   	$stateProvider.state("personinfo",{
   		url: '/personinfo',
-  		templateUrl: 'views/personinfo.html'
+  		templateUrl: 'views/firstPage.html'
   	})
   	$stateProvider.state("resource",{
   		url: '/resource',
@@ -68,5 +68,5 @@ angular
   		url: '/enroll',
   		templateUrl: 'views/enroll.html'
   	})
-  	$urlRouterProvider.otherwise('/officebox')
+	$urlRouterProvider.otherwise('/enroll')
   }])

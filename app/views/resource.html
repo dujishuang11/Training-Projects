@@ -14,13 +14,15 @@
 			<li class="zhy_li">
 				<div class="zhy_li_left">申请人：</div>
 				<div class="zhy_li_right">
-					<input type="text" class="zhy_a1" ng-model="shenqingren"/>
+					<input type="text" ng-model="shenqingren" disabled="disabled"/>
 				</div>
 			</li>
 			<li class="zhy_li">
 				<div class="zhy_li_left">收件人：</div>
 				<div class="zhy_li_right">
-					<input type="text" class="zhy_a2" ng-model="shoujianren"/>
+					<select ng-model="shoujianren">
+						<option ng-repeat="a in data">{{a.username}}</option>
+					</select>
 				</div>
 			</li>
 			
@@ -28,43 +30,46 @@
 			<li class="zhy_li">
 				<div class="zhy_li_left">物&#x3000;资：</div>
 				<div class="zhy_li_right">
-					<textarea rows="0" cols="0" class="zhy_a3" ng-model="wuzi"></textarea>
+					<textarea rows="0" cols="0" ng-model="wuzi"></textarea>
 				</div>
 			</li>
 			<li class="zhy_li">
 				<div class="zhy_li_left">用&#x3000;途：</div>
 				<div class="zhy_li_right">
-					<textarea rows="0" cols="0" class="zhy_a4" ng-model="yongtu"></textarea>
+					<textarea rows="0" cols="0" ng-model="yongtu"></textarea>
 				</div>
 			</li>
 			<div class="zhy_foot1">
 				<input type="button" value="提交" class="btn-info btn btn-lg" ng-click="zhy_btn1()" />
 			</div>
 		</div>
+		
 		<div class="zhy_txt" ng-hide="isHide">
 			<li class="zhy_li">
 				<div class="zhy_li_left">申请人：</div>
 				<div class="zhy_li_right">
-					<input type="text" class="zhy_b1"/>
+					<input type="text"/>
 				</div>
 			</li>
 			<li class="zhy_li">
 				<div class="zhy_li_left">收件人：</div>
 				<div class="zhy_li_right">
-					<input type="text" class="zhy_b2"/>
+					<select>
+						<option></option>
+					</select>
 				</div>
 			</li>
 			
 			<li class="zhy_li">
 				<div class="zhy_li_left">福&#x3000;利：</div>
 				<div class="zhy_li_right">
-					<textarea rows="0" cols="0" class="zhy_b3"></textarea>
+					<textarea rows="0" cols="0"></textarea>
 				</div>
 			</li>
 			<li class="zhy_li">
 				<div class="zhy_li_left">原&#x3000;因：</div>
 				<div class="zhy_li_right">
-					<textarea rows="0" cols="0" class="zhy_b4"></textarea>
+					<textarea rows="0" cols="0"></textarea>
 				</div>
 			</li>
 			<div class="zhy_foot2">
@@ -72,9 +77,16 @@
 			</div>
 		</div>
 		
+		
+		
 		<div class="zhy_mb" ng-show = "isShow">
 			<p>输入的内容不能为空</p>
 			<button class="btn-info btn btn-xs" ng-click="zhy_dis()">确定</button>
+		</div>
+		
+		<div class="zhy_mb" ng-show = "zhy_show">
+			<p>对不起，您没有访问权限</p>
+			<button class="btn-info btn btn-xs" ng-click="zhy_display()">确定</button>
 		</div>
 		
 		

@@ -8,54 +8,57 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
- .controller('telCtrl',function() {
-
-})
-.directive("wyhNew",function(){
-	return function(s,e,a){
-		var hml="<ul class='wyh_ul1'><li></li><li></li><li></li><li><button class='btn btn-danger wyh_abtn'>删除</button><button class='btn btn-primary wyh_bbtn'>编辑</button></li></ul>";
-		e.find('.wyhadd').on("touchstart",function(){
-			e.find(".wyh_allul").append(hml)
+	.controller('telCtrl', ["$scope", "$http", "$state", function($scope, $http, $state) {
+		$scope.djsShow = false;
+		$http({
+			url: "http://" + ip + ":401/users",
+			method: "get"
+		}).then(function(e) {
+			$scope.data = e.data;
+//			console.log($scope.data)
 		})
-	}
-})
-.directive("wyhDel",function(){
-	return function(s,e,a){
-		var fid = e.find('.wyh_ul1');
-		for(var i=0; i<e.find(".wyh_abtn").length; i++){
-			e.find(".wyh_abtn")[i].index = i;
-			e.find(".wyh_abtn")[i].addEventListener("touchstart",function(){
-				fid[this.index].remove()
+
+		//	点击每条数据跳转到此数据的详情页
+		$scope.xiangqing = function(data) {
+//			console.log(data)
+			sessionStorage.setItem("personinfo", data.name)
+		}
+
+		//	关键字搜索
+		$scope.sousuo = function() {
+			$http({
+				url: "http://" + ip + ":401/users/?name=" + $scope.mainkey,
+				method: "get"
+			}).then(function(e) {
+				$scope.data = e.data;
 			})
 		}
-	}
-})
-.directive("wyhChange",function(){
-	return function(s,e,a){
-		var fidd = e.find('.wyh_ul1');
-//		console.log(fidd)
-		for(var i=0; i<e.find(".wyh_bbtn").length; i++){
-			e.find(".wyh_bbtn")[i].index = i;
-			var off=true;
-			e.find(".wyh_bbtn")[i].addEventListener("touchstart",function(){
-				var Inp = this.parentNode.parentNode.getElementsByTagName("input")
-				if(off){
-					for(var i = 0; i < Inp.length; i++ ){
-						Inp[i].removeAttribute('disabled');
-					}
-					e.find(".wyh_bbtn")[this.index].innerHTML="完成";
-					off=false;
-				}
-				else{
-					for(var i = 0; i < Inp.length; i++ ){
-						Inp[i].setAttribute("disabled", "false");
-					}
-					e.find(".wyh_bbtn")[this.index].innerHTML="编辑";
-					off=true;
-				}
-			})
+
+		//	所点击数据删除
+		$scope.del = function(idd,index) {
+			if(sessionStorage.level != '2') {
+				$http({
+					url: "http://" + ip + ":401/users/"+idd,
+					method: "delete"
+				}).then(function(e) {
+					$scope.data.splice(index,1)
+				})
+			}else{
+				$scope.djsShow = true;
+			}
+
 		}
 		
+//		点击新增
+		$scope.telAdd = function() {
+			if(sessionStorage.level != '2') {
+				$state.go("enroll")
+			}
+		}
 		
-	}
-})
+//		点击编辑
+		$scope.bianji = function(id){
+			sessionStorage.id = id
+		}
+
+	}])

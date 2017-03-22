@@ -44,45 +44,49 @@ angular.module('trainingProjectsApp')
   	}
 
 //    点击登录   
-     $scope.logining=function(){
-       $http({
-     	url:"http://"+ip+":401/users/login",
-     	method:"post",
-     	data:{
-     		'username':$scope.username,
-     		'password':$scope.passwold
-     	}
-       }).then(function(e){
-     	  sessionStorage.username=$scope.username;
-     	  var a=e.data.uid;
-     	  $http({
-     	  	url:"http://"+ip+":401/users/?id="+a,
-     	  	method:"get"
-     	  }).then(function(e){
-     	  	sessionStorage.level=e.data.level;
-     	  	console.log(sessionStorage.level);
-     	  	$state.go('firstPage');
-     	  })  
-       })
-        
+     $scope.username='';
+     $scope.passwold ='';
+     $scope.logining = function() {
+     	$scope.loginshow = false;
+		if($scope.username=='') {
+			$scope.loginshow = true;
+		}
+		else if($scope.passwold =='') {
+			$scope.loginshow = true;
+		} 
+         else {
+			$http({
+				url: "http://" + ip + ":401/users/login",
+				method: "post",
+				data: {
+					'username': $scope.username,
+					'password': $scope.passwold
+				}
+			}).then(function(e) {
+				console.log(e)
+				sessionStorage.username = $scope.username;
+				var a = e.data.uid;
+				$http({
+					url: "http://" + ip + ":401/users/?id=" + a,
+					method: "get"
+				}).then(function(e) {
+					sessionStorage.level = e.data.level;
+					// console.log(sessionStorage.level);
+					if(sessionStorage.level == '0') {
+						console.log('大boss')
+					} else if(sessionStorage.level == '1') {
+						console.log('经理')
+					} else {
+						console.log('员工')
+					}
+	   	  	       $state.go('firstPage');
+				})
+			})
+		}
      }
-    
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
+     $scope.loginHide=function(){
+     	$scope.loginshow = false;
+     }
      
      
   }])
