@@ -127,7 +127,7 @@ html,body {
 	z-index: 99;
 }
 
-.doger-right p:nth-child(1){
+.doger-main p:nth-child(1){
 	font-size: 1rem;
 	margin-top: 1rem;
 	margin-left: 1rem;
@@ -136,7 +136,7 @@ html,body {
 	/*font-weight: bold;*/
 }
 
-.doger-right p:nth-child(1) span {
+.doger-main p:nth-child(1) span {
 	float: right;
 	margin-top: .5rem;
 	font-size: .6rem;
@@ -144,7 +144,7 @@ html,body {
 	margin-right: 2rem;
 }
 
-.doger-right p:nth-child(1) i {
+.doger-main p:nth-child(1) i {
 	font-size: 1.3rem;
 	vertical-align: middle;
 	margin-right: .3rem;
