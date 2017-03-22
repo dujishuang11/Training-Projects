@@ -11,15 +11,15 @@
 			
 			<div class="doger-left">
 				<ul class="doger-list">
-					<li><span><i class="iconfont icon-app"></i>首页</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = 'firstPage'></a><>
-					<li><span><i class="iconfont icon-kaoqin4"></i>考勤信息</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.salary'></a><>
-					<li><span><i class="iconfont icon-3333333"></i>个人通讯录</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.tel'></a><>
-					<li><span><i class="iconfont icon-richeng"></i>日程事务</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.business'></a><>
-					<li><span><i class="iconfont icon-youxiang-shoujianxiang"></i>收件箱</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.officebox'></a><>
-					<li><span><i class="iconfont icon-ziyuan"></i>资源申请</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.resource'></a><>
-					<li><span><i class="iconfont icon-touxiang"></i>个人信息</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.personinfo'></a><>
+					<li><span><i class="iconfont icon-app"></i>首页</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = 'firstPage'></a></li>
+					<li><span><i class="iconfont icon-kaoqin4"></i>考勤信息</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.salary'></a></li>
+					<li><span><i class="iconfont icon-3333333"></i>个人通讯录</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.tel'></a></li>
+					<li><span><i class="iconfont icon-richeng"></i>日程事务</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.business'></a></li>
+					<li><span><i class="iconfont icon-youxiang-shoujianxiang"></i>收件箱</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.officebox'></a></li>
+					<li><span><i class="iconfont icon-ziyuan"></i>资源申请</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.resource'></a></li>
+					<li><span><i class="iconfont icon-touxiang"></i>个人信息</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.personinfo'></a></li>
 					<li><span><i class="iconfont icon-shenqing"></i>请假申请</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.vacate'></a><>
-					<li><span><i class="iconfont icon-zhuangxiufengge"></i>风格界面</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.styleModality'></a><>
+					<li><span><i class="iconfont icon-zhuangxiufengge"></i>风格界面</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.styleModality'></a></li>
 				</ul>
 			</div>
 			<!--</lxmfrg>-->
@@ -66,7 +66,7 @@
 				<i class="iconfont icon-guanbi" ng-click = "lxmclo()"></i>
 				<p class="doger_succ">签到成功</p>
 				<p class="doger_erro">错误:404</p>
-				<p>立即查看</p>
+				<p><a ui-sref = '.salary' ng-click = "lxmclo()">立即查看</a></p>
 			</div>
 		</div>
 	</lxmfrg>
@@ -83,11 +83,11 @@
 			var str = ''
 			str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec);
 //			$('.doger-my-time').text(str);
-			for(var i = 0; i < $('.doger-right img').length; i++) {
+			for(var i = 0; i < $('.doger-time img').length; i++) {
 				if(i == 2 || i == 5) {
-					$('.doger-right img')[i].src = '../img/time/colon.JPG';
+					$('.doger-time img')[i].src = '../img/time/colon.JPG';
 				} else {
-					$('.doger-right img')[i].src = '../img/time/' + str.charAt(i) + '.JPG'
+					$('.doger-time img')[i].src = '../img/time/' + str.charAt(i) + '.JPG'
 				}
 			}
 		}

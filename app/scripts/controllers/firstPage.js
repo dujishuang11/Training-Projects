@@ -67,6 +67,10 @@ var doger_app = angular.module('trainingProjectsApp')
 		var doger_data = new Date();
 //		alert(sss)
 		var doger_my_data = doger_data.getFullYear()+"-"+(doger_data.getMonth()+1)+"-"+doger_data.getDate();
+//		var doger_my_data = '2017-3-26'
+//		console.log(doger_my_data1)
+		
+//		localStorage.my_day = doger_my_data;
 //		var my_map = document.getElementsByClassName('doger_my_map');
 //		console.log(my_map[])
 //		if(my_map.innerHTML != ''){
@@ -82,21 +86,40 @@ var doger_app = angular.module('trainingProjectsApp')
 		$scope.isShow = true;
 		var my_on = false;
 		var my_id = '';
+		if(localStorage.my_map){
+			my_id = localStorage.my_map
+		}
 //		var my_big_id = '';
-		
-		$http({
-			url:doger_url,
-			method:'get'
-		}).then(function(data){
-			for(var i = 0; i < data.data.length; i++){
-				if(sessionStorage.username == data.data[i].uid){
-					console.log('???')
-//					break;
-				}else{
-					wtf("","","","");
-				}
-			}
-		})
+		wtf("","","","");
+		whthfu()
+//		$http({
+//			url:doger_url,
+//			method:'get'
+//		}).then(function(data){
+//			if(data.data.length > 0){
+//				for(var i = 0; i < data.data.length; i++){
+////					console.log(1111111111)
+////					if(doger_my_data != data.data[0].date){
+////						localStorage.removeItem('my_map')
+////						wtf("","","","");
+////						whthfu()
+////					}
+//					if(sessionStorage.username == data.data[i].uid){
+//						my_on = true
+////						alert('请勿重复签到')
+////	//					break;
+//						whthfu()
+//					}else{
+//						wtf("","","","");
+//						whthfu()
+//					}
+//				}
+//			}
+//			else{
+//				wtf("","","","");
+//				whthfu()
+//			}
+//		})
 //		var my_map = document.getElementsByClassName('doger_my_map');
 //		$scope.aa = my_map;
 //		console.log($scope.aa[0].innerHTML)
@@ -167,6 +190,8 @@ var doger_app = angular.module('trainingProjectsApp')
 //						my_big_id = my_id
 //						console.log(data.data.id)
 						my_id = data.data.id
+						localStorage.my_map = my_id;
+						console.log(localStorage.my_map)
 //						console.log($scope.my_id)
 					})
 				}
@@ -179,8 +204,10 @@ var doger_app = angular.module('trainingProjectsApp')
 
 			
 		
-		var my_aa = document.getElementsByClassName('doger_succ')[0];
-		$scope.lxmtipOne = function(e) {
+		
+		function whthfu(){
+			var my_aa = document.getElementsByClassName('doger_succ')[0];
+			$scope.lxmtipOne = function(e) {
 			getLocation();
 			var myTime = new Date();
 			var iHour = myTime.getHours();
@@ -358,6 +385,7 @@ var doger_app = angular.module('trainingProjectsApp')
 				my_map_erro.innerHTML = '无法获取当前地理位置'
 				$scope.myShow = !$scope.myShow;
 			}	
+		}
 		}
 		
 		$scope.lxmclo = function(e) {
