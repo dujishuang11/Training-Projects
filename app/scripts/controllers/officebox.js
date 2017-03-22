@@ -11,14 +11,16 @@
 angular.module('trainingProjectsApp')
  .controller('officeboxCtrl', ['$scope','$http','$state',function ($scope,$http,$state){
  			var lhq_xun = '';
- 			var num = 0;
- 			var num1 = 0;
+ 			var lhqnum = 0;
+ 			var lhqnum1 = 0;
  			var dat = [];
 			var urll = 'http://'+ip+':401/shoujianxiang';  	  
 			$http({
-				url:urll,
+				url:urll+"/?uid"+sessionStorage.username,
+//				sessionStorage.username
 				method:'GET'
 			}).then(function(data){
+				console.log(data.data)
 				$scope.daat= data.data;
 				$scope.aaa()
 			})
@@ -33,32 +35,32 @@ angular.module('trainingProjectsApp')
 			
 			
 			$scope.bottom_lhq=function(){
-				if(num>$scope.daat.length){
-    				return num-=10;
+				if(lhqnum>$scope.daat.length){
+    				return lhqnum-=10;
     			}
-				num +=10;
-    			if(num>$scope.daat.length){
-    				return num-=10;
+				lhqnum +=10;
+    			if(lhqnum>$scope.daat.length){
+    				return lhqnum-=10;
     			}else{
     				$scope.aaa()
     			}
     		}
 			$scope.top_lhq=function(){
-    			num -=10;
+    			lhqnum -=10;
   
-    			if(num<0){
-					return num=0
+    			if(lhqnum<0){
+					return lhqnum=0
 				}else{
 					$scope.aaa()
 				}
     		}
 			
 			$scope.aaa = function(){
-				num1 = 0;
+				lhqnum1 = 0;
 				dat = []
-				for(var i=num; i<$scope.daat.length; i++){
-					num1++;
-					if(num1>10){
+				for(var i=lhqnum; i<$scope.daat.length; i++){
+					lhqnum1++;
+					if(lhqnum1>10){
 						break;
 					}else{
 						dat.push($scope.daat[i])

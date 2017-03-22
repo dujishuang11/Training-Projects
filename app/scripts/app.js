@@ -64,9 +64,23 @@ angular
   		url: '/salary',
   		views:{
   			content:{
+<<<<<<< HEAD
   				templateUrl: 'views/salary.html'
   			}
   		}
+=======
+  				templateUrl: 'views/salary.html'		
+  			}
+  		}
+  		
+//		url: '/salary',
+//		views:{
+//			main:{
+//				templateUrl: 'views/firstPage.html',
+//				controller:"salaryCtrl"
+//			}
+//		}
+>>>>>>> origin/master
   	})
   	$stateProvider.state("firstPage.styleModality",{
   		url: '/styleModality',

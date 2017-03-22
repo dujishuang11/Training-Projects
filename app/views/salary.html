@@ -1,53 +1,35 @@
 <div ng-controller="salaryCtrl">
-	 <div class="zhj_header">
-	 	<div class="zhj_check">
-	 		<span class="iconfont icon-kaoqin4"></span>
-	 		<span>在线考勤</span>	 		
-	 	</div>
-	 	<div class="zhj_border"></div>
-<!--包着日期的盒子-->
-	 <div class="zhj_content">
-	 	<ul>
-	 		<li>日期</li>
-	 		<li>上午上班</li>
-	 		<li>上午下班</li>
-	 		<li>下午上班</li>
-	 		<li>下午下班</li>
-	 		<li>
-	 			<span>备注</span>
-	 		    <button zhj-set-div class="zhj_button" ng-click='toggle()'>编辑</button>
-	 		</li>
-	 	</ul>
-	 	<div class="zhj_secondLi">
-	 	<ul>
-	 		<li>11-22</li>
-	 		<li>√</li>
-	 		<li>√</li>
-	 		<li>√</li>
-	 		<li>√</li>
-	 		<input type="text" value="工作良好"/>
-	 	</ul>
-	   </div>
-	   <div class="zhj_secondLi">
-	 	<ul>
-	 		<li>11-22</li>
-	 		<li>×</li>
-	 		<li>×</li>
-	 		<li>×</li>
-	 		<li>×</li>
-	 		<input type="text" value="工作态度差"/>
-	 	</ul>
-	   </div>
-	   <div class="zhj_secondLi">
-	 	<ul>
-	 		<li>11-22</li>
-	 		<li>○</li>
-	 		<li>○</li>
-	 		<li>○</li>
-	 		<li>○</li>
-	 		<input type="text" value="缺勤一天"/>
-	 	</ul>
-	  </div>
-	</div>
-   </div>	
+	<zhj-set-div>
+		<div class="zhj_header">
+			<div class="zhj_check">
+				<span class="iconfont icon-kaoqin4"></span>
+				<span>在线考勤</span>
+			</div>
+			<div class="zhj_border"></div>
+			<div class="zhj_secondLi">
+				<div ng-repeat = 'a in btn'>
+					<ol>
+						<li>日期</li>
+						<li>上午上班</li>
+						<li>上午下班</li>
+						<li>下午上班</li>
+						<li>下午下班</li>
+					</ol>
+					<ul>
+						<li><p>{{a.date.split('-')[0]}}</p><br><p>{{a.date.split('-')[1]}}</p><p>{{-a.date.split('-')[2]}}</p></li>
+						<li><span>{{a.time1.split('-')[0]}}</span><br><span>{{a.time1.split('-')[1]}}</span></li>
+						<li><span>{{a.time2.split('-')[0]}}</span><br><span>{{a.time2.split('-')[1]}}</span></li>
+						<li><span>{{a.time3.split('-')[0]}}</span><br><span>{{a.time3.split('-')[1]}}</span></li>
+						<li><span>{{a.time4.split('-')[0]}}</span><br><span>{{a.time4.split('-')[1]}}</span></li>
+						
+						<div class="zhj_doger_ipt">
+							<div>备注<br>内容</div>
+							<textarea class="zhj_doger_why" readonly placeholder="此处填写备注内容">{{a.summary}}</textarea>
+							<div class="zhj_doger_tip">编辑</div>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</zhj-set-div>
 </div>
