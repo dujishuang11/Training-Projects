@@ -9,17 +9,20 @@
 	width: 100%;
 	height: 1.7rem;
 	font-size: 0.7rem;
+	
 }
 .zhy_title_left{
 	text-align: center;
 	line-height: 1.7rem;
 	text-align: center;
+	margin: 0;
 	/*background: red;*/
 	overflow: hidden;
 }
 .zhy_title_left .zhy_p1{
 	padding: 0 0.5rem;
 	float: left;
+	
 }
 .zhy_title_left .zhy_p2{
 	float: left;
