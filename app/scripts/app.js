@@ -22,7 +22,7 @@ angular
   	})
   	$stateProvider.state("business",{
   		url: '/business',
-  		templateUrl: 'views/business.html'
+  		templateUrl: 'views/firstPage.html'
   	})
   	$stateProvider.state("firstPage",{
   		url: '/firstPage',
@@ -34,15 +34,27 @@ angular
   	})
   	$stateProvider.state("personinfo",{
   		url: '/personinfo',
-  		templateUrl: 'views/personinfo.html'
+  		templateUrl: 'views/firstPage.html'
   	})
   	$stateProvider.state("resource",{
   		url: '/resource',
   		templateUrl: 'views/resource.html'
   	})
-  	$stateProvider.state("salary",{
+  	$stateProvider.state("firstPage.salary",{
   		url: '/salary',
-  		templateUrl: 'views/salary.html'
+  		views:{
+  			content:{
+  				templateUrl: 'views/salary.html'		
+  			}
+  		}
+  		
+//		url: '/salary',
+//		views:{
+//			main:{
+//				templateUrl: 'views/firstPage.html',
+//				controller:"salaryCtrl"
+//			}
+//		}
   	})
   	$stateProvider.state("styleModality",{
   		url: '/styleModality',
@@ -68,6 +80,5 @@ angular
   		url: '/enroll',
   		templateUrl: 'views/enroll.html'
   	})
-	$urlRouterProvider.otherwise('/login')
+  	$urlRouterProvider.otherwise('/firstPage')
   }])
-  ;

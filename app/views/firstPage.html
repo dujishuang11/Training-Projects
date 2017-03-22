@@ -1,49 +1,83 @@
 <div class="doger-box" ng-controller="firstPage">
-	<lxm>
+	<lxmfrg>
 		<div class="doger-top">
 			<p class="doger-title">
 				<img src="../img/icon.png" class="img-thumbnail" alt="" />
 				<span>Username</span>
 			</p>
 		</div>
+<<<<<<< HEAD
 		<div class="doger-wrapper" >
+=======
+		
+		<div class="doger-wrapper">
+			
+>>>>>>> origin/master
 			<div class="doger-left">
-				<ul>
-					<li><span><i class="iconfont icon-kaoqin4"></i>在线考勤</span></li>
-					<li><span><i class="iconfont icon-3333333"></i>个人通讯录</span></li>
-					<li><span><i class="iconfont icon-richeng"></i>日程事务</span></li>
-					<li><span><i class="iconfont icon-youxiang-shoujianxiang"></i>收件箱</span></li>
-					<li><span><i class="iconfont icon-ziyuan"></i>资源申请</span></li>
-					<li><span><i class="iconfont icon-touxiang"></i>个人信息</span></li>
-					<li><span><i class="iconfont icon-shenqing"></i>请假申请</span></li>
-					<li><span><i class="iconfont icon-zhuangxiufengge"></i>风格界面</span></li>
+				<ul class="doger-list">
+					<li><span><i class="iconfont icon-app"></i>首页</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.firstPage'></a></li>
+					<li><span><i class="iconfont icon-kaoqin4"></i>考勤信息</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.salary'></a></li>
+					<li><span><i class="iconfont icon-3333333"></i>个人通讯录</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.tel'></a></li>
+					<li><span><i class="iconfont icon-richeng"></i>日程事务</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.business'></a></li>
+					<li><span><i class="iconfont icon-youxiang-shoujianxiang"></i>收件箱</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.officebox'></a></li>
+					<li><span><i class="iconfont icon-ziyuan"></i>资源申请</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.resource'></a></li>
+					<li><span><i class="iconfont icon-touxiang"></i>个人信息</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.personinfo'></a></li>
+					<li><span><i class="iconfont icon-shenqing"></i>请假申请</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.vacate'></a></li>
+					<li><span><i class="iconfont icon-zhuangxiufengge"></i>风格界面</span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.styleModality'></a></li>
 				</ul>
 			</div>
-			
-			<div class="doger-right">
-				<p>在线考勤</p>
-				<div class="doger-time">
-					<!--<p class="doger-my-time"></p>-->
-					<img/>
-					<img/>
-					<img/>
-					<img/>
-					<img/>
-					<img/>
-					<img/>
-					<img/>
+			<!--</lxmfrg>-->
+			<div class="doger-right" ui-view="content">
+				<!--<ui-view>-->
+				<!--<lxmfrg>-->
+				<div class="doger-main">
+					<p><i class="iconfont icon-kaoqin4"></i>在线考勤<span class="doger_data"></span></p>
+					<div class="doger-time">
+						<img/>
+						<img/>
+						<img/>
+						<img/>
+						<img/>
+						<img/>
+						<img/>
+						<img/>
+					</div>
+					<lxmlow>
+					<div class="doger-map">
+						<p><i class="iconfont icon-dizhi2"></i>当前位置</p>
+						<p class="doger_my_map"></p>
+						<p class="doger_my_map_nan" ng-show = "isShow">正在获取当前位置</p>
+					</div>
+					</lxmlow>
+					<div class="doger-work">
+						<button ng-click = 'lxmtipOne()'>上午上班</button>
+						<button ng-click = 'lxmtipTwo()'>上午下班</button><br><br><br>
+						<button ng-click = 'lxmtipThree()'>下午上班</button>
+						<button ng-click = 'lxmtipFour()'>下午下班</button>
+					</div>
+					
 				</div>
+				<!--</ui-view>-->
 				<!--<ui-view>-->
 					
 				<!--</ui-view>-->
 			</div>
 			
 		</div>
-	</lxm>
+		
+		<div class="doger_tip" ng-show = "myShow">
+			<div class="modal-content doger_tip_content">
+				<i class="iconfont icon-guanbi" ng-click = "lxmclo()"></i>
+				<p class="doger_succ">签到成功</p>
+				<p class="doger_erro">错误:404</p>
+				<p>立即查看</p>
+			</div>
+		</div>
+	</lxmfrg>
 	<script>
+		//时间
 		setInterval(fnTime, 1000)
 		fnTime();
-		
 		function fnTime() {
 			var myTime = new Date();
 			var iHour = myTime.getHours();
@@ -60,9 +94,63 @@
 				}
 			}
 		}
-		
 		function doub(n) {
 			return n < 10 ? '0' + n : '' + n
 		}
+		//位置
+//		$(".doger-my-map").html('正在定位...');
+//		function getLocation(){   
+//		    if (navigator.geolocation){   
+//		        navigator.geolocation.getCurrentPosition(showPosition,showError);   
+//		    }else{   
+//		        alert("浏览器不支持地理定位。");   
+//		    }   
+//		}
+//		function showPosition(position){
+////			$(".doger-my-map").html("纬度:"+position.coords.latitude +'，经度:'+ position.coords.longitude);
+//			var latlon = position.coords.latitude+','+position.coords.longitude;
+//			//baidu
+//			var url = "http://api.map.baidu.com/geocoder/v2/?ak=C93b5178d7a8ebdb830b9b557abce78b&callback=renderReverse&location="+latlon+"&output=json&pois=0";
+//			$.ajax({ 
+//				type: "GET", 
+//				dataType: "jsonp", 
+//				url: url,
+//				beforeSend: function(){
+////					$(".doger_my_map").html('正在定位...');
+//				},
+//				success: function (json) { 
+//					if(json.status==0){
+//						$(".doger_my_map").html(json.result.formatted_address);
+//					}
+//				},
+//				error: function (XMLHttpRequest, textStatus, errorThrown) { 
+//					$(".doger_my_map").html(latlon+"地址位置获取失败"); 
+//				}
+//			});
+//		}
+//
+//		function showError(error){
+//			switch(error.code) {
+//				case error.PERMISSION_DENIED:
+//					console.log("定位失败,用户拒绝请求地理定位");
+//					break;
+//				case error.POSITION_UNAVAILABLE:
+//					console.log("定位失败,位置信息是不可用");
+//					break;
+//				case error.TIMEOUT:
+//					console.log("定位失败,请求获取用户位置超时");
+//					break;
+//				case error.UNKNOWN_ERROR:
+//					console.log("定位失败,定位系统失效");
+//					break;
+//		    }
+//		}
+//
+//		getLocation();
+
+		var doger_data = new Date();
+		var doger_my_data = doger_data.getFullYear()+"-"+(doger_data.getMonth()+1)+"-"+doger_data.getDate();
+		$('.doger_data').text(doger_my_data)
+		
 	</script>
 </div>

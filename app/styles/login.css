@@ -1,12 +1,12 @@
 .zhj_wrapper{
 	width: 100%;
 	height:28.4rem;
-	background: url(../images/bj1.png) no-repeat;
+	background: url(../images/beijing.png) no-repeat;
 	background-size: 100% 100%;
 }
 .zhj_welcome{
 	width: 100%;
-	height: 2.5rem;
+	height: 7rem;
 	float: left;
 	font-size: 2rem;
 	text-align: center;
@@ -15,29 +15,34 @@
 	text-shadow: 2px 0px 0px #000;
 	font-weight: bold;
 	font-family: "blackadder itc";
-	margin-top: 6rem;
+	margin-top: 3rem;
+	/*background: pink;*/	
+}
+.zhj_welcome img{
+	width: 5.5rem;
+	height: 6rem;
 }
 .zhj_loginName{
 	width: 100%;
 	height: 2rem;
 	float: left;
-	font-size: 0.8rem;
+	font-size: 1.5rem;
 	text-align: center;
 	line-height: 2rem;
 	color:white;
 	text-shadow: 2px 0px 0px #000;
 	font-family: "blackadder itc";
 	font-weight: bold;
-	margin-bottom: 6%;
+	/*margin-bottom: 6%;*/
 }
 .wraUS{
 	width: 100%;
 	height: 1.7rem;
 	float: left;
-	margin-top:6%;
+	margin-top:12%;
 }
-.wraUS:nth-child(4){
-	margin-top: 10%;
+.wraUS:nth-child(3){
+	margin-top: 14%;
 }
 .wraUS .zhj_userName{
 	width:auto;
@@ -58,8 +63,8 @@
 	padding: 0.8rem 0 0.8rem 0.4rem;
 	float: left;
 	font-size: 0.7rem;
-	color: black;
-	background: rgba(255,255,255,0.5);
+	color: rgba(0,0,0,0.7);
+	background: rgba(255,255,255,0.3);
 }
 .wraUS input:nth-child(1){
 	position: relative;
@@ -85,6 +90,9 @@
     font-weight: bold;
     font-family: "blackadder itc";
 }
+.wraUS input::placeholder{
+	color: rgba(0,0,0,0.6);
+}
 .wraUS:nth-child(2) input{
 	display: inline-block;
 	width:calc(100% - 30%);
@@ -92,9 +100,15 @@
 	padding: 0.8rem 0 0.8rem 0.4rem;
 	float: left;
 	font-size: 0.7rem;
-	color: black;
-	background: rgba(255,255,255,0.5);
+	color: rgba(0,0,0,0.7);
+	background: rgba(255,255,255,0.3);
 	position: relative;
+}
+.wraUS:nth-child(2) input::placeholder{
+	color: rgba(0,0,0,0.6);
+}
+.zhj_placeholder{
+	color: rgba(0,0,0,0)!important;
 }
 .zhj_btnbtn{
 	width: calc(100% - 70%);
@@ -105,7 +119,7 @@
 	text-align: center;
 	line-height: 1.5rem;
 	margin-left: 36%;
-	margin-top:10%;
+	margin-top:12%;
 	color:white;
 	text-shadow: 3px 0px 0px #000;
 }
@@ -131,8 +145,21 @@
 	color: red;
 	font-size: 0.6rem;
 	margin-top: 0.4rem;
-	/*display: none;*/
 }
+.zhj_showder{
+	width: 100%;
+	height: 1rem;
+	background: rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+
+
+
 
 
 

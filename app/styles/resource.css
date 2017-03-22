@@ -65,6 +65,20 @@
 }
 .zhy_text .zhy_li:nth-child(2){
 	margin-top: 0.7rem;
+	overflow: hidden;
+}
+.zhy_text .zhy_li:nth-child(2) select{
+	width: 80%;
+	height: 100%;
+	padding: 0.2rem 0;
+	/*background: none;*/
+	/*border: none;*/
+	outline: none;
+	font-size: 0.8rem;
+	border-bottom:0.1rem solid #ccc;
+}
+.zhy_text .zhy_li:nth-child(2) select option{
+	width: 10%;
 }
 
 .zhy_text .zhy_li:nth-child(3){
@@ -115,6 +129,16 @@
 }
 .zhy_txt .zhy_li:nth-child(2){
 	margin-top: 0.7rem;
+}
+.zhy_txt .zhy_li:nth-child(2) select{
+	width: 80%;
+	height: 100%;
+	padding: 0.2rem 0;
+	/*background: none;*/
+	/*border: none;*/
+	outline: none;
+	font-size: 0.8rem;
+	border-bottom:0.1rem solid #ccc;
 }
 
 .zhy_txt .zhy_li:nth-child(3){
