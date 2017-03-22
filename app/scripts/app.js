@@ -100,5 +100,10 @@ angular
 			}
 		}
   	})
+<<<<<<< HEAD
+	$urlRouterProvider.otherwise('/enroll')
+
+=======
   	$urlRouterProvider.otherwise('/tel')
+>>>>>>> origin/master
   }])
