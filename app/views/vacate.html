@@ -8,41 +8,57 @@
 			<li class="zhy_content_li">
 				<div class="zhy_content_li_l">申请人：</div>
 				<div class="zhy_content_li_r">
-					<input type="text" />
+					<input type="text" ng-model="zhy_sqr" disabled="disabled" />
 				</div>
 				
 			</li>
 			<li class="zhy_content_li">
 				<div class="zhy_content_li_l">收件人：</div>
 				<div class="zhy_content_li_r">
-					<input type="text" />
+					<select ng-model="zhy_sjr">
+						<option ng-repeat="zhypeo in zhylist" ng-hide="zhy_hihi">{{zhypeo.username}}</option>
+						<option ng-repeat="zhypeo1 in zhylist1">{{zhypeo1.username}}</option>
+					</select>
 				</div>
 				
 			</li>
 			<li class="zhy_content_li">
 				<div class="zhy_content_li_l">缘&#x3000;由：</div>
 				<div class="zhy_content_li_r">
-					<textarea rows="0" cols="0"></textarea>
+					<textarea rows="0" cols="0"  ng-model="zhy_yy"></textarea>
 				</div>
 			</li>
 			
 			<li class="zhy_content_li">
 				<div class="zhy_content_li_l">请假日期：</div>
 				<div class="zhy_content_li_r">
-					从<input type="date" ng-model="init" min="zhy_time:false"/>至<input type="date" ng-model="zhy_t2" />
+					从<input type="date" ng-model="zhy_t1" min="2017-03-20"/>至<input type="date" ng-model="zhy_t2" />
 					<!--{{date:"yyyy年MM月dd日"}}-->
 				</div>
 			</li>
 			
+			<div class="zhy_footer">
+				<input type="button" value="提交" ng-click="zhy_sub()" class="btn-info btn btn-lg" />
+			</div>
 		</div>
-		
-		<div class="zhy_footer">
-			<input type="button" value="提交" class="btn-info btn btn-lg" />
-		</div>
-		
-		
 		
 	</div>
 	
+	
+	<div class="lhq-zezao" ng-show = "zhy_isShow">
+		<div class="lhq-zezaobox modal-content">
+			<i class="iconfont icon-guanbi"  ng-click="zhy_none()"></i>
+			<p>友情提示</p>
+			<span>输入内容不能为空</span>
+		</div>
+	</div>
+	
+	<div class="lhq-zezao" ng-show = "zhy_mm">
+		<div class="lhq-zezaobox modal-content">
+			<i class="iconfont icon-guanbi"  ng-click="zhy_href()"></i>
+			<p>友情提示</p>
+			<span>您是Boss,不用申请</span>
+		</div>
+	</div>
 	
 </div>

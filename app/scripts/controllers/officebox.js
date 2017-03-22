@@ -16,7 +16,7 @@ angular.module('trainingProjectsApp')
  			var dat = [];
 			var urll = 'http://'+ip+':401/shoujianxiang';  	  
 			$http({
-				url:urll+"/?uid"+sessionStorage.username,
+				url:urll+"/?uid="+sessionStorage.username,
 //				sessionStorage.username
 				method:'GET'
 			}).then(function(data){
