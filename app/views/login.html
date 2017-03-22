@@ -1,23 +1,29 @@
 <div ng-controller="loginCtrl">
 	<div class="zhj_wrapper">
 		<div class="zhj_welcome">
+			<img src="../images/logo.png" alt="" />
+		</div>
+		<!--<div class="zhj_loginName">
 			Welcom login
-		</div>
-		<div class="zhj_loginName">
-			XX公司员工管理系统
-		</div>
+		</div>-->
 		<div class="wraUS">
 			<div class="zhj_userName">用户名：</div>
-			<input type="text" class="form-control" />
+			<input type="text" class="form-control useName" onfocus="this.placeholder=''" ng-blur='loginblur()' placeholder="请输入你的中文名" ng-model='username'/>
+			<div id="zhj_usename" ng-show='loginShow'>请输入你的中文名</div>
 		</div>
 		<div class="wraUS">
-			<div class="zhj_userName">职&#x3000位：</div>
-		    <input type="text" class="form-control" />
-		</div>
-		<div class="wraUS">
-			<div class="zhj_userName">密&#x3000码：</div>
-			<input type="password" class="form-control" />
+			<div class="zhj_userName">密&#x3000;码：</div>
+			<input type="password" placeholder="请输入数字加英文的字符" class="form-control password" ng-model='passwold' onfocus="this.placeholder=''" ng-blur='loginpass()'/>
+			<div id="zhj_placeholder" ng-show='passShow'>请输入正确密码</div>
 		</div>		
-		<button class="btn btn-primary   zhj_btnbtn" zhj-login>登录</button>
+		<button class="btn btn-primary   zhj_btnbtn" zhj-login ng-click='logining()'>登录</button>
 	</div>
+	<div class="lhq-zezao" ng-show='loginshow'>
+		<div class="lhq-zezaobox modal-content">
+			<i class="iconfont icon-guanbi" ng-click='loginHide()'></i>
+			<p ng-model='loginText'>阿曾姐姐提醒你</p>
+			<span ng-model='loginIfio'>登录名或密码有错哦！</span>
+		</div>
+	</div>
+
 </div>

@@ -5,53 +5,85 @@
 			<span>
 				用户名：
 			</span>
-			<input type="text"/>
+			<input type="text" ng-model='enusername' ng-blur="chang()" ng-focus="change()"  onfocus="this.placeholder=''"required placeholder="请输入你的真实中文名"/>
+			<div id="zhj_enuser" ng-show='isShow'>请输入真实姓名</div>
 		</div>
 		<div class="zhj_Wname">
 			<span>
 				密&#x3000;码：
 			</span>
-			<input type="password"/>
+			<input type="password" ng-model='enpasswold' onfocus="this.placeholder=''" ng-blur="paschang()"  placeholder="请输入6-12位英语加数字的密码"/>
+			<div id="enPassWorld" ng-show='paShow'>请输入正确密码</div>
 		</div>
+		
+		
 		<div class="zhj_Wname">
 			<span>
 				职&#x3000;位：
 			</span>
-			<input type="text"/>
+			<input type="text" onfocus="this.placeholder=''" ng-model="enposition" placeholder="请输入你所对应职位"/>
+			<div id="enPosition"></div><div class="zhj_chang"><p>0是大boss</p><p>1是经理</p> <p>2普通员工</p></div>
 		</div>
 		<div class="zhj_Wname">
 			<span>
 				性&#x3000;别：
 			</span>
-			<input type="radio" name="sex"/><span>男</span>
-			<input type="radio" name="sex" checked="checked"/><span>女</span>
+			<input type="radio" name="sex" ng-model="sex" value="男" /><span>男</span>
+			<input type="radio" name="sex" checked="checked" ng-model="sex" value="女"/><span>女</span>
 		</div>
 		<div class="zhj_Wname">
 			<span>
 				电子邮箱：
 			</span>
-			<input type="email" name="sex"/>
+			<input type="email" ng-model='enemail' onfocus="this.placeholder=''" ng-blur="enmail()" name="sex" placeholder="请输入有效邮箱"/>
+			<div id="zhiEmail" ng-Show='emailShow'>请输入有效邮箱</div>
 		</div>
 		<div class="zhj_Wname">
 			<span>
 				手机号：
 			</span>
-			<input type="tel" name="sex"/>
+			<input type="tel" ng-model='ennphone' onfocus="this.placeholder=''" ng-blur="zhj_phone()" name="sex" placeholder="请输入有效手机号"/>
+			<div id="zhjPhone" ng-show='enPhone'>请输入有效手机号</div>
+		</div>
+		<div class="zhj_Wname">
+			<span>
+				Q&#x3000Q：
+			</span>
+			<input type="tel" name="sex" ng-model='QQ' onfocus="this.placeholder=''" ng-blur="enqq()" placeholder="请输入5-10位有效QQ"/>
+			<div id="zhjqq" ng-show='enq'>请输入有效qq号</div>
+		</div>
+		<div class="zhj_Wname">
+			<span>
+				其他联系方式：
+			</span>
+			<input type="tel" name="sex" ng-model='otherphone' onfocus="this.placeholder=''" ng-blur="othPhone()" placeholder="请输入有效手机号"/>
+			<div id="zhj_otherPhone" ng-show='otherShow'>请输入有效手机号</div>
+		</div>
+		<div class="zhj_Wname">
+			<span>
+				真实姓名：
+			</span>
+			<input type="text" ng-model='myNewName' onfocus="this.placeholder=''" ng-blur='NewName()' placeholder="请输入你的姓名"/>
+			<div id="newName" ng-show='nameSow'>与用户名相同</div>
 		</div>
 		<div class="zhj_Wname">
 			<span>
 				地&#x3000址：
 			</span>
-			<textarea name="tex" rows="" cols=""></textarea>
+			<textarea name="tex" rows="" cols="" ng-model='enAddr'>
+			</textarea>
 		</div>
-		
+
 		<div class="zhj_loginBar">
-			<button>注册</button>
+			<button ng-click='enregister()'>注册</button>
+		</div>		
+	</div>
+	
+	<div class="lhq-zezao" ng-show='enShodowshow'>
+		<div class="lhq-zezaobox modal-content">
+			<i class="iconfont icon-guanbi" ng-click='enrollHide()'></i>
+			<p ng-model='loginText'>阿曾姐姐提醒你</p>
+			<span ng-model='loginIfio'>注册内容未完善哦！</span>
 		</div>
-		
-		
-		
-		
-		
 	</div>
 </div>

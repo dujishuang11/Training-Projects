@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>Kabosu</name>
+=======
+<<<<<<< HEAD
+	<name>lhq-sb</name>
+=======
+	<name>trainingProjects</name>
+>>>>>>> origin/master
+>>>>>>> origin/master
 	<comment></comment>
 	<projects>
 	</projects>
@@ -14,4 +22,21 @@
 	<natures>
 		<nature>com.aptana.projects.webnature</nature>
 	</natures>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+	<filteredResources>
+		<filter>
+			<id>1490055640427</id>
+			<name></name>
+			<type>26</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-node_modules</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
+>>>>>>> origin/master
+>>>>>>> origin/master
 </projectDescription>

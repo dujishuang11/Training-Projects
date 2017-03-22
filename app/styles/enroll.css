@@ -3,7 +3,6 @@
 	height: 24rem;	
 	padding-left: 1rem;
 	padding-right: 1rem;
-	background:#EFEFEF;
 }
 .zhj_head{
 	width: 100%;
@@ -20,6 +19,7 @@
 	height: 1.5rem;
 	float: left;
 	margin-top:2%;
+	position: relative;
 }
 .zhj_Wname span{
 	width: auto;
@@ -31,9 +31,85 @@
 .zhj_Wname input{
 	width: 60%;
 	height: 0.6rem;
-	padding: 0.5rem 0 0.5rem 0;
-	border: none;
+	padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+	border: 1px solid #252628;
 	border-radius: 0.2rem;
+}
+#zhj_enuser{
+	width:auto;
+	height: auto;
+	position: absolute;
+	top:0rem ;
+	right:-0.8rem;
+	color: red;
+	font-size: 0.5rem;
+	/*display: none;*/
+}
+#enPassWorld{
+	width:3rem;
+	height: 1rem;
+	position: absolute;
+	top:0rem;
+	right:-0.5rem;
+	color: red;
+	font-size: 0.6rem;
+	/*display:none;*/
+}
+#enPosition{
+	width:auto;
+	height: auto;
+	position: absolute;
+	top:0rem;
+	right:-0.5rem;
+	color: black;
+	font-size: 0.6rem;
+}
+#zhiEmail{
+	width:auto;
+	height: auto;
+	position: absolute;
+	top:0rem;
+	right:-0.8rem;
+	color: red;
+	font-size: 0.5rem;
+}
+#zhjPhone{
+	width:auto;
+	height: auto;
+	position: absolute;
+	top: 1rem;
+	top:0rem;
+	right:-0.6rem;
+	color: red;
+	font-size: 0.5rem;
+	/*display:none;*/
+}
+#zhjqq{
+	width:auto;
+	height: auto;
+	position: absolute;
+	top:0rem;
+	right:-0.6rem;
+	color: red;
+	font-size: 0.5rem;
+}
+#zhj_otherPhone{
+	width:auto;
+	height: auto;
+	position: absolute;
+	top:0rem;
+	right:-0.6rem;
+	color: red;
+	font-size: 0.5rem;
+}
+#newName{
+	width:auto;
+	height: auto;
+	position: absolute;
+	top:0rem;
+	right:-3.4rem;
+	color: red;
+	font-size: 0.5rem;
 }
 .zhj_Wname:nth-child(2) span{
 	width: auto;
@@ -42,11 +118,15 @@
 	color: black;
 	font-size: 0.7rem;
 }
+.zhj_chang{
+   position: absolute;
+   top: 0;
+   right: 0;
+}
 .zhj_Wname:nth-child(2) input{
 	width: 60%;
 	height: 0.6rem;
-	padding: 0.5rem 0 0.5rem 0;
-	border: none;
+	padding: 0.5rem 0 0.5rem 0.2rem;
 	border-radius: 0.2rem;
 }
 .zhj_Wname:nth-child(3) span{
@@ -59,8 +139,7 @@
 .zhj_Wname:nth-child(3) input{
 	width: 60%;
 	height: 0.6rem;
-	padding: 0.5rem 0 0.5rem 0;
-	border: none;
+	padding: 0.5rem 0 0.5rem 0.2rem;
 	border-radius: 0.2rem;
 }
 .zhj_Wname:nth-child(4) span{
@@ -74,8 +153,7 @@
 	display: inline-block;
 	width: 60%;
 	height: 0.6rem;
-	padding: 0.5rem 0 0.5rem 0;
-	border: none;
+	padding: 0.5rem 0 0.5rem 0.2rem;
 	border-radius: 0.2rem;
 }
 .zhj_Wname:nth-child(5) span{
@@ -108,8 +186,7 @@
 .zhj_Wname:nth-child(6) input{
 	width: 54%;
 	height: 0.6rem;
-	padding: 0.5rem 0 0.5rem 0;
-	border: none;
+	padding: 0.5rem 0 0.5rem 0.2rem;
 	border-radius: 0.2rem;
 }
 .zhj_Wname:nth-child(7) span{
@@ -120,15 +197,10 @@
 	font-size: 0.7rem;
 }
 .zhj_Wname:nth-child(7) input{
-	width: 58%;
+	width: 54%;
 	height: 0.6rem;
-	padding: 0.5rem 0 0.5rem 0;
-	border: none;
+	padding: 0.5rem 0 0.5rem 0.2rem;
 	border-radius: 0.2rem;
-}
-.zhj_Wname:nth-child(8){
-	width: auto;
-	height: auto;
 }
 .zhj_Wname:nth-child(8) span{
 	width: auto;
@@ -137,30 +209,74 @@
 	color: black;
 	font-size: 0.7rem;
 }
-.zhj_Wname:nth-child(8) textarea{
+.zhj_Wname:nth-child(8) input{
+	width:54%;
+	height: 0.6rem;
+	padding: 0.5rem 0 0.5rem 0.2rem;
+	border-radius: 0.2rem;
+}
+.zhj_Wname:nth-child(9) span{
+	width: auto;
+	height: auto;
+	float: left;
+	color: black;
+	font-size: 0.7rem;
+}
+.zhj_Wname:nth-child(9) input{
+	width:40%;
+	height: 0.6rem;
+	padding: 0.5rem 0 0.5rem 0.2rem;
+	border-radius: 0.2rem;
+}
+.zhj_Wname:nth-child(10) span{
+	width: auto;
+	height: auto;
+	float: left;
+	color: black;
+	font-size: 0.7rem;
+}
+.zhj_Wname:nth-child(10) input{
+	width:60%;
+	height: 0.6rem;
+	padding: 0.5rem 0 0.5rem 0.2rem;
+	border-radius: 0.2rem;
+}
+.zhj_Wname:nth-child(10){
+	width: auto;
+	height: auto;
+}
+.zhj_Wname:nth-child(11) span{
+	width: auto;
+	height: auto;
+	float: left;
+	color: black;
+	font-size: 0.7rem;
+}
+.zhj_Wname:nth-child(11) textarea{
 	margin-left: 0.3rem;
 	width: 8rem;
 	height: 3rem;
 	float: left;
 	outline-style: none;
-	border: none;
+	border:1px solid #252628;
 	border-radius: 0.3rem;
 	font-size: 0.5rem;
-	
+	text-align: left;
+	padding: 0.2rem 0.2rem 0.2rem 0.2rem;
 }
 .zhj_loginBar{
 	width: 100%;
 	height: 2rem;
 	float: left;
-	margin-top: 8%;
+	margin-top: 20%;
 }
 .zhj_loginBar button{
 	width: 30%;
-	height: 1.5rem;
+	height: 2rem;
 	outline: none;
 	border: none;
 	border-radius: 0.2rem;
 	background: dodgerblue;
-	font-size: 0.7rem;
+	font-size: 0.9rem;
 	margin-left: 32%;
 }

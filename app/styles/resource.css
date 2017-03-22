@@ -65,6 +65,20 @@
 }
 .zhy_text .zhy_li:nth-child(2){
 	margin-top: 0.7rem;
+	overflow: hidden;
+}
+.zhy_text .zhy_li:nth-child(2) select{
+	width: 80%;
+	height: 100%;
+	padding: 0.2rem 0;
+	/*background: none;*/
+	/*border: none;*/
+	outline: none;
+	font-size: 0.8rem;
+	border-bottom:0.1rem solid #ccc;
+}
+.zhy_text .zhy_li:nth-child(2) select option{
+	width: 10%;
 }
 
 .zhy_text .zhy_li:nth-child(3){
@@ -116,6 +130,16 @@
 .zhy_txt .zhy_li:nth-child(2){
 	margin-top: 0.7rem;
 }
+.zhy_txt .zhy_li:nth-child(2) select{
+	width: 80%;
+	height: 100%;
+	padding: 0.2rem 0;
+	/*background: none;*/
+	/*border: none;*/
+	outline: none;
+	font-size: 0.8rem;
+	border-bottom:0.1rem solid #ccc;
+}
 
 .zhy_txt .zhy_li:nth-child(3){
 	margin-top: 1rem;
@@ -135,8 +159,34 @@
 }
 
 
-.zhy_foot{
+.zhy_foot1{
 	width: 100%;
 	text-align: right;
 	margin-top: 3rem;
 }
+.zhy_foot2{
+	width: 100%;
+	text-align: right;
+	margin-top: 3rem;
+}
+.zhy_mb{
+	width: 100%;
+	height: 8rem;
+	line-height: 3rem;
+	font-size: 1rem;
+	background: rgba(255,255,255,0.7);
+	text-align: center;
+	position: absolute;
+	top: 6rem;
+	left: 0;
+	/*display: none;*/
+	
+}
+.zhy_bg1{
+	background: #ccc;
+}
+.zhy_bg3{
+	background: #ccc;
+}
+
+
