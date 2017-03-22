@@ -119,6 +119,7 @@ html,body {
 	/*background-size: cover;*/
 	float: left;
 	background: #f3f3f3;
+	overflow: auto;
 	position: relative;
 }
 

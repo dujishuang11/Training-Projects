@@ -83,7 +83,20 @@ var doger_app = angular.module('trainingProjectsApp')
 		var my_on = false;
 		var my_id = '';
 //		var my_big_id = '';
-		wtf("","","","");
+		
+		$http({
+			url:doger_url,
+			method:'get'
+		}).then(function(data){
+			for(var i = 0; i < data.data.length; i++){
+				if(sessionStorage.username == data.data[i].uid){
+					console.log('???')
+//					break;
+				}else{
+					wtf("","","","");
+				}
+			}
+		})
 //		var my_map = document.getElementsByClassName('doger_my_map');
 //		$scope.aa = my_map;
 //		console.log($scope.aa[0].innerHTML)
@@ -106,12 +119,17 @@ var doger_app = angular.module('trainingProjectsApp')
 			}).then(function(data){
 				for(var i = 0; i < data.data.length; i++){
 //					console.log(data.data[i].date)
-					if(doger_my_data == data.data[i].date){
-//						console.log()
-						my_id = data.data[data.data.length-1].id
-						my_on = true;
-//						break;
-//						console.log(my_id)
+//					console.log(data.data)
+					if(sessionStorage.username == data.data[i].uid){
+						if(doger_my_data == data.data[i].date){
+	//						console.log()
+							my_id = data.data[data.data.length-1].id
+							my_on = true;
+	//						break;
+	//						console.log(my_id)
+						}
+					}else{
+						my_on = false
 					}
 				}
 				if(my_on == true){
@@ -265,8 +283,7 @@ var doger_app = angular.module('trainingProjectsApp')
 			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map.innerHTML;
 			if(my_map.innerHTML != ''){
 				$http({
-					url:'http://'+ip+':401/kaoqin/'+$scope.my_id+'',
-//					url:'http://'+ip+':401/kaoqin/',
+					url:'http://'+ip+':401/kaoqin/'+my_id+'',
 					method:'get'
 				}).then(function(data){
 					$http({
