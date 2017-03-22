@@ -36,29 +36,41 @@ angular.module('trainingProjectsApp')
 
 		//	所点击数据删除
 		$scope.del = function(idd,index) {
-			if(sessionStorage.level != '2') {
+			console.log(sessionStorage.level)
+			if(sessionStorage.level == '2') {
+				$scope.djsShow = true;
+			}else{
 				$http({
 					url: "http://" + ip + ":401/users/"+idd,
 					method: "delete"
 				}).then(function(e) {
 					$scope.data.splice(index,1)
 				})
-			}else{
-				$scope.djsShow = true;
 			}
 
 		}
 		
 //		点击新增
 		$scope.telAdd = function() {
-			if(sessionStorage.level != '2') {
+			if(sessionStorage.level == '2') {
 				$state.go("enroll")
+			}else{
+//				$scope.djsHtml = "您没有访问权限";
+				$scope.djsShow = true;
 			}
 		}
 		
 //		点击编辑
 		$scope.bianji = function(id){
-			sessionStorage.id = id
+			if(sessionStorage.level != '2') {
+				sessionStorage.id = id
+			}else{
+				$scope.djsShow = true;
+			}
+		}
+		
+		$scope.djsGuan = function(){
+			$scope.djsShow = false;
 		}
 
 	}])
