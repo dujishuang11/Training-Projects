@@ -1,6 +1,7 @@
 <div ng-controller="styleModalityCtrl" class="djs-content">
 	<wyh-style>
-	<div class="djs-mintitle" ng-class="{'Pgl':isPgl,'Fxh':isFxh,'Zgc':isZgc,'Wsh':isWsh,'Bcl':isBcl,'Dyl':isDyl,'Meh':isMeh,'Slh':isSlh,'Hyh':isHyh,'Mhf':isMhf,'Zqs':isZqs,'Lhz':isLhz}" >
+		<!-- ng-class="{'Pgl':isPgl,'Fxh':isFxh,'Zgc':isZgc,'Wsh':isWsh,'Bcl':isBcl,'Dyl':isDyl,'Meh':isMeh,'Slh':isSlh,'Hyh':isHyh,'Mhf':isMhf,'Zqs':isZqs,'Lhz':isLhz}" -->
+	<div class="djs-mintitle">
 		<i class="iconfont icon-zhuangxiufengge"></i><span>风格界面</span>
 	</div>
 	<div class="djs-border"></div> 
@@ -18,6 +19,6 @@
 		<li ng-click="zangqingse()">藏青色</li>
 		<li ng-click="lanhuazi()">兰花紫</li>
 	</ul>
-	<button class="btn btn-primary djs-button">保存</button>
+	<button class="btn btn-primary djs-button" ng-click="wyh_backColor()">复原</button>
 	</wyh-style>
 </div>

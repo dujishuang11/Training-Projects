@@ -169,8 +169,15 @@ html,body {
 	font-size: 1rem;
 }
 
-.doger-top p {
+/*.doger-top p {
 	float: left;
+}*/
+
+.doger-title a {
+	color: white;
+	line-height: 2.6rem;
+	float: right;
+	margin-right: .5rem;
 }
 
 .doger-time {
