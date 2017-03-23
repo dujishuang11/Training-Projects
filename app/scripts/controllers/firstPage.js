@@ -576,4 +576,8 @@ var doger_app = angular.module('trainingProjectsApp')
 			}
 		}	
 		
+	}).directive("setColor",function(){
+			return function(scope,element,attrs){
+				element.css("background",localStorage.Sbackground).css("color",localStorage.Scolor);
+			}
 	})
