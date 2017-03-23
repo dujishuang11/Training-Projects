@@ -8,7 +8,7 @@
  * Controller of the trainingProjectsApp
  */
 var xq_app = angular.module('trainingProjectsApp')
-  xq_app.controller('particularsCtrl',['$scope','$http','$state','$filter',function ($scope,$http,$state,$filter){
+  xq_app.controller('particularsCtrl',['$scope','$http','$state','$filter','$location',function ($scope,$http,$state,$filter,$location){
     	$scope.lhqisShow = false;
     	$scope.lhqShow = false;
     	$scope.Sender='';
@@ -41,14 +41,15 @@ var xq_app = angular.module('trainingProjectsApp')
     					title:$scope.titleLhq,
     					content:$scope.contentLhq,
     					uid:$scope.addressee,
-    					date:$scope.timeLhq
+    					date:$scope.timeLhq,
+    					read:'false'
     				}
 //  				}
     			}).then(function(e){
     				console.log(e.data)
     				if(e.data !==''){
     					alert('发送成功！')
-    					$state.go('officebox')
+					$location.path('firstPage/officebox')
     				}
     			})
     			$scope.lhqisShow = false;
@@ -64,7 +65,7 @@ var xq_app = angular.module('trainingProjectsApp')
     		$scope.lhqisShow = false;
     	}
     	$scope.fanhui=function(){
-    		$state.go('officebox')
+				$location.path('firstPage/officebox')
     	}
     	$scope.fusername = sessionStorage.fusername;
     	$scope.date = sessionStorage.date;

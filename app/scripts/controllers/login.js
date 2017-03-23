@@ -50,6 +50,11 @@ angular.module('trainingProjectsApp')
      $scope.username='';
      $scope.passwold ='';
      $scope.logining = function() {
+     	localStorage.setItem('Sbackground','');
+     	localStorage.setItem('Scolor','');
+     	sessionStorage.username = localStorage.Sbackground;
+     	sessionStorage.username = localStorage.Scolor;
+     	
      	$scope.loginshow = false;
 		if($scope.username=='') {
 			$scope.loginshow = true;
@@ -68,6 +73,7 @@ angular.module('trainingProjectsApp')
 			}).then(function(e) {
 				console.log(e)
 				sessionStorage.username = $scope.username;
+				sessionStorage.userid = e.data.uid;
 				var a = e.data.uid;
 				$http({
 					url: "http://" + ip + ":401/users/?id=" + a,

@@ -1,11 +1,8 @@
 <div ng-controller="loginCtrl">
 	<div class="zhj_wrapper">
 		<div class="zhj_welcome">
-			<img src="../images/logo.png" alt="" />
+			<img ng-src="../images/logo.png" alt="" />
 		</div>
-		<!--<div class="zhj_loginName">
-			Welcom login
-		</div>-->
 		<div class="wraUS">
 			<div class="zhj_userName">用户名：</div>
 			<input type="text" class="form-control useName" onfocus="this.placeholder=''" ng-blur='loginblur()' placeholder="请输入你的中文名" ng-model='username'/>
