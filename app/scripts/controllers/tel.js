@@ -62,7 +62,8 @@ angular.module('trainingProjectsApp')
 //		点击编辑
 		$scope.bianji = function(id){
 			if(sessionStorage.level != '2') {
-				sessionStorage.id = id
+				sessionStorage.userid = id
+				$location.path('/firstPage/personinfo');
 			}else{
 				$scope.djsShow = true;
 			}

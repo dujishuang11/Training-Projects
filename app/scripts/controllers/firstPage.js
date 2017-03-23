@@ -91,7 +91,11 @@ var doger_app = angular.module('trainingProjectsApp')
 		}
 //		var my_big_id = '';
 //		wtf("","","","");
+<<<<<<< HEAD
 //		whthfu()
+=======
+		whthfu()
+>>>>>>> origin/master
 //		$http({
 //			url:doger_url,
 //			method:'get'
@@ -484,8 +488,12 @@ var doger_app = angular.module('trainingProjectsApp')
 			}
 		}	
 		
+<<<<<<< HEAD
 	}).directive("setColor",function(){
 			return function(scope,element,attrs){
 				element.css("background",localStorage.Sbackground).css("color",localStorage.Scolor);
 			}
 		})
+=======
+	})
+>>>>>>> origin/master

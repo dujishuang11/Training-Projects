@@ -32,7 +32,8 @@
 			<li class="zhy_content_li">
 				<div class="zhy_content_li_l">请假日期：</div>
 				<div class="zhy_content_li_r">
-					从<input type="date" ng-model="zhy_t1" min="2017-03-20"/>至<input type="date" ng-model="zhy_t2" />
+					<!--<p class="zhy_txt_do"></p>-->
+					从<input type="date" ng-model="zhy_nnn" min="zhy_nnn"/>至<input type="date" ng-model="zhy_nnn1" />
 					<!--{{date:"yyyy年MM月dd日"}}-->
 				</div>
 			</li>
@@ -58,6 +59,14 @@
 			<i class="iconfont icon-guanbi"  ng-click="zhy_href()"></i>
 			<p>友情提示</p>
 			<span>您是Boss,不用申请</span>
+		</div>
+	</div>
+	
+	<div class="lhq-zezao" ng-show = "zhy_tt">
+		<div class="lhq-zezaobox modal-content">
+			<i class="iconfont icon-guanbi"  ng-click="zhy_xiao()"></i>
+			<p>友情提示</p>
+			<span>您的日期格式不对</span>
 		</div>
 	</div>
 	

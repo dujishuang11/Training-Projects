@@ -8,40 +8,41 @@
  * Controller of the trainingProjectsApp
  */
 var lhq_app = angular.module('trainingProjectsApp')
-lhq_app.controller('personinfoCtrl', ["$scope", "$http", function($scope, $http) {
+lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location", function($scope, $http,$location) {
 	$http({
-		url: "http://" + ip + ":401/users/?username=" + sessionStorage.username,
+		url: "http://" + ip + ":401/users/?id=" + sessionStorage.userid,
 		method: "get"
 	}).then(function(e) {
 		console.log(e.data)
-		$scope.djsName = e.data[0].name;
-		$scope.djsTel = e.data[0].tel;
-		$scope.djsEmail = e.data[0].email;
-		$scope.djsAdd = e.data[0].address;
-		$scope.djsQQ = e.data[0].qq;
-		$scope.djsTeltwo = e.data[0].others;
+		$scope.djsName = e.data.name;
+		$scope.djsTel = e.data.tel;
+		$scope.djsEmail = e.data.email;
+		$scope.djsAdd = e.data.address;
+		$scope.djsQQ = e.data.qq;
+		$scope.djsTeltwo = e.data.others;
 	})
 	$scope.djsBtn = function() {
-		console.log($scope.djsName)
-		console.log($scope.djsTel)
-		console.log($scope.djsEmail)
-		console.log($scope.djsAdd)
-		console.log($scope.djsQQ)
-		console.log($scope.djsTeltwo)
 		$http({
-			url: "http://" + ip + ":401/users/?id=" + sessionStorage.id,
+			url: "http://" + ip + ":401/users/?id=" + sessionStorage.userid,
 			method: "put",
-			data:{
-				username:$scope.djsName,
-				name:$scope.djsName,
-				tel:$scope.djsTel,
-				email:$scope.djsEmail,
-				address:$scope.djsAdd,
-				qq:$scope.djsQQ,
-				others:$scope.djsTeltwo
+			data: {
+				username: $scope.djsName,
+				name: $scope.djsName,
+				tel: $scope.djsTel,
+				email: $scope.djsEmail,
+				address: $scope.djsAdd,
+				qq: $scope.djsQQ,
+				others: $scope.djsTeltwo
 			}
 		}).then(function(e) {
-			console.log(e)
+			$http({
+				url: "http://" + ip + ":401/users/?username=" + sessionStorage.username,
+				method: "get",
+			}).then(function(data){
+				console.log(data.data[0].id)
+				sessionStorage.userid = data.data[0].id
+				$location.path('/firstPage/tel');
+			})
 		})
 	}
 }]);
