@@ -58,6 +58,16 @@ lhq_app.directive("lhq", function() {
 					read.readAsDataURL(files);
 					read.onload = function() {
 						element.find(".img").html("<img class = 'img-thumbnail' src='" + this.result + "'/>");
+						console.log(this.result)
+						
+						$http({
+							url:'http:// '+ ip + ':401/users/?id='+sessionStorage.userid,
+							mothed:'put',
+							data:{
+								pic:this.result
+							}
+						})
+							
 					}
 				})
 			})
