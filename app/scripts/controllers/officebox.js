@@ -10,11 +10,7 @@
 
 angular.module('trainingProjectsApp')
  .controller('officeboxCtrl', ['$scope','$http','$state','$location',function ($scope,$http,$state,$location){
- 			var lhq_xun = '';
- 			var lhqnum = 0;
- 			var lhqnum1 = 10;
- 			var dat = [];
-			
+ 			var lhqnum = 0;		
 			$scope.clicking = function(e){
 				sessionStorage.setItem('fusername',e.fusername);
 				sessionStorage.setItem('date',e.date);
@@ -31,9 +27,8 @@ angular.module('trainingProjectsApp')
 			}
 			
 			$scope.bottom_lhq=function(){
-				
 				if($scope.daat.length <10){
-					return
+					return 
 				}
 				lhqnum+=10;
 				$scope.aaa();
@@ -47,12 +42,14 @@ angular.module('trainingProjectsApp')
     		}
 			var urll = 'http://'+ip+':401/shoujianxiang';	
 			$scope.aaa = function(){
+				console.log(lhqnum)
 				$http({
 					url:'http://'+ip+':401/shoujianxiang/?{"uid":"'+sessionStorage.username+'","$skip":'+lhqnum+',"$limit":10}',
 					method:'GET'
 				}).then(function(data){
 					$scope.daat= data.data;
+					console.log($scope.daat)
 				})
 			}
-				$scope.aaa()
+			$scope.aaa();
   }])
