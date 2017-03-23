@@ -10,7 +10,7 @@
 angular.module('trainingProjectsApp')
   .controller('loginCtrl',['$scope','$http','$state',function ($scope,$http,$state) {
   	//  验证密码
-  	localStorage.removeItem('my_map')
+//	localStorage.removeItem('my_map')
   	sessionStorage.removeItem('level')
   	sessionStorage.removeItem('username')
   	 var pasExp = /^(?!\d+$)(?![A-Za-z]+$)[a-zA-Z0-9]{6,}$/;
