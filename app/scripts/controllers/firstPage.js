@@ -62,8 +62,27 @@
 		
 		
 var doger_app = angular.module('trainingProjectsApp')
+
+
+
+
+
+
+
+
+
 	var doger_url = 'http://'+ip+':401/kaoqin';
 	doger_app.controller('firstPage',["$scope","$http",function($scope,$http) {
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
 		var doger_data = new Date();
 //		alert(sss)
 		var doger_my_data = doger_data.getFullYear()+"-"+(doger_data.getMonth()+1)+"-"+doger_data.getDate();
@@ -83,7 +102,7 @@ var doger_app = angular.module('trainingProjectsApp')
 		var my_on = false;
 		var my_id = '';
 //		var my_big_id = '';
-		wtf("","","","");
+//		wtf("","","","");
 //		var my_map = document.getElementsByClassName('doger_my_map');
 //		$scope.aa = my_map;
 //		console.log($scope.aa[0].innerHTML)
@@ -438,5 +457,8 @@ var doger_app = angular.module('trainingProjectsApp')
 				}
 			}
 		}	
-		
-	})
+	}).directive("setColor",function(){
+			return function(scope,element,attrs){
+				element.css("background",localStorage.Sbackground).css("color",localStorage.Scolor);
+			}
+		})
