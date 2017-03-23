@@ -21,11 +21,11 @@
 						<li><span>{{a.time2.split('-')[0]}}</span><br><span>{{a.time2.split('-')[1]}}</span></li>
 						<li><span>{{a.time3.split('-')[0]}}</span><br><span>{{a.time3.split('-')[1]}}</span></li>
 						<li><span>{{a.time4.split('-')[0]}}</span><br><span>{{a.time4.split('-')[1]}}</span></li>
-						
+						<li style="display: none;">{{a.id}}</li>
 						<div class="zhj_doger_ipt">
 							<div>备注<br>内容</div>
 							<textarea class="zhj_doger_why" readonly placeholder="此处填写备注内容">{{a.summary}}</textarea>
-							<div class="zhj_doger_tip">编辑</div>
+							<div class="zhj_doger_tip" ng-click = "lxmBianji($index,a.id)">{{lxmBn}}</div>
 						</div>
 					</ul>
 				</div>
