@@ -47,14 +47,19 @@ angular.module('trainingProjectsApp')
   	}
 
 //    点击登录   
+//	 localStorage.setItem('Sbackground','');
+// 	 localStorage.setItem('Scolor','');
      $scope.username='';
      $scope.passwold ='';
      $scope.logining = function() {
      	localStorage.setItem('Sbackground','');
-     	localStorage.setItem('Scolor','');
-     	sessionStorage.username = localStorage.Sbackground;
-     	sessionStorage.username = localStorage.Scolor;
-     	
+   	 	localStorage.setItem('Scolor','');
+//   	localStorage.Sbackground;
+// 	 	localStorage.Scolor;
+//   	sessionStorage.username = localStorage.Sbackground;
+//   	sessionStorage.username = localStorage.Scolor;
+//   	console.log(localStorage.Sbackground)
+//   	console.log(localStorage.Scolor)
      	$scope.loginshow = false;
 		if($scope.username=='') {
 			$scope.loginshow = true;
@@ -74,11 +79,16 @@ angular.module('trainingProjectsApp')
 				console.log(e)
 				sessionStorage.username = $scope.username;
 				sessionStorage.userid = e.data.uid;
+//				sessionStorage.username = localStorage.Sbackground;
+//		     	sessionStorage.username = localStorage.Scolor;
+//		     	console.log(localStorage.Sbackground)
+//		     	console.log(localStorage.Scolor)
 				var a = e.data.uid;
 				$http({
 					url: "http://" + ip + ":401/users/?id=" + a,
 					method: "get"
 				}).then(function(e) {
+					
 					sessionStorage.level = e.data.level;
 					// console.log(sessionStorage.level);
 					if(sessionStorage.level == '0') {

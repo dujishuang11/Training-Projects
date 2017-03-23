@@ -22,9 +22,7 @@
 		<div class="wyh_taskfp" ng-hide="wyh_isHide">
 			<div class="wyh_dat">
 				<span>选择日期：</span>
-				<input type="date" min="2017-03-23" ng-focus="wyh_blur()"  class="wyh_tim" ng-model="wyh_dates" />
-				<div class="wyh_zhuyi" ng-show="wyh_jingShi">只能提前一天发布任务</div>
-				<div class="wyh_zhuyiSq">{{nows | date: 'yyyy-MM-dd'}}</div>
+				<input type="input"  class="wyh_tim" ng-model="wyh_ww" disabled="disabled"/>
 			</div>
 			<div class="wyh_cont">
 				<span>工作内容：</span>
@@ -32,7 +30,7 @@
 			</div>
 			<div class="wyh_Ren">
 				<span>&nbsp;执&nbsp;行&nbsp;人：</span>
-				<select ng-click="wyh_names()" class="wyh_peopl" ng-model="wyh_uid">
+				<select class="wyh_peopl" ng-model="wyh_uid">
 					<option ng-repeat="ar in arss">{{ar.username}}</option>
 				</select>
 			</div>
