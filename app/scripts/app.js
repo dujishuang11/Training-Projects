@@ -100,5 +100,13 @@ angular
 			}
 		}
   	})
+  	$stateProvider.state("firstPage.personinfoa",{
+  		url: '/personinfoa',
+  		views:{
+			content:{
+  				templateUrl: 'views/personinfo2.html'
+			}
+		}
+  	})
 	$urlRouterProvider.otherwise('/login')
   }])

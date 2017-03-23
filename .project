@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 <<<<<<< HEAD
-	<name>Kabosu</name>
+	<name>pepolepower</name>
 =======
-<<<<<<< HEAD
-	<name>lhq-sb</name>
-=======
-	<name>trainingProjects</name>
->>>>>>> origin/master
+	<name>xiao</name>
 >>>>>>> origin/master
 	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
+		<buildCommand>
+			<name>com.aptana.editor.php.aptanaPhpBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 		<buildCommand>
 			<name>com.aptana.ide.core.unifiedBuilder</name>
 			<arguments>
@@ -21,14 +22,15 @@
 	</buildSpec>
 	<natures>
 		<nature>com.aptana.projects.webnature</nature>
+		<nature>com.aptana.editor.php.phpNature</nature>
 	</natures>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 	<filteredResources>
 		<filter>
-			<id>1490055640427</id>
+<<<<<<< HEAD
+			<id>1490167317847</id>
+=======
+			<id>1490161198395</id>
+>>>>>>> origin/master
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -37,6 +39,4 @@
 			</matcher>
 		</filter>
 	</filteredResources>
->>>>>>> origin/master
->>>>>>> origin/master
 </projectDescription>

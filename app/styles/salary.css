@@ -177,6 +177,7 @@
 	width: 56%;
 	border: none;
 	font-size: .6rem;
+	background: rgba(0,0,0,0);
 }
 /*.zhj_secondLi ul input{
 	width: 28.8%;
