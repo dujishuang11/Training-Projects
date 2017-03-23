@@ -68,7 +68,8 @@ var doger_app = angular.module('trainingProjectsApp')
 	var doger_url = 'http://'+ip+':401/kaoqin';
 	doger_app.controller('firstPage',["$scope","$http",function($scope,$http) {
 		
-		
+//		$scope.photo = 'images/icon.png';
+
 		var doger_data = new Date();
 //		alert(sss)
 		var doger_my_data = doger_data.getFullYear()+"-"+(doger_data.getMonth()+1)+"-"+doger_data.getDate();
@@ -99,6 +100,15 @@ var doger_app = angular.module('trainingProjectsApp')
 //		if(localStorage.my_map){
 //			my_id = localStorage.my_map
 //		}
+		
+//		$http({
+//			url:'http://'+ip+':401/users/?id='+sessionStorage.username+'',
+//			method:'get'
+//		}).then(function(e){
+//			console.log(e)
+//		})
+		
+
 		$http({
 			url:'http://'+ip+':401/kaoqin/?{"uid":"'+sessionStorage.username+'","date":"'+doger_my_data+'"}',
 			method:'get'
