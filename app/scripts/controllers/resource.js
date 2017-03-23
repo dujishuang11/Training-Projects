@@ -106,10 +106,9 @@ angular.module('trainingProjectsApp')
 				data:{
 						fusername:$scope.shenqingren,
 						title:"办公用品申请",
-						content:$scope.wuzi,
+						content:$scope.wuzi+$scope.yongtu,
 						date:$scope.dt2,
 						uid:$scope.shoujianren,
-						yongtu:$scope.yongtu,
 						read:'false'
 					}
 			}).then(function(e){
@@ -137,10 +136,9 @@ angular.module('trainingProjectsApp')
 				data:{
 						fusername:$scope.shenqingren,
 						title:"福利申请",
-						content:$scope.wuzi,
+						content:$scope.wuzi+$scope.yongtu,
 						date:$scope.dt2,
 						uid:$scope.shoujianren,
-						yongtu:$scope.yongtu,
 						read:'false'
 					}
 			}).then(function(e){
