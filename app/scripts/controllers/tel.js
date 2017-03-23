@@ -8,20 +8,20 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-	.controller('telCtrl', ["$scope", "$http", "$state", function($scope, $http, $state) {
+	.controller('telCtrl', ["$scope", "$http", "$state","$location", function($scope, $http, $state,$location) {
 		$scope.djsShow = false;
 		$http({
 			url: "http://" + ip + ":401/users",
 			method: "get"
 		}).then(function(e) {
 			$scope.data = e.data;
-//			console.log($scope.data)
 		})
 
 		//	点击每条数据跳转到此数据的详情页
 		$scope.xiangqing = function(data) {
-//			console.log(data)
 			sessionStorage.setItem("personinfo", data.name)
+			
+			$location.path('/firstPage/personinfoa');
 		}
 
 		//	关键字搜索
@@ -47,15 +47,14 @@ angular.module('trainingProjectsApp')
 					$scope.data.splice(index,1)
 				})
 			}
-
 		}
 		
 //		点击新增
 		$scope.telAdd = function() {
-			if(sessionStorage.level == '2') {
+			if(sessionStorage.level != '2') {
 				$state.go("enroll")
 			}else{
-//				$scope.djsHtml = "您没有访问权限";
+				$scope.djsHtml = "您没有访问权限";
 				$scope.djsShow = true;
 			}
 		}

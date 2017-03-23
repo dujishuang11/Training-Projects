@@ -21,10 +21,12 @@
 			<span>操作</span>
 		</div>
 		<div class="wyh_allul">
-			<ul class='wyh_ul1' ng-repeat="ddata in data" ng-click='xiangqing(ddata)'>
-				<li>{{ddata.name}}</li>
-				<li>{{ddata.tel}}</li>
-				<li>{{ddata.email}}</li>
+			<ul class='wyh_ul1' ng-repeat="ddata in data">
+				
+				<li ng-click="xiangqing(ddata)">{{ddata.name}}</li>
+				<li ng-click="xiangqing(ddata)">{{ddata.tel}}</li>
+				<li ng-click="xiangqing(ddata)">{{ddata.email}}</li>
+				<!--<a ui-serf=".personinfo"></a>-->
 				<li>
 					<button class='btn btn-danger wyh_abtn' ng-click="del(ddata.id,$index)">删除</button>
 					<button class='btn btn-primary wyh_bbtn' ng-click="bianji(ddata.id)">编辑</button>
@@ -35,8 +37,7 @@
 	<div class="lhq-zezao" ng-show="djsShow">
 		<div class="lhq-zezaobox modal-content">
 			<i class="iconfont icon-guanbi" ng-click="djsGuan()"></i>
-			<p>小强欧巴</p>
-			<span>请输入完整信息！</span>
+			<p>亲~您没有访问权限</p>
 		</div>
 	</div>
 </div>

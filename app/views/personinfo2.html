@@ -1,0 +1,45 @@
+<div ng-controller="personinfoaCtrl" class="lhq-sb">
+	<div class="xiaoqiang-header">
+		<i class="iconfont icon-touxiang"></i>
+    	<span>个人信息</span>
+	</div>
+	<div class="border"></div>
+	
+	<div class="xiaoqiang-left" ng-repeat="sdata in djsData">
+		<p>
+			<span class="djs-inin">姓&#x3000;&#x3000;名:</span>
+			<i class="djs-info">{{sdata.name}}</i>
+		</p>
+		
+		<p>
+			<span class="djs-inin">性&#x3000;&#x3000;别:</span>
+			<i class="djs-info">{{sdata.sex}}</i>
+		</p>
+		<p>
+			<span class="djs-inin">手&#x3000;&#x3000;机:</span>
+			<i class="djs-info">{{sdata.tel}}</i>
+		</p>
+		<p>
+			<span class="djs-inin">电子邮件:</span>
+			<i class="djs-info">{{sdata.email}}</i>
+		</p>
+		<p>
+			<span class="djs-inin">地&#x3000;&#x3000;址:</span>
+			<i class="djs-info">{{sdata.address}}</i>
+		</p>
+		<p>
+			<span class="djs-inin">Q&#x3000;Q&#x3000;号:</span>
+			<i class="djs-info">{{sdata.qq}}</i>
+		</p>
+		<p>
+			<span class="djs-inin">其它联系方式:</span>
+			<i class="djs-info">{{sdata.others}}</i>
+		</p>
+	</div>
+	<lhq>
+	<div class="xiaoqiang-right" >
+		<img src="../img/icon.png" alt="" />
+	</div>
+	</lhq>
+</div>
+
