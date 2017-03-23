@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>pepolepower</name>
+=======
+	<name>xiao</name>
+>>>>>>> origin/master
 	<comment></comment>
 	<projects>
 	</projects>
@@ -22,7 +26,11 @@
 	</natures>
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
 			<id>1490167317847</id>
+=======
+			<id>1490161198395</id>
+>>>>>>> origin/master
 			<name></name>
 			<type>26</type>
 			<matcher>
