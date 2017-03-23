@@ -26,7 +26,7 @@ angular.module('trainingProjectsApp')
 		
 	}).then(function(e){
 		$scope.data1 = e.data;
-		console.log($scope.data)
+//		console.log($scope.data)
 	})
   	
   	

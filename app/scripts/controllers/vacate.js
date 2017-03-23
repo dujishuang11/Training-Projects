@@ -86,6 +86,7 @@ angular.module('trainingProjectsApp')
 	
 	
 	
+	
 	console.log($scope.zhy_time)
 //	console.log($scope.zhy_t1)
   	
