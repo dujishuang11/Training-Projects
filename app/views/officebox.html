@@ -18,10 +18,12 @@
 		</div>
 		
 		<ul class="ul-ul-lhq">
-			<li ng-repeat = "q in daat" ng-click="clicking(q)" ng-class= "lhq_home">
+			<li ng-repeat = "q in daat" ng-click="clicking(q)">
+				<div ng-class="{'lhq_blue':q.read=='false'}">
 				<span>{{q.fusername}}</span>
 				<span>{{q.title}}</span>
 				<span>{{q.date}}</span>
+				</div>
 			</li>
 		</ul>
 	</div>
