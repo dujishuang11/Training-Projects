@@ -141,10 +141,13 @@ $scope.enShodowshow=false;
 				"qq":$scope.QQ,
 				"others":$scope.otherphone,
 				"address":$scope.enAddr,
-				"name":$scope.myNewName
+				"name":$scope.myNewName,
+				"pic":'images/icon.png'
 			}
 		}).then(function(e){
 			console.log(e)	
+			sessionStorage.myPic='images/icon.png';
+			console.log(sessionStorage.myPic)
 			
 			$scope.enusername='';
 			$scope.enpasswold='';
