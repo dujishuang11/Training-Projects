@@ -32,6 +32,7 @@
 				success: function (json) { 
 					if(json.status==0){
 						$(".doger_my_map").html(json.result.formatted_address);
+						$(".doger_my_map_nan").css('display','none');
 					}
 				},
 				error: function (XMLHttpRequest, textStatus, errorThrown) { 
@@ -68,45 +69,22 @@ var doger_app = angular.module('trainingProjectsApp')
 	var doger_url = 'http://'+ip+':401/kaoqin';
 	doger_app.controller('firstPage',["$scope","$http",function($scope,$http) {
 		
-//		$scope.photo = 'images/icon.png';
-
+		
 		var doger_data = new Date();
-//		alert(sss)
 		var doger_my_data = doger_data.getFullYear()+"-"+(doger_data.getMonth()+1)+"-"+doger_data.getDate();
 		$('.exit')[0].addEventListener('touchstart',function(){
 			if(localStorage.my_map){
 				localStorage.removeItem(my_map)
 			}	
 		})
-//		var doger_my_data = '2017-3-26'
-		console.log(doger_my_data)
-		
-//		localStorage.my_day = doger_my_data;
-//		var my_map = document.getElementsByClassName('doger_my_map');
-//		console.log(my_map[])
-//		if(my_map.innerHTML != ''){
-//				alert(1)
-//				$scope.isShow = false;
-//		}	
-//		var myTime = new Date();
-//		var iHour = myTime.getHours();
-//		var iMin = myTime.getMinutes();
-//		var str = doub(iHour) + ':' + doub(iMin);
 		console.log(sessionStorage.username)
 		$scope.myShow = false;
-		$scope.isShow = true;
+		$scope.isShow = false;
 		var my_on = false;
 		var my_id = '';
 //		if(localStorage.my_map){
 //			my_id = localStorage.my_map
 //		}
-		
-//		$http({
-//			url:'http://'+ip+':401/users/?id='+sessionStorage.username+'',
-//			method:'get'
-//		}).then(function(e){
-//			console.log(e)
-//		})
 		
 
 		$http({
@@ -159,7 +137,7 @@ var doger_app = angular.module('trainingProjectsApp')
 //				whthfu()
 //			}
 //		})
-//		var my_map = document.getElementsByClassName('doger_my_map');
+
 //		$scope.aa = my_map;
 //		console.log($scope.aa[0].innerHTML)
 //		if($('.doger_my_map').text() == ''){
@@ -252,7 +230,7 @@ var doger_app = angular.module('trainingProjectsApp')
 
 			
 		
-		
+
 		function whthfu(){
 			var my_aa = document.getElementsByClassName('doger_succ')[0];
 			$scope.lxmtipOne = function(e) {
@@ -261,11 +239,12 @@ var doger_app = angular.module('trainingProjectsApp')
 			var iHour = myTime.getHours();
 			var iMin = myTime.getMinutes();
 			var iSec = myTime.getSeconds();
-			var my_map = document.getElementsByClassName('doger_my_map')[0];
+			var my_map_big = document.getElementsByClassName('doger_my_map')[0];
 			var my_map_erro = document.getElementsByClassName('doger_erro')[0];
 			var my_map_tip = document.getElementsByClassName('doger_my_map_nan')[0];
-			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map.innerHTML;
-			if(my_map.innerHTML != ''){
+			
+			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map_big.innerHTML;
+			if(my_map_big.innerHTML != ''){
 //				$http({
 ////				url:'http://'+ip+':401/kaoqin/'+$scope.my_id+'',
 //					url:'http://'+ip+':401/kaoqin/',
@@ -323,11 +302,11 @@ var doger_app = angular.module('trainingProjectsApp')
 			var iHour = myTime.getHours();
 			var iMin = myTime.getMinutes();
 			var iSec = myTime.getSeconds();
-			var my_map = document.getElementsByClassName('doger_my_map')[0];
+			var my_map_big = document.getElementsByClassName('doger_my_map')[0];
 			var my_map_erro = document.getElementsByClassName('doger_erro')[0];
 			var my_map_tip = document.getElementsByClassName('doger_my_map_nan')[0];
-			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map.innerHTML;
-			if(my_map.innerHTML != ''){
+			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map_big.innerHTML;
+			if(my_map_big.innerHTML != ''){
 //				$http({
 //					url:'http://'+ip+':401/kaoqin/'+my_id+'',
 //					method:'get'
@@ -380,11 +359,11 @@ var doger_app = angular.module('trainingProjectsApp')
 			var iHour = myTime.getHours();
 			var iMin = myTime.getMinutes();
 			var iSec = myTime.getSeconds();
-			var my_map = document.getElementsByClassName('doger_my_map')[0];
+			var my_map_big = document.getElementsByClassName('doger_my_map')[0];
 			var my_map_erro = document.getElementsByClassName('doger_erro')[0];
 			var my_map_tip = document.getElementsByClassName('doger_my_map_nan')[0];
-			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map.innerHTML;
-			if(my_map.innerHTML != ''){
+			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map_big.innerHTML;
+			if(my_map_big.innerHTML != ''){
 //				$http({
 //					url:'http://'+ip+':401/kaoqin/'+my_id+'',
 //					method:'get'
@@ -437,11 +416,11 @@ var doger_app = angular.module('trainingProjectsApp')
 			var iHour = myTime.getHours();
 			var iMin = myTime.getMinutes();
 			var iSec = myTime.getSeconds();
-			var my_map = document.getElementsByClassName('doger_my_map')[0];
+			var my_map_big = document.getElementsByClassName('doger_my_map')[0];
 			var my_map_erro = document.getElementsByClassName('doger_erro')[0];
 			var my_map_tip = document.getElementsByClassName('doger_my_map_nan')[0];
-			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map.innerHTML;
-			if(my_map.innerHTML != ''){
+			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map_big.innerHTML;
+			if(my_map_big.innerHTML != ''){
 //				$http({
 //					url:'http://'+ip+':401/kaoqin/'+$scope.my_id+'',
 //					url:'http://'+ip+':401/kaoqin/',
@@ -499,19 +478,15 @@ var doger_app = angular.module('trainingProjectsApp')
 	.directive("lxmfrg",function($http){
 		return{
 			restrict:"ECMA",
-//			templateUrl:"index.html",
 			link:function($scope,element,attr){
-//				console.log(1)
-//				element.find('p').css("color","red");
-//				element.find('.laaaaa')[0].addEventListener('touchstart',function(){
-//					location.href = '/#!/salary'
-//				})
-//				var my_map = document.getElementsByClassName('doger_my_map')[0];
-//				if(my_map.innerHTML != ''){
-//					$scope.isShow = false;
-//				}else{
-//					$scope.isShow = true;
-//				}
+//				var my_pict = document.getElementsByClassName('.doger_myPhoto');
+				$http({
+					url:'http://'+ip+':401/users/?id='+sessionStorage.userid+'',
+					method:'get'
+				}).then(function(e){
+					element.find('.doger_myPhoto')[0].src = e.data.pic
+				})
+		
 
 				var on = false;
 				var myList = element.find('.doger-list li');
@@ -577,8 +552,8 @@ var doger_app = angular.module('trainingProjectsApp')
 		return{
 			restrict:"ECMA",
 			link:function($scope,element,attr){
-				var my_map = document.getElementsByClassName('doger_my_map')[0];
-				if(my_map.innerHTML != ''){
+				var my_map_txt = document.getElementsByClassName('doger_my_map')[0];
+				if(my_map_txt.innerHTML != ''){
 					$scope.isShow = false;
 				}else{
 					$scope.isShow = true;
