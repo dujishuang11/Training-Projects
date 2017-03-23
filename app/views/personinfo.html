@@ -8,33 +8,33 @@
 	<div class="xiaoqiang-left">
 		<p>
 			<span>姓&#x3000;&#x3000;名:</span>
-			<input type="text" class="form-control" />
+			<input type="text" class="form-control" ng-model="djsName" />
 		</p>
 		
 		<p>
 			<span>性&#x3000;&#x3000;别:</span>
-			<input type="radio" name="sex"/><span>男</span>
-			<input type="radio" name="sex"/><span>女</span>
+			<input type="radio" name="sex" ng-model="djsSex1"/><span>男</span>
+			<input type="radio" name="sex" ng-model="djsSex2"/><span>女</span>
 		</p>
 		<p>
 			<span>手&#x3000;&#x3000;机:</span>
-			<input type="text" class="form-control" />
+			<input type="text" class="form-control" ng-model="djsTel" />
 		</p>
 		<p>
 			<span>电子邮件:</span>
-			<input type="text" class="form-control" />
+			<input type="text" class="form-control" ng-model="djsEmail" />
 		</p>
 		<p>
 			<span>地&#x3000;&#x3000;址:</span>
-			<textarea name="tex" rows="" cols=""></textarea>
+			<textarea name="tex" rows="" cols="" ng-model="djsAdd"></textarea>
 		</p>
 		<p>
 			<span>Q&#x3000;Q&#x3000;号:</span>
-			<input type="text" class="form-control" />
+			<input type="text" class="form-control" ng-model="djsQQ" />
 		</p>
 		<p>
 			<span>其它服务:</span>
-			<input type="text" class="form-control" />
+			<input type="text" class="form-control" ng-model="djsTeltwo" />
 		</p>
 	</div>
 	<lhq>
@@ -45,5 +45,5 @@
 	</div>
 	</lhq>
 	
-	<input type="button" class="xiaoqiang-but" value="保存"/>
+	<input type="button" class="xiaoqiang-but" value="保存" ng-click="djsBtn()"/>
 </div>
