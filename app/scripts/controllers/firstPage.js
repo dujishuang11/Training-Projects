@@ -90,7 +90,7 @@ var doger_app = angular.module('trainingProjectsApp')
 			my_id = localStorage.my_map
 		}
 //		var my_big_id = '';
-		wtf("","","","");
+//		wtf("","","","");
 		whthfu()
 //		$http({
 //			url:doger_url,
