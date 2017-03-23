@@ -90,9 +90,6 @@ var doger_app = angular.module('trainingProjectsApp')
 			my_id = localStorage.my_map
 		}
 //		var my_big_id = '';
-<<<<<<< HEAD
-//		wtf("","","","");
-=======
 		wtf("","","","");
 		whthfu()
 //		$http({
@@ -123,7 +120,6 @@ var doger_app = angular.module('trainingProjectsApp')
 //				whthfu()
 //			}
 //		})
->>>>>>> origin/master
 //		var my_map = document.getElementsByClassName('doger_my_map');
 //		$scope.aa = my_map;
 //		console.log($scope.aa[0].innerHTML)
