@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>pepolepower</name>
+=======
+<<<<<<< HEAD
+	<name>Kabosu</name>
+=======
+<<<<<<< HEAD
+	<name>trainingProjects</name>
+=======
+<<<<<<< HEAD
+	<name>pepolepower</name>
+=======
+	<name>xiao</name>
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> origin/master
 	<comment></comment>
 	<projects>
 	</projects>
@@ -20,9 +36,23 @@
 		<nature>com.aptana.projects.webnature</nature>
 		<nature>com.aptana.editor.php.phpNature</nature>
 	</natures>
+<<<<<<< HEAD
+=======
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
 			<id>1490167317847</id>
+=======
+<<<<<<< HEAD
+			<id>1490228985566</id>
+=======
+<<<<<<< HEAD
+			<id>1490167317847</id>
+=======
+			<id>1490161198395</id>
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> origin/master
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -31,4 +61,5 @@
 			</matcher>
 		</filter>
 	</filteredResources>
+>>>>>>> origin/master
 </projectDescription>
