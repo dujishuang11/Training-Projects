@@ -8,7 +8,7 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
- .controller('businessCtrl',["$scope","$http","$interval",function($scope,$http,$interval){
+ .controller('businessCtrl',["$scope","$http","$interval","$filter",function($scope,$http,$interval,$filter){
 	$http({
 		url:"http://"+ip+":401/shiwu/?uid="+sessionStorage.username,
 		method:"get"
@@ -41,11 +41,7 @@ angular.module('trainingProjectsApp')
   	
   	
   	$scope.wyh_toShow=false;
-  	//获取当前日期
-  	var timer = $interval(function () {  
-        $scope.nows = new Date;  
-    }, 1000);
-    
+  	
   	$scope.toggleb=function(){
 		if(sessionStorage.level==2){ //员工没权限访问
 			console.log(sessionStorage.level)
@@ -65,13 +61,13 @@ angular.module('trainingProjectsApp')
   	}
   	//保存
   	$scope.wyhSave=function(){
-		if($scope.wyh_dates=='' || $scope.wyh_cont=="" || $scope.wyh_uid==""){
+		if($scope.wyh_ww=='' || $scope.wyh_cont=="" || $scope.wyh_uid==""){
 			$scope.wyh_isShow = !$scope.wyh_isShow;
 		}else{
 			$http({
 				url:"http://"+ip+":401/shiwu",
 				method:"post",
-				data:{"date":$scope.wyh_dates,"content":$scope.wyh_cont,"uid":$scope.wyh_uid}
+				data:{"date":$scope.wyh_ww,"content":$scope.wyh_cont,"uid":$scope.wyh_uid}
 			}).then(function(e){
 				console.log(e)
 				$scope.wyh_dates=""; //清空
@@ -80,29 +76,24 @@ angular.module('trainingProjectsApp')
 			})
 		}
   	}
-  	//警告需一天前布置任务
-  	$scope.wyh_jingShi=false;
-  	$scope.wyh_blur=function(){
-//		console.log($scope.wyh_dates);
-//		console.log($scope.nows)
-//		console.log($scope.nows.valueOf()-1)
-//		console.log($scope.wyh_dates)
-		if($scope.wyh_dates!=$scope.nows.valueOf()-1){
-			$scope.wyh_jingShi = !$scope.wyh_jingShi;
-		}
-		
-  	}
+  	//获取当前日期
+  	$scope.wyh_tima = new Date();
+    $scope.wyh_timb = new Date();
+	$scope.wyh_timmm = Number($scope.wyh_timb.setDate($scope.wyh_tima.getDate()+1));
+	$scope.wyh_timss = ($filter("date")($scope.wyh_timmm,"yyyy-MM-dd"));
+	$scope.wyh_nn = new Date($scope.wyh_timss)
+  	$scope.wyh_ww = ($filter("date")($scope.wyh_nn,"yyyy-MM-dd"));
   	
-  	$scope.wyh_jingShi=false;
+  	
+  	
+  	
   	//获取执行人后台用户名
-	$scope.wyh_names=function(){
 		$http({
 			url:"http://"+ip+":401/users",
 			method:"get"
 		}).then(function(e){
 			$scope.arss=e.data;
 		})
-	}
   	
   	
   	

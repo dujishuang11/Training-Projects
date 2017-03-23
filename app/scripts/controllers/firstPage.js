@@ -59,16 +59,26 @@
 
 		getLocation();
 		
+//		setTimeout(function(){
+			
+//		},100)
 		
 		
 var doger_app = angular.module('trainingProjectsApp')
 	var doger_url = 'http://'+ip+':401/kaoqin';
 	doger_app.controller('firstPage',["$scope","$http",function($scope,$http) {
+		
+		
 		var doger_data = new Date();
 //		alert(sss)
 		var doger_my_data = doger_data.getFullYear()+"-"+(doger_data.getMonth()+1)+"-"+doger_data.getDate();
+		$('.exit')[0].addEventListener('touchstart',function(){
+			if(localStorage.my_map){
+				localStorage.removeItem(my_map)
+			}	
+		})
 //		var doger_my_data = '2017-3-26'
-//		console.log(doger_my_data1)
+		console.log(doger_my_data)
 		
 //		localStorage.my_day = doger_my_data;
 //		var my_map = document.getElementsByClassName('doger_my_map');
@@ -86,12 +96,30 @@ var doger_app = angular.module('trainingProjectsApp')
 		$scope.isShow = true;
 		var my_on = false;
 		var my_id = '';
-		if(localStorage.my_map){
-			my_id = localStorage.my_map
-		}
+//		if(localStorage.my_map){
+//			my_id = localStorage.my_map
+//		}
+		$http({
+			url:'http://'+ip+':401/kaoqin/?{"uid":"'+sessionStorage.username+'","date":"'+doger_my_data+'"}',
+			method:'get'
+		}).then(function(data){
+//			console.log(data)
+			if(data.data.length > 0){
+				my_id = localStorage.my_map
+				localStorage.my_map = data.data[0].id
+				whthfu()
+				console.log(localStorage.my_map)
+//				location.reload()
+			}else{
+//				location.reload()
+				wtf("","","","");
+				whthfu()
+				console.log(localStorage.my_map)
+			}
+		})
 //		var my_big_id = '';
 //		wtf("","","","");
-		whthfu()
+//		whthfu()
 //		$http({
 //			url:doger_url,
 //			method:'get'
@@ -106,6 +134,7 @@ var doger_app = angular.module('trainingProjectsApp')
 ////					}
 //					if(sessionStorage.username == data.data[i].uid){
 //						my_on = true
+//						console.log( data.data[i].uid)
 ////						alert('请勿重复签到')
 ////	//					break;
 //						whthfu()
@@ -141,23 +170,32 @@ var doger_app = angular.module('trainingProjectsApp')
 				method:'get'
 			}).then(function(data){
 				for(var i = 0; i < data.data.length; i++){
-//					console.log(data.data[i].date)
-//					console.log(data.data)
+					console.log(data.data[i].date)
+					console.log(data.data)
 					if(sessionStorage.username == data.data[i].uid){
 						if(doger_my_data == data.data[i].date){
-	//						console.log()
 							my_id = data.data[data.data.length-1].id
 							my_on = true;
-	//						break;
-	//						console.log(my_id)
 						}
 					}else{
 						my_on = false
 					}
+//					$http({
+//						url:'http://'+ip+':401/kaoqin/?{"uid":"'+sessionStorage.username+'","date":"'+doger_my_data+'"}',
+//						method:'get'
+//					}).then(function(data){
+//						if(data.length > 0){
+//							on = true
+//							location.reload()
+//						}else{
+//							on = false
+//						}
+//					})
 				}
 				if(my_on == true){
 					$http({
-						url:'http://'+ip+':401/kaoqin/'+my_id+'',
+						url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
+//						url:'http://'+ip+':401/kaoqin/'+my_id+'?{"uid":"'+sessionStorage.username+'","date":"'+doger_my_data+'"}',
 						method:'PUT',
 						data:{
 							date:doger_my_data,
@@ -169,7 +207,7 @@ var doger_app = angular.module('trainingProjectsApp')
 							uid:sessionStorage.username
 						}
 					}).then(function(data){
-						my_id = data.data.id
+//						my_id = data.data.id
 //						my_big_id = my_id
 						
 					})
@@ -187,11 +225,11 @@ var doger_app = angular.module('trainingProjectsApp')
 							uid:sessionStorage.username
 						}
 					}).then(function(data){
+						location.reload()
 //						my_big_id = my_id
 //						console.log(data.data.id)
-						my_id = data.data.id
-						localStorage.my_map = my_id;
-						console.log(localStorage.my_map)
+//						localStorage.my_map = my_id;
+//						console.log(localStorage.my_map)
 //						console.log($scope.my_id)
 					})
 				}
@@ -218,21 +256,40 @@ var doger_app = angular.module('trainingProjectsApp')
 			var my_map_tip = document.getElementsByClassName('doger_my_map_nan')[0];
 			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map.innerHTML;
 			if(my_map.innerHTML != ''){
-				$http({
-//				url:'http://'+ip+':401/kaoqin/'+$scope.my_id+'',
-					url:'http://'+ip+':401/kaoqin/',
-					method:'get'
-				}).then(function(data){
-					$http({
-						url:'http://'+ip+':401/kaoqin/'+my_id+'',
-						method:'get'
-					}).then(function(data1){
-						setTimeout(function(){
-							
+//				$http({
+////				url:'http://'+ip+':401/kaoqin/'+$scope.my_id+'',
+//					url:'http://'+ip+':401/kaoqin/',
+//					method:'get'
+//				}).then(function(data){
+//					$http({
+//						url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//						method:'get'
+//					}).then(function(data1){
+//						setTimeout(function(){
+//							
+//							$http({
+//								url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//								method:'get',
+//							}).then(function(data){
+//								console.log(my_id)
+//								console.log(data)
+//								if(data.data.time1 != ''){
+//									my_aa.innerHTML = '今天已经签到'
+//									$scope.myShow = !$scope.myShow;
+//								}else{
+//									my_aa.innerHTML = '签到成功'
+//									$scope.myShow = !$scope.myShow;
+//									wtf(str,"","","",str,data.data.time2,data.data.time3,data.data.time4)	
+//								}
+//							})
+//						},600)
+//					})
+//				})
 							$http({
-								url:'http://'+ip+':401/kaoqin/'+my_id+'',
+								url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
 								method:'get',
 							}).then(function(data){
+								console.log(my_id)
 								console.log(data)
 								if(data.data.time1 != ''){
 									my_aa.innerHTML = '今天已经签到'
@@ -243,9 +300,6 @@ var doger_app = angular.module('trainingProjectsApp')
 									wtf(str,"","","",str,data.data.time2,data.data.time3,data.data.time4)	
 								}
 							})
-						},600)
-					})
-				})
 			}else{
 				my_aa.innerHTML = '签到失败'
 				my_map_erro.style.display = 'block'
@@ -264,18 +318,33 @@ var doger_app = angular.module('trainingProjectsApp')
 			var my_map_tip = document.getElementsByClassName('doger_my_map_nan')[0];
 			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map.innerHTML;
 			if(my_map.innerHTML != ''){
-				$http({
-					url:'http://'+ip+':401/kaoqin/'+$scope.my_id+'',
-					url:'http://'+ip+':401/kaoqin/',
-					method:'get'
-				}).then(function(data){
-					$http({
-						url:'http://'+ip+':401/kaoqin/'+my_id+'',
-						method:'get'
-					}).then(function(data1){
-						setTimeout(function(){
+//				$http({
+//					url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//					method:'get'
+//				}).then(function(data){
+//					$http({
+//						url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//						method:'get'
+//					}).then(function(data1){
+//						setTimeout(function(){
+//							$http({
+//								url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//								method:'get',
+//							}).then(function(data){
+//								if(data.data.time2 != ''){
+//									my_aa.innerHTML = '今天已经签到'
+//									$scope.myShow = !$scope.myShow;
+//								}else{
+//									my_aa.innerHTML = '签到成功'
+//									$scope.myShow = !$scope.myShow;
+//									wtf("",str,"","",data.data.time1,str,data.data.time3,data.data.time4)	
+//								}
+//							})
+//						},600)
+//					})
+//				})
 							$http({
-								url:'http://'+ip+':401/kaoqin/'+my_id+'',
+								url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
 								method:'get',
 							}).then(function(data){
 								if(data.data.time2 != ''){
@@ -287,9 +356,6 @@ var doger_app = angular.module('trainingProjectsApp')
 									wtf("",str,"","",data.data.time1,str,data.data.time3,data.data.time4)	
 								}
 							})
-						},600)
-					})
-				})
 			}else{
 				my_aa.innerHTML = '签到失败'
 				my_map_erro.style.display = 'block'
@@ -309,17 +375,33 @@ var doger_app = angular.module('trainingProjectsApp')
 			var my_map_tip = document.getElementsByClassName('doger_my_map_nan')[0];
 			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map.innerHTML;
 			if(my_map.innerHTML != ''){
-				$http({
-					url:'http://'+ip+':401/kaoqin/'+my_id+'',
-					method:'get'
-				}).then(function(data){
-					$http({
-						url:'http://'+ip+':401/kaoqin/'+my_id+'',
-						method:'get'
-					}).then(function(data1){
-						setTimeout(function(){
+//				$http({
+//					url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//					method:'get'
+//				}).then(function(data){
+//					$http({
+//						url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//						method:'get'
+//					}).then(function(data1){
+//						setTimeout(function(){
+//							$http({
+//								url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//								method:'get',
+//							}).then(function(data){
+//								if(data.data.time3 != ''){
+//									my_aa.innerHTML = '今天已经签到'
+//									$scope.myShow = !$scope.myShow;
+//								}else{
+//									my_aa.innerHTML = '签到成功'
+//									$scope.myShow = !$scope.myShow;
+//									wtf("","",str,"",data.data.time1,data.data.time2,str,data.data.time4)	
+//								}
+//							})
+//						},600)
+//					})
+//				})
 							$http({
-								url:'http://'+ip+':401/kaoqin/'+my_id+'',
+								url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
 								method:'get',
 							}).then(function(data){
 								if(data.data.time3 != ''){
@@ -331,9 +413,6 @@ var doger_app = angular.module('trainingProjectsApp')
 									wtf("","",str,"",data.data.time1,data.data.time2,str,data.data.time4)	
 								}
 							})
-						},600)
-					})
-				})
 			}else{
 				my_aa.innerHTML = '签到失败'
 				my_map_erro.style.display = 'block'
@@ -353,18 +432,34 @@ var doger_app = angular.module('trainingProjectsApp')
 			var my_map_tip = document.getElementsByClassName('doger_my_map_nan')[0];
 			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map.innerHTML;
 			if(my_map.innerHTML != ''){
-				$http({
-					url:'http://'+ip+':401/kaoqin/'+$scope.my_id+'',
-					url:'http://'+ip+':401/kaoqin/',
-					method:'get'
-				}).then(function(data){
-					$http({
-						url:'http://'+ip+':401/kaoqin/'+my_id+'',
-						method:'get'
-					}).then(function(data1){
-						setTimeout(function(){
+//				$http({
+//					url:'http://'+ip+':401/kaoqin/'+$scope.my_id+'',
+//					url:'http://'+ip+':401/kaoqin/',
+//					method:'get'
+//				}).then(function(data){
+//					$http({
+//						url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//						method:'get'
+//					}).then(function(data1){
+//						setTimeout(function(){
+//							$http({
+//								url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//								method:'get',
+//							}).then(function(data){
+//								if(data.data.time4 != ''){
+//									my_aa.innerHTML = '今天已经签到'
+//									$scope.myShow = !$scope.myShow;
+//								}else{
+//									my_aa.innerHTML = '签到成功'
+//									$scope.myShow = !$scope.myShow;
+//									wtf("","","",str,data.data.time1,data.data.time2,data.data.time3,str)	
+//								}
+//							})
+//						},600)
+//					})
+//				})
 							$http({
-								url:'http://'+ip+':401/kaoqin/'+my_id+'',
+								url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
 								method:'get',
 							}).then(function(data){
 								if(data.data.time4 != ''){
@@ -376,9 +471,6 @@ var doger_app = angular.module('trainingProjectsApp')
 									wtf("","","",str,data.data.time1,data.data.time2,data.data.time3,str)	
 								}
 							})
-						},600)
-					})
-				})
 			}else{
 				my_aa.innerHTML = '签到失败'
 				my_map_erro.style.display = 'block'
@@ -484,4 +576,8 @@ var doger_app = angular.module('trainingProjectsApp')
 			}
 		}	
 		
+	}).directive("setColor",function(){
+			return function(scope,element,attrs){
+				element.css("background",localStorage.Sbackground).css("color",localStorage.Scolor);
+			}
 	})
