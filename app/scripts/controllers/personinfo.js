@@ -10,7 +10,7 @@
 var lhq_app = angular.module('trainingProjectsApp')
 lhq_app.controller('personinfoCtrl', ["$scope", "$http", function($scope, $http) {
 	$http({
-		url: "http://" + ip + ":401/users/?username=" + sessionStorage.username,
+		url: "http://" + ip + ":401/users/?id=" + sessionStorage.userId,
 		method: "get"
 	}).then(function(e) {
 		console.log(e.data)
