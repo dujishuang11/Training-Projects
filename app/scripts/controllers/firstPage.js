@@ -91,7 +91,7 @@ var doger_app = angular.module('trainingProjectsApp')
 		}
 //		var my_big_id = '';
 //		wtf("","","","");
-		//whthfu()
+		whthfu()
 //		$http({
 //			url:doger_url,
 //			method:'get'
