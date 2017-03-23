@@ -100,5 +100,5 @@ angular
 			}
 		}
   	})
-	$urlRouterProvider.otherwise('/enroll')
+	$urlRouterProvider.otherwise('/login')
   }])

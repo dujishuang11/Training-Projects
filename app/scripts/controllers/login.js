@@ -47,6 +47,11 @@ angular.module('trainingProjectsApp')
      $scope.username='';
      $scope.passwold ='';
      $scope.logining = function() {
+     	localStorage.setItem('Sbackground','');
+     	localStorage.setItem('Scolor','');
+     	sessionStorage.username = localStorage.Sbackground;
+     	sessionStorage.username = localStorage.Scolor;
+     	
      	$scope.loginshow = false;
 		if($scope.username=='') {
 			$scope.loginshow = true;
