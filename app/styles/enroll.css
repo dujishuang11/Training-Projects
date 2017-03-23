@@ -292,17 +292,33 @@
 	float: left;
 	margin-top: 20%;
 }
-.zhj_loginBar button{
-	width: 30%;
+.zhj_loginBar button:nth-child(1){
+	width: 26%;
 	height: 2rem;
 	outline: none;
 	border: none;
 	border-radius: 0.2rem;
 	background: dodgerblue;
-	font-size: 0.9rem;
-	margin-left: 32%;
-	/*font-weight: bold;*/
+	font-size: 0.6rem;
+	margin-left: 15%;
 	font-size: 1rem;
 	color: rgba(255,255,255,0.9);
 	text-shadow: 2px 1px 1px #000;
 }
+.zhj_loginBar button:nth-child(2){
+	width: 26%;
+	height: 2rem;
+	outline: none;
+	border: none;
+	border-radius: 0.2rem;
+	background: dodgerblue;
+	font-size: 0.6rem;
+	margin-left: 15%;
+	font-size: 1rem;
+	color: rgba(255,255,255,0.9);
+	text-shadow: 2px 1px 1px #000;
+}
+
+
+
+

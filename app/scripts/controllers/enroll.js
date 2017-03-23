@@ -8,7 +8,7 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('enrollCtrl', ['$scope','$http','$state',function ($scope,$http,$state) {
+  .controller('enrollCtrl', ['$scope','$http','$location',function ($scope,$http,$location) {
 //    验证用户名
 	 var userName= /[\u4e00-\u9fa5]/;
 	 $scope.enuserShow = false;
@@ -145,6 +145,7 @@ $scope.enShodowshow=false;
 			}
 		}).then(function(e){
 			console.log(e)	
+			
 			$scope.enusername='';
 			$scope.enpasswold='';
 			$scope.enposition='';
@@ -155,10 +156,15 @@ $scope.enShodowshow=false;
 			$scope.otherphone='';
 			$scope.myNewName='';
 			$scope.enAddr='';				
-			$state.go('tel');
+			$location.path('/firstPage/tel');
 		})		
   	   }
      }
+  	  
+  	  $scope.zhj_comeBack=function(){
+  	  	 $location.path('/firstPage/tel');
+  	  }
+  	  
   	  
   	  $scope.enrollHide=function(){
   	  	$scope.enShodowshow=false;
