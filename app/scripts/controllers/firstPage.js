@@ -76,6 +76,7 @@ var doger_app = angular.module('trainingProjectsApp')
 		var doger_data = new Date();
 		var doger_my_data = doger_data.getFullYear()+"-"+(doger_data.getMonth()+1)+"-"+doger_data.getDate();
 		$('.exit')[0].addEventListener('touchstart',function(){
+			sessionStorage.clear()
 			if(localStorage.my_map){
 				localStorage.removeItem(my_map)
 			}	
