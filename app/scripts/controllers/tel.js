@@ -11,9 +11,10 @@ angular.module('trainingProjectsApp')
 	.controller('telCtrl', ["$scope", "$http", "$state","$location", function($scope, $http, $state,$location) {
 		var ddnum = 0;
 		$scope.djsShow = false;
-		
-	
-		
+		if(!sessionStorage.username){
+				$state.go('login')
+			}
+
 		$scope.abcdef = function(){
 			$http({
 			url: 'http://'+ ip +':401/users/?{"$skip":'+ddnum+',"$limit":10}',
