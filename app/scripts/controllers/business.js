@@ -83,8 +83,8 @@ angular.module('trainingProjectsApp')
 	$scope.wyh_timss = ($filter("date")($scope.wyh_timmm,"yyyy-MM-dd"));
 	$scope.wyh_nn = new Date($scope.wyh_timss)
   	$scope.wyh_ww = ($filter("date")($scope.wyh_nn,"yyyy-MM-dd"));
-  	
-  	
+	//再将日期赋给min值
+	$scope.wyh_zhi=$scope.wyh_ww;
   	
   	
   	//获取执行人后台用户名

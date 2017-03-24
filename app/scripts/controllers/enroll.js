@@ -11,9 +11,9 @@ angular.module('trainingProjectsApp')
   .controller('enrollCtrl', ['$scope','$http','$location','$state',function ($scope,$http,$location,$state) {
   	
 //   从其它页面跳转  	
-//	if(!sessionStorage.username){
-//	  	  $state.go('login');
-//	  }
+	if(!sessionStorage.username){
+	  	  $state.go('login');
+	  }
   	  	  	
   	
 //    验证用户名
@@ -155,8 +155,7 @@ $scope.enShodowshow=false;
 		}).then(function(e){
 			console.log(e)	
 			sessionStorage.myPic='images/icon.png';
-			console.log(sessionStorage.myPic)
-			
+			console.log(sessionStorage.myPic)		
 			$scope.enusername='';
 			$scope.enpasswold='';
 			$scope.enposition='';
@@ -168,7 +167,10 @@ $scope.enShodowshow=false;
 			$scope.myNewName='';
 			$scope.enAddr='';				
 			$location.path('/firstPage/tel');
-		})		
+		},function(){
+			$scope.enShodowshow=true;
+			$('.enText').text('用户名已被注册');
+		})
   	   }
      }
   	  

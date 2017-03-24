@@ -31,7 +31,7 @@ var xq_app = angular.module('trainingProjectsApp')
     		if($scope.Sender == '' || $scope.addressee == '' || $scope.contentLhq == '' ||$scope.timeLhq == ''||$scope.titleLhq == ''){
     			$scope.lhqisShow = true;
     			$scope.lhqShow = true;
-    			$scope.lhq_xiaoxi = '输入内容为空！'
+    			$scope.lhq_xiaoxi = '系统提示'
     			$scope.lhq_span = '请输入完整信息！'
     			
     			$scope.xxx = function(){
