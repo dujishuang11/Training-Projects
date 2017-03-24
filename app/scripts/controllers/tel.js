@@ -9,13 +9,39 @@
  */
 angular.module('trainingProjectsApp')
 	.controller('telCtrl', ["$scope", "$http", "$state","$location", function($scope, $http, $state,$location) {
+		var ddnum = 0;
 		$scope.djsShow = false;
-		$http({
-			url: "http://" + ip + ":401/users",
+		if(!sessionStorage.username){
+				$state.go('login')
+			}
+
+		$scope.abcdef = function(){
+			$http({
+			url: 'http://'+ ip +':401/users/?{"$skip":'+ddnum+',"$limit":10}',
 			method: "get"
-		}).then(function(e) {
+				}).then(function(e) {
 			$scope.data = e.data;
 		})
+		}
+		
+		$scope.abcdef();
+		
+		//点击下一页
+		$scope.DX=function(){
+			if($scope.data.length <10){
+					return
+			}
+				ddnum+=10;
+				$scope.abcdef();
+		}
+		//点击上一页
+		$scope.DS=function(){
+			ddnum-=10;
+				if(ddnum<0){
+					return ddnum = 0
+				}
+				$scope.abcdef();
+		}
 
 		//	点击每条数据跳转到此数据的详情页
 		$scope.xiangqing = function(data) {

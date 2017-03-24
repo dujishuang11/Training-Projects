@@ -8,8 +8,10 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('resourceCtrl', ["$scope","$http","$filter","$location",function ($scope,$http,$filter,$location) {
-  	
+  .controller('resourceCtrl', ["$scope","$http","$filter","$location","$state",function ($scope,$http,$filter,$location,$state) {
+  	if(!sessionStorage.username){
+		$state.go('login')
+	}
   	//请求领导层的
   	$http({
   		url:"http://"+ip+":401/users/?level=1",

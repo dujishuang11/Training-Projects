@@ -14,6 +14,11 @@ var xq_app = angular.module('trainingProjectsApp')
     	$scope.Sender='';
     	$scope.addressee = '';
     	$scope.contentLhq = '';
+    	
+    	
+    	if(!sessionStorage.username){
+			$state.go('login')
+		}
 		
     	$scope.hui=function(){
     		$scope.lhqisShow = true;
@@ -48,7 +53,6 @@ var xq_app = angular.module('trainingProjectsApp')
     			}).then(function(e){
     				console.log(e.data)
     				if(e.data !==''){
-    					alert('发送成功！')
 					$location.path('firstPage/officebox')
     				}
     			})
