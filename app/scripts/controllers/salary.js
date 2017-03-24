@@ -8,8 +8,11 @@
  * Controller of the trainingProjectsApp
  */
 var salary_app = angular.module('trainingProjectsApp')
-salary_app.controller('salaryCtrl', ["$scope","$http",function($scope,$http) {
+salary_app.controller('salaryCtrl', ["$scope","$http","$state",function($scope,$http,$state) {
 //	$scope.btn = ['1','2'];
+	if(!sessionStorage.username){
+		$state.go('login')
+	}
 	var doger_url = 'http://'+ip+':401/kaoqin/?uid='+sessionStorage.username+'';
 	$http({
 		url:doger_url,

@@ -8,7 +8,14 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('enrollCtrl', ['$scope','$http','$location',function ($scope,$http,$location) {
+  .controller('enrollCtrl', ['$scope','$http','$location','$state',function ($scope,$http,$location,$state) {
+  	
+//   从其它页面跳转  	
+//	if(!sessionStorage.username){
+//	  	  $state.go('login');
+//	  }
+  	  	  	
+  	
 //    验证用户名
 	 var userName= /[\u4e00-\u9fa5]/;
 	 $scope.enuserShow = false;
@@ -110,6 +117,7 @@ angular.module('trainingProjectsApp')
 	 	}
   	 }
   	
+  	  
   	
 // 点击注册的时候
 $scope.enusername='';
