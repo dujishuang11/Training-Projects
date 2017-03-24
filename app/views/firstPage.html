@@ -12,15 +12,15 @@
 		<div class="doger-wrapper">	
 			<div class="doger-left" set-color>
 				<ul class="doger-list">
-					<li set-color><span><i class="iconfont icon-app" set-color></i><div set-color>首页</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = 'firstPage'></a></li>
-					<li set-color><span><i class="iconfont icon-kaoqin4" set-color></i><div set-color>考勤信息</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.salary'></a></li>
-					<li set-color><span><i class="iconfont icon-3333333" set-color></i><div set-color>个人通讯录</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.tel'></a></li>
-					<li set-color><span><i class="iconfont icon-richeng" set-color></i><div set-color>日程事务</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.business'></a></li>
-					<li set-color><span><i class="iconfont icon-youxiang-shoujianxiang" set-color></i><div set-color>收件箱</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.officebox'></a></li>
-					<li set-color><span><i class="iconfont icon-ziyuan" set-color></i><div set-color>资源申请</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.resource'></a></li>
-					<li set-color><span><i class="iconfont icon-touxiang" set-color></i><div set-color>个人信息</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.personinfo'></a></li>
-					<li set-color><span><i class="iconfont icon-shenqing" set-color></i><div set-color>请假申请</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.vacate'></a></li>
-					<li set-color><span><i class="iconfont icon-zhuangxiufengge" set-color></i><div set-color>风格界面</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.styleModality'></a></li>
+					<li set-color><span><i class="glyphicon glyphicon-th" set-color></i><div set-color>首页</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = 'firstPage'></a></li>
+					<li set-color><span><i class="glyphicon glyphicon-list-alt" set-color></i><div set-color>考勤信息</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.salary'></a></li>
+					<li set-color><span><i class="glyphicon glyphicon-phone" set-color></i><div set-color>个人通讯录</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.tel'></a></li>
+					<li set-color><span><i class="glyphicon glyphicon-tasks" set-color></i><div set-color>日程事务</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.business'></a></li>
+					<li set-color><span><i class="glyphicon glyphicon-envelope" set-color></i><div set-color>收件箱</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.officebox'></a></li>
+					<li set-color><span><i class="glyphicon glyphicon-th-large" set-color></i><div set-color>资源申请</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.resource'></a></li>
+					<li set-color><span><i class="glyphicon glyphicon-user" set-color></i><div set-color>个人信息</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.personinfo'></a></li>
+					<li set-color><span><i class="glyphicon glyphicon-edit" set-color></i><div set-color>请假申请</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.vacate'></a></li>
+					<li set-color><span><i class="glyphicon glyphicon-leaf" set-color></i><div set-color>风格界面</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.styleModality'></a></li>
 				</ul>
 			</div>
 			<!--</lxmfrg>-->
@@ -28,7 +28,7 @@
 				<!--<ui-view>-->
 				<!--<lxmfrg>-->
 				<div class="doger-main">
-					<p><i class="iconfont icon-kaoqin4"></i>在线考勤<span class="doger_data"></span></p>
+					<p><i class="glyphicon glyphicon-list-alt"></i>在线考勤<span class="doger_data"></span></p>
 					<div class="doger-time">
 						<img/>
 						<img/>
@@ -39,9 +39,10 @@
 						<img/>
 						<img/>
 					</div>
+					<p class="doger_my_time_font"></p>
 					
 					<div class="doger-map">
-						<p><i class="iconfont icon-dizhi2"></i>当前位置</p>
+						<p><i class="glyphicon glyphicon-map-marker"></i>当前位置</p>
 						<p class="doger_my_map"></p>
 						<p class="doger_my_map_nan" ng-show = "isShow">正在获取当前位置</p>
 					</div>
@@ -85,12 +86,12 @@
 			var iSec = myTime.getSeconds();
 			var str = ''
 			str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec);
-//			$('.doger-my-time').text(str);
+			$('.doger_my_time_font').text(str);
 			for(var i = 0; i < $('.doger-time img').length; i++) {
 				if(i == 2 || i == 5) {
-					$('.doger-time img')[i].src = '../images/time/colon.JPG';
+					$('.doger-time img')[i].src = 'images/colon.JPG';
 				} else {
-					$('.doger-time img')[i].src = '../images/time/' + str.charAt(i) + '.JPG'
+					$('.doger-time img')[i].src = 'images/' + str.charAt(i) + '.JPG'
 				}
 			}
 		}
