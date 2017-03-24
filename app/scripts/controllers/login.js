@@ -53,13 +53,12 @@ angular.module('trainingProjectsApp')
      	localStorage.setItem('Sbackground','');
    	 	localStorage.setItem('Scolor','');
      	$scope.loginshow = false;
-		if($scope.username=='') {
+		if($scope.username == '') {
 			$scope.loginshow = true;
 		}
-		else if($scope.passwold =='') {
+		else if($scope.passwold == '') {
 			$scope.loginshow = true;
-		} 
-         else {
+		}else {
 			$http({
 				url: "http://" + ip + ":401/users/login",
 				method: "post",
