@@ -155,8 +155,7 @@ $scope.enShodowshow=false;
 		}).then(function(e){
 			console.log(e)	
 			sessionStorage.myPic='images/icon.png';
-			console.log(sessionStorage.myPic)
-			
+			console.log(sessionStorage.myPic)		
 			$scope.enusername='';
 			$scope.enpasswold='';
 			$scope.enposition='';
@@ -168,7 +167,10 @@ $scope.enShodowshow=false;
 			$scope.myNewName='';
 			$scope.enAddr='';				
 			$location.path('/firstPage/tel');
-		})		
+		},function(){
+			$scope.enShodowshow=true;
+			$('.enText').text('用户名已被注册');
+		})
   	   }
      }
   	  
