@@ -97,7 +97,8 @@
 }
 .wyh_allul{
 	width:100%;
-	height:auto;
+	min-height:14rem;
+	/*overflow: hidden;*/
 	
 }
 .wyh_center>.wyh_allul>.wyh_ul1{
@@ -158,4 +159,33 @@
 	margin:0.15rem 0 0 0.15rem;
 	float: left;
 	width:1.7rem;
+}
+.djs-xiayiye{
+	width: 100%;
+	height: 3rem;
+	overflow: hidden;
+	margin-top: 1rem;
+}
+.djs-xiayiye input:nth-child(1){
+	float: left;
+	margin-top: 1rem;
+	margin-left: 1.5rem;
+	width: 4rem;
+	height: 1.3rem;
+	background: #69CCFF;
+	border:0;
+	color: #FFFFFF;
+	border-radius: 0.3rem;
+}
+.djs-xiayiye input:nth-child(2){
+	float: right;
+	margin-top: 1rem;
+	margin-right: 1.5rem;
+	width: 4rem;
+	height: 1.3rem;
+	background: #69CCFF;
+	border:0;
+	color: #FFFFFF;
+	border-radius: 0.3rem;
+	
 }
