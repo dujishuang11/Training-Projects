@@ -21,6 +21,7 @@
 	height: 1.5rem;
 	float: left;
 	margin-top:2%;
+	padding-left: 10%;
 	position: relative;
 }
 .zhj_Wname span{
@@ -126,11 +127,11 @@
 	display: inline-block;
 	color: rgba(255,255,255,0.9);
     text-shadow: 2px 0px 0px #000;
-    margin-left: 5%;
+    margin-left: 3%;
     margin-top: 1%;
 }
 .zhj_opintions p:nth-child(1){
-	 margin-left: 21%;
+	 margin-left: 23%;
 }
 .zhj_Wname:nth-child(2) span{
 	width: auto;
@@ -205,7 +206,7 @@
 	font-size: 0.7rem;
 }
 .zhj_Wname:nth-child(6) input{
-	width: 60%;
+	width: 62%;
 	height: 0.6rem;
 	padding: 0.5rem 0 0.5rem 0.2rem;
 	border-radius: 0.2rem;
@@ -219,7 +220,7 @@
 	font-size: 0.7rem;
 }
 .zhj_Wname:nth-child(7) input{
-	width: 55%;
+	width: 60%;
 	height: 0.6rem;
 	padding: 0.5rem 0 0.5rem 0.2rem;
 	border-radius: 0.2rem;
@@ -233,7 +234,7 @@
 	font-size: 0.7rem;
 }
 .zhj_Wname:nth-child(8) input{
-	width:55%;
+	width:54%;
 	height: 0.6rem;
 	padding: 0.5rem 0 0.5rem 0.2rem;
 	border-radius: 0.2rem;
@@ -247,7 +248,7 @@
 	font-size: 0.7rem;
 }
 .zhj_Wname:nth-child(9) input{
-	width:62%;
+	width:54%;
 	height: 0.6rem;
 	padding: 0.5rem 0 0.5rem 0.2rem;
 	border-radius: 0.2rem;
@@ -261,7 +262,7 @@
 	font-size: 0.7rem;
 }
 .zhj_Wname:nth-child(10) input{
-	width:45%;
+	width:42.5%;
 	height: 0.6rem;
 	padding: 0.5rem 0 0.5rem 0.2rem;
 	border-radius: 0.2rem;
@@ -276,7 +277,7 @@
 }
 .zhj_Wname:nth-child(11) textarea{
 	margin-left: 0.3rem;
-	width: 8rem;
+	width: 6.5rem;
 	height: 3rem;
 	float: left;
 	outline-style: none;
