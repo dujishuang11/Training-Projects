@@ -17,11 +17,14 @@
 }
 
 .header-lhq i{
-	font-size: 1.3rem;
+	/*transform: scale(0.8);*/
+	font-size: 1rem;
 	vertical-align: middle;
+	margin-right: 0.2rem;
 }
 .header-lhq span{
 	font-size: 0.7rem;
+	vertical-align: middle;
 }
 .lhq-center{
 	width: 100%;
@@ -143,7 +146,7 @@
 	margin-bottom: 0.3rem;
 }
 .lhq-center-one span:nth-child(1){
-	width:4rem;
+	width:3.5rem;
 	height: 1rem;
 	line-height: 1rem;
 	text-align: center;
@@ -153,16 +156,16 @@
 	font-size: 0.7rem;
 }
 .lhq-center-one span:nth-child(2){
-	width: 3rem;
+	width: 4rem;
 	height: 1rem;
 	line-height: 1rem;
 	float: left;
 	text-align: center;
 	display: block;
-	color: #0000FF;
+	color: #000000;
 }
 .lhq-center-one span:nth-child(3){
-	width: 3rem;
+	width: 4rem;
 	height: 1rem;
 	line-height: 1rem;
 	float: left;
@@ -172,7 +175,7 @@
 }
 
 .lhq_blue{
-	color: #0000FF;
+	font-weight: 600;
 }
 .lhq_black{
 	color: #000000;
