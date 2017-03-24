@@ -12,7 +12,7 @@
 				<span>工作内容</span>
 				<span>执行人</span>
 			</div>
-			<ul class="wyh_task" ng-repeat="item in items | orderBy:Paixu | limitTo : '3' ">
+			<ul class="wyh_task" ng-repeat="item in items | orderBy:Paixu ">
 				<li>{{item.date | date:'yyyy-MM-dd'}}</li>
 				<li>{{item.content}}</li>
 				<li>{{item.uid}}</li>
@@ -22,7 +22,8 @@
 		<div class="wyh_taskfp" ng-hide="wyh_isHide">
 			<div class="wyh_dat">
 				<span>选择日期：</span>
-				<input type="input"  class="wyh_tim" ng-model="wyh_ww" disabled="disabled"/>
+				
+				<input type="date" min="{{wyh_zhi}}"  class="wyh_tim" ng-model="wyh_ww" />
 			</div>
 			<div class="wyh_cont">
 				<span>工作内容：</span>
@@ -41,14 +42,16 @@
 	</div>
 	<div class="lhq-zezao" ng-show = "wyh_isShow">
 		<div class="lhq-zezaobox modal-content">
-			<i class="iconfont icon-guanbi" ng-click="wyh_none()"></i>
+			<i class="glyphicon glyphicon-remove-circle
+" ng-click="wyh_none()"></i>
 			<p>系统提示</p>
 			<span>输入内容不能为空！</span>
 		</div>
 	</div>
 	<div class="lhq-zezao" ng-show = "wyh_toShow">
 		<div class="lhq-zezaobox modal-content">
-			<i class="iconfont icon-guanbi" ng-click="wyh_fw()"></i>
+			<i class="glyphicon glyphicon-remove-circle
+i" ng-click="wyh_fw()"></i>
 			<p>系统提示</p>
 			<span>员工没有权限访问！</span>
 		</div>
