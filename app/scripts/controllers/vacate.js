@@ -8,7 +8,11 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('vacateCtrl', ['$scope','$http','$filter',"$location",function ($scope,$http,$filter,$location) {
+  .controller('vacateCtrl', ['$scope','$http','$filter',"$location","$state",function ($scope,$http,$filter,$location,$state) {
+  	
+  	if(!sessionStorage.username){
+		$state.go('login')
+	}
   	//请求领导层的
   	$http({
   		url:"http://"+ip+":401/users/?level=1",
@@ -85,6 +89,7 @@ angular.module('trainingProjectsApp')
 	$scope.zhyt1 = ($filter("date")($scope.zhy_nnn,"yyyy-MM-dd"));
 	
 	
+//	$scope.jgr='2017-03-22';
 	
 	
 	console.log($scope.zhy_time)
@@ -135,4 +140,11 @@ angular.module('trainingProjectsApp')
   	
   	
   	
-  }]);
+  }]).directive('zhy',function(){
+  	var ssss = new Date();
+  	return function(s,e,a){
+  		e.find('.aa').a("min",ssss)
+  	}
+  	
+  	
+  });
