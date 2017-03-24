@@ -86,10 +86,11 @@ angular.module('trainingProjectsApp')
 	$scope.zhy_nnn1 = new Date($scope.zhytimer);
 	
 //	$scope.zhy_t1 = GetDateStr(3);
+	//将三天后的日期转化格式yyyy-MM-dd
 	$scope.zhyt1 = ($filter("date")($scope.zhy_nnn,"yyyy-MM-dd"));
 	
-	
-//	$scope.jgr='2017-03-22';
+	//再将日期赋给min值
+	$scope.zhybig=$scope.zhyt1;
 	
 	
 	console.log($scope.zhy_time)
@@ -140,11 +141,4 @@ angular.module('trainingProjectsApp')
   	
   	
   	
-  }]).directive('zhy',function(){
-  	var ssss = new Date();
-  	return function(s,e,a){
-  		e.find('.aa').a("min",ssss)
-  	}
-  	
-  	
-  });
+  }]);
