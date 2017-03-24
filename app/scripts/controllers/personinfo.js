@@ -46,7 +46,7 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location", function($s
 		})
 	}
 }]);
-lhq_app.directive("lhq", function() {
+lhq_app.directive("lhq", function($http) {
 	return {
 		restrict: "ECMA",
 		link: function(scope, element, attr) {
@@ -61,8 +61,8 @@ lhq_app.directive("lhq", function() {
 						console.log(this.result)
 						
 						$http({
-							url:'http:// '+ ip + ':401/users/?id='+sessionStorage.userid,
-							mothed:'put',
+							url:'http://'+ ip +':401/users/?id='+sessionStorage.userid,
+							method:'put',
 							data:{
 								pic:this.result
 							}
