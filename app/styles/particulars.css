@@ -16,8 +16,9 @@
 }
 
 .header-lhq i{
-	font-size: 1.3rem;
+	font-size: 1rem;
 	vertical-align: middle;
+	margin-right: 0.2rem;
 }
 .header-lhq span{
 	font-size: 0.7rem;

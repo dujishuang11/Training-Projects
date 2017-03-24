@@ -10,6 +10,12 @@
 
 angular.module('trainingProjectsApp')
  .controller('officeboxCtrl', ['$scope','$http','$state','$location',function ($scope,$http,$state,$location){
+ 	
+ 	
+ 			if(!sessionStorage.username){
+				$state.go('login')
+			}
+ 			
  			var lhqnum = 0;		
 			$scope.clicking = function(e){
 				sessionStorage.setItem('fusername',e.fusername);
@@ -28,7 +34,7 @@ angular.module('trainingProjectsApp')
 			
 			$scope.bottom_lhq=function(){
 				if($scope.daat.length <10){
-					return 
+					return
 				}
 				lhqnum+=10;
 				$scope.aaa();

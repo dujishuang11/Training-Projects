@@ -67,8 +67,11 @@
 		
 var doger_app = angular.module('trainingProjectsApp')
 	var doger_url = 'http://'+ip+':401/kaoqin';
-	doger_app.controller('firstPage',["$scope","$http",function($scope,$http) {
+	doger_app.controller('firstPage',["$scope","$http","$state",function($scope,$http,$state) {
 		
+		if(!sessionStorage.username){
+			$state.go('login')
+		}
 		
 		var doger_data = new Date();
 		var doger_my_data = doger_data.getFullYear()+"-"+(doger_data.getMonth()+1)+"-"+doger_data.getDate();
