@@ -11,9 +11,9 @@ angular.module('trainingProjectsApp')
   .controller('enrollCtrl', ['$scope','$http','$location','$state',function ($scope,$http,$location,$state) {
   	
 //   从其它页面跳转  	
-//	if(!sessionStorage.username){
-//	  	  $state.go('login');
-//	  }
+	if(!sessionStorage.username){
+	  	  $state.go('login');
+	  }
   	  	  	
   	
 //    验证用户名
