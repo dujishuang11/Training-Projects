@@ -76,6 +76,7 @@ var doger_app = angular.module('trainingProjectsApp')
 		var doger_data = new Date();
 		var doger_my_data = doger_data.getFullYear()+"-"+(doger_data.getMonth()+1)+"-"+doger_data.getDate();
 		$('.exit')[0].addEventListener('touchstart',function(){
+			sessionStorage.clear()
 			if(localStorage.my_map){
 				localStorage.removeItem(my_map)
 			}	
@@ -285,9 +286,11 @@ var doger_app = angular.module('trainingProjectsApp')
 								console.log(data)
 								if(data.data.time1 != ''){
 									my_aa.innerHTML = '今天已经签到'
+									my_map_erro.innerHTML = ''
 									$scope.myShow = !$scope.myShow;
 								}else{
 									my_aa.innerHTML = '签到成功'
+									my_map_erro.innerHTML = ''
 									$scope.myShow = !$scope.myShow;
 									wtf(str,"","","",str,data.data.time2,data.data.time3,data.data.time4)	
 								}
@@ -341,10 +344,12 @@ var doger_app = angular.module('trainingProjectsApp')
 							}).then(function(data){
 								if(data.data.time2 != ''){
 									my_aa.innerHTML = '今天已经签到'
+									my_map_erro.innerHTML = ''
 									$scope.myShow = !$scope.myShow;
 								}else{
 									my_aa.innerHTML = '签到成功'
 									$scope.myShow = !$scope.myShow;
+									my_map_erro.innerHTML = ''
 									wtf("",str,"","",data.data.time1,str,data.data.time3,data.data.time4)	
 								}
 							})
@@ -398,10 +403,12 @@ var doger_app = angular.module('trainingProjectsApp')
 							}).then(function(data){
 								if(data.data.time3 != ''){
 									my_aa.innerHTML = '今天已经签到'
+									my_map_erro.innerHTML = ''
 									$scope.myShow = !$scope.myShow;
 								}else{
 									my_aa.innerHTML = '签到成功'
 									$scope.myShow = !$scope.myShow;
+									my_map_erro.innerHTML = ''
 									wtf("","",str,"",data.data.time1,data.data.time2,str,data.data.time4)	
 								}
 							})
@@ -423,6 +430,7 @@ var doger_app = angular.module('trainingProjectsApp')
 			var my_map_erro = document.getElementsByClassName('doger_erro')[0];
 			var my_map_tip = document.getElementsByClassName('doger_my_map_nan')[0];
 			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map_big.innerHTML;
+			
 			if(my_map_big.innerHTML != ''){
 //				$http({
 //					url:'http://'+ip+':401/kaoqin/'+$scope.my_id+'',
@@ -450,15 +458,18 @@ var doger_app = angular.module('trainingProjectsApp')
 //						},600)
 //					})
 //				})
+
 							$http({
 								url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
 								method:'get',
 							}).then(function(data){
 								if(data.data.time4 != ''){
 									my_aa.innerHTML = '今天已经签到'
+									my_map_erro.innerHTML = ''
 									$scope.myShow = !$scope.myShow;
 								}else{
 									my_aa.innerHTML = '签到成功'
+									my_map_erro.innerHTML = ''
 									$scope.myShow = !$scope.myShow;
 									wtf("","","",str,data.data.time1,data.data.time2,data.data.time3,str)	
 								}
@@ -483,10 +494,12 @@ var doger_app = angular.module('trainingProjectsApp')
 			restrict:"ECMA",
 			link:function($scope,element,attr){
 //				var my_pict = document.getElementsByClassName('.doger_myPhoto');
+				$('.doger_name').text(sessionStorage.username)
 				$http({
 					url:'http://'+ip+':401/users/?id='+sessionStorage.userid+'',
 					method:'get'
 				}).then(function(e){
+					console.log(e.data.pic)
 					element.find('.doger_myPhoto')[0].src = e.data.pic
 				})
 		
