@@ -77,10 +77,9 @@ var doger_app = angular.module('trainingProjectsApp')
 		var doger_my_data = doger_data.getFullYear()+"-"+(doger_data.getMonth()+1)+"-"+doger_data.getDate();
 		$('.exit')[0].addEventListener('touchstart',function(){
 			sessionStorage.clear()
-			localStorage.removeItem('my_map')
-//			if(localStorage.my_map){
-//				localStorage.removeItem(my_map)
-//			}	
+			if(localStorage.my_map){
+				localStorage.removeItem(my_map)
+			}	
 		})
 		console.log(sessionStorage.username)
 		$scope.myShow = false;
@@ -96,102 +95,76 @@ var doger_app = angular.module('trainingProjectsApp')
 			url:'http://'+ip+':401/kaoqin/?{"uid":"'+sessionStorage.username+'","date":"'+doger_my_data+'"}',
 			method:'get'
 		}).then(function(data){
-			console.log(data)
+//			console.log(data)
 			if(data.data.length > 0){
+//				my_id = localStorage.my_map
 				localStorage.my_map = data.data[0].id
 				whthfu()
 				console.log(localStorage.my_map)
+//				location.reload()
 			}else{
+//				location.reload()
+				wtf("","","","");
+				whthfu()
+				console.log(localStorage.my_map)
+			}
+		})
+		
+
+		function wtf(amou,amon,aafu,aafn,bmou,bmon,bafu,bafn){
+			$http({
+				url:doger_url,
+				method:'get'
+			}).then(function(data){
+				for(var i = 0; i < data.data.length; i++){
+					console.log(data.data[i].date)
+					console.log(data.data)
+					if(sessionStorage.username == data.data[i].uid){
+						if(doger_my_data == data.data[i].date){
+							my_id = data.data[data.data.length-1].id
+							my_on = true;
+						}
+					}else{
+						my_on = false
+					}
+				}
+				if(my_on == true){
+					$http({
+						url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
+//						url:'http://'+ip+':401/kaoqin/'+my_id+'?{"uid":"'+sessionStorage.username+'","date":"'+doger_my_data+'"}',
+						method:'PUT',
+						data:{
+							date:doger_my_data,
+							time1:bmou,
+							time2:bmon,
+							time3:bafu,
+							time4:bafn,
+							summary:"",
+							uid:sessionStorage.username
+						}
+					}).then(function(data){
+//						my_id = data.data.id
+//						my_big_id = my_id
+						
+					})
+				}else{
 					$http({
 						url:doger_url,
 						method:'POST',
 						data:{
 							date:doger_my_data,
-							time1:"",
-							time2:"",
-							time3:"",
-							time4:"",
+							time1:amou,
+							time2:amon,
+							time3:aafn,
+							time4:aafu,
 							summary:"",
 							uid:sessionStorage.username
 						}
 					}).then(function(data){
-						console.log(data.data.id)
-						localStorage.my_map = data.data.id
-						whthfu()
+						location.reload()
 					})
-			}
-		})
-		
-
-		function wtf(bmou,bmon,bafu,bafn){
-			$http({
-				url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
-				method:'PUT',
-				data:{
-					date:doger_my_data,
-					time1:bmou,
-					time2:bmon,
-					time3:bafu,
-					time4:bafn,
-					summary:"",
-					uid:sessionStorage.username
 				}
-			}).then(function(data){					
-			
 			})
-//			$http({
-//				url:doger_url,
-//				method:'get'
-//			}).then(function(data){
-//				for(var i = 0; i < data.data.length; i++){
-//					console.log(data.data[i].date)
-//					console.log(data.data)
-//					if(sessionStorage.username == data.data[i].uid){
-//						if(doger_my_data == data.data[i].date){
-//							my_id = data.data[data.data.length-1].id
-//							my_on = true;
-//						}
-//					}else{
-//						my_on = false
-//					}
-//				}
-//				if(my_on == true){
-//					$http({
-//						url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
-////						url:'http://'+ip+':401/kaoqin/'+my_id+'?{"uid":"'+sessionStorage.username+'","date":"'+doger_my_data+'"}',
-//						method:'PUT',
-//						data:{
-//							date:doger_my_data,
-//							time1:bmou,
-//							time2:bmon,
-//							time3:bafu,
-//							time4:bafn,
-//							summary:"",
-//							uid:sessionStorage.username
-//						}
-//					}).then(function(data){
-////						my_id = data.data.id
-////						my_big_id = my_id
-//						
-//					})
-//				}else{
-//					$http({
-//						url:doger_url,
-//						method:'POST',
-//						data:{
-//							date:doger_my_data,
-//							time1:amou,
-//							time2:amon,
-//							time3:aafn,
-//							time4:aafu,
-//							summary:"",
-//							uid:sessionStorage.username
-//						}
-//					}).then(function(data){
-//						location.reload()
-//					})
-//				}
-//			})
 		}
 		
 		
@@ -248,6 +221,7 @@ var doger_app = angular.module('trainingProjectsApp')
 								url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
 								method:'get',
 							}).then(function(data){
+								console.log(my_id)
 								console.log(data)
 								if(data.data.time1 != ''){
 									my_aa.innerHTML = '今天已经签到'
@@ -257,7 +231,7 @@ var doger_app = angular.module('trainingProjectsApp')
 									my_aa.innerHTML = '签到成功'
 									my_map_erro.innerHTML = ''
 									$scope.myShow = !$scope.myShow;
-									wtf(str,data.data.time2,data.data.time3,data.data.time4)	
+									wtf(str,"","","",str,data.data.time2,data.data.time3,data.data.time4)	
 								}
 							})
 			}else{
@@ -315,7 +289,7 @@ var doger_app = angular.module('trainingProjectsApp')
 									my_aa.innerHTML = '签到成功'
 									$scope.myShow = !$scope.myShow;
 									my_map_erro.innerHTML = ''
-									wtf(data.data.time1,str,data.data.time3,data.data.time4)	
+									wtf("",str,"","",data.data.time1,str,data.data.time3,data.data.time4)	
 								}
 							})
 			}else{
@@ -374,7 +348,7 @@ var doger_app = angular.module('trainingProjectsApp')
 									my_aa.innerHTML = '签到成功'
 									$scope.myShow = !$scope.myShow;
 									my_map_erro.innerHTML = ''
-									wtf(data.data.time1,data.data.time2,str,data.data.time4)	
+									wtf("","",str,"",data.data.time1,data.data.time2,str,data.data.time4)	
 								}
 							})
 			}else{
@@ -436,7 +410,7 @@ var doger_app = angular.module('trainingProjectsApp')
 									my_aa.innerHTML = '签到成功'
 									my_map_erro.innerHTML = ''
 									$scope.myShow = !$scope.myShow;
-									wtf(data.data.time1,data.data.time2,data.data.time3,str)	
+									wtf("","","",str,data.data.time1,data.data.time2,data.data.time3,str)	
 								}
 							})
 			}else{
@@ -464,7 +438,7 @@ var doger_app = angular.module('trainingProjectsApp')
 					url:'http://'+ip+':401/users/?id='+sessionStorage.userid+'',
 					method:'get'
 				}).then(function(e){
-//					console.log(e.data.pic)
+					console.log(e.data.pic)
 					element.find('.doger_myPhoto')[0].src = e.data.pic
 				})
 		
