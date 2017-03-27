@@ -22,8 +22,7 @@
 		<div class="wyh_taskfp" ng-hide="wyh_isHide">
 			<div class="wyh_dat">
 				<span>选择日期：</span>
-				
-				<input type="date" min="{{wyh_zhi}}"  class="wyh_tim" ng-model="wyh_ww" />
+				<input type="date" min="{{wyh_zhi}}"  class="wyh_tim" ng-model="wyh_nn" />
 			</div>
 			<div class="wyh_cont">
 				<span>工作内容：</span>
@@ -33,6 +32,7 @@
 				<span>&nbsp;执&nbsp;行&nbsp;人：</span>
 				<select class="wyh_peopl" ng-model="wyh_uid">
 					<option ng-repeat="ar in arss">{{ar.username}}</option>
+					<option ng-repeat="ar2 in arss2">{{ar2.username}}</option>
 				</select>
 			</div>
 			<div class="wyh_save">
