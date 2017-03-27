@@ -118,7 +118,7 @@ lhq_app.directive("lhq", function($http) {
 		restrict: "ECMA",
 		link: function(scope, element, attr) {
 			element.find(".xx-button").bind("touchstart", function() {
-				alert('111')
+				//alert('111')
 				element.find(".imginput").click();
 				element.find(".imginput").change(function() {
 					var files = this.files[0],
