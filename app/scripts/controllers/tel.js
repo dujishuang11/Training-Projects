@@ -10,18 +10,18 @@
 angular.module('trainingProjectsApp')
 	.controller('telCtrl', ["$scope", "$http", "$state","$location", function($scope, $http, $state,$location) {
 		var ddnum = 0;
-		$scope.djsShow = false;
 		if(!selssionStorage.username){
 				$state.go('login')
 			}
+		$scope.djsShow = false;
 
 		$scope.abcdef = function(){
 			$http({
-			url: 'http://'+ ip +':401/users/?{"$skip":'+ddnum+',"$limit":10}',
-			method: "get"
-				}).then(function(e) {
-			$scope.data = e.data;
-		})
+				url: 'http://'+ ip +':401/users/?{"$skip":'+ddnum+',"$limit":10}',
+				method: "get"
+			}).then(function(e) {
+				$scope.data = e.data;
+			})
 		}
 		
 		$scope.abcdef();
@@ -91,11 +91,12 @@ angular.module('trainingProjectsApp')
 				sessionStorage.userid = id
 				$location.path('/firstPage/personinfo');
 			}else{
+				$scope.djsHtml = "您没有访问权限";
 				$scope.djsShow = true;
 			}
 		}
 		
-		$scope.djsGuan = function(){
+		$scope.djsGuanbi = function(){
 			$scope.djsShow = false;
 		}
 

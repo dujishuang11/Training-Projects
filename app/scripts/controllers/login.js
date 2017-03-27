@@ -29,6 +29,16 @@ angular.module('trainingProjectsApp')
   	 	}
   	 }
   	 
+  	 $scope.loginFocus=function(){
+  	 	$scope.loginShow = false;
+  	 }
+  	 
+  	 $scope.loginFocusPass=function(){
+  	 	$scope.passShow = false;
+  	 }
+  	 
+  	 
+  	 
 //   验证密码
     var pasExp = /^(?!\d+$)(?![A-Za-z]+$)[a-zA-Z0-9]{6,}$/;
     $scope.passShow = false;

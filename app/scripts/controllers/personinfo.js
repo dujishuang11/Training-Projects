@@ -13,7 +13,7 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 	if(!sessionStorage.username){
 	  	  $state.go('login');
 	  }
-	
+	$scope.djsShowtel = false;
 	$scope.djsSex = '';
 	$scope.djsName = '';
 	$scope.djsTel = '';
@@ -126,7 +126,7 @@ lhq_app.directive("lhq", function($http) {
 					read.readAsDataURL(files);
 					read.onload = function() {
 						element.find(".djsImg").src=this.result
-						console.log(this.result)
+//						console.log(this.result)
 						
 						$http({
 							url:'http://'+ ip +':401/users/?id='+sessionStorage.userid,
