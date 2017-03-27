@@ -9,6 +9,12 @@
  */
 angular.module('trainingProjectsApp')
  .controller('businessCtrl',["$scope","$http","$interval","$filter","$state",function($scope,$http,$interval,$filter,$state){
+ 	  	//判断是否登录
+  	if(!sessionStorage.username){
+			$state.go('login')
+		}
+  	
+  	
 	$http({
 		url:"http://"+ip+":401/shiwu/?uid="+sessionStorage.username,
 		method:"get"
@@ -95,12 +101,7 @@ angular.module('trainingProjectsApp')
 			$scope.arss=e.data;
 		})
   	
-  	//判断是否登录
-  	if(!sessionStorage.username){
-			$state.go('login')
-		}
-  	
-  	
+
   
 }])
 
