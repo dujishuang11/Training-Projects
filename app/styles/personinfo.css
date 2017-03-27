@@ -181,7 +181,7 @@
 .xiaoqiang-right{
 	width: 40%;
 	height: 15rem;
-	float: left;
+	float: right;
 	overflow: hidden;
 }
 
@@ -191,7 +191,6 @@
 	margin: 0 auto;
 	margin-top: 0.5rem;
 	border-radius: 0.5rem;
-	background:url(../img/icon.png) no-repeat center center;
 	background-size:cover ;
 }
 .img img{

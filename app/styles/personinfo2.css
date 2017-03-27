@@ -8,6 +8,10 @@
 .djs-inin {
 	float: left;
 }
+.djsFoot {
+	width: 100%;
+	clear: both;
+}
 .djsBnt {
 	float: right;
 	margin-right: 2rem;

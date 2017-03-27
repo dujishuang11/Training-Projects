@@ -88,20 +88,37 @@ angular.module('trainingProjectsApp')
 	$scope.wyh_timmm = Number($scope.wyh_timb.setDate($scope.wyh_tima.getDate()+1));
 	$scope.wyh_timss = ($filter("date")($scope.wyh_timmm,"yyyy-MM-dd"));
 	$scope.wyh_nn = new Date($scope.wyh_timss)
-  	$scope.wyh_ww = ($filter("date")($scope.wyh_nn,"yyyy-MM-dd"));
+	$scope.wyh_ww = ($filter("date")($scope.wyh_nn,"yyyy-MM-dd"));
 	//再将日期赋给min值
 	$scope.wyh_zhi=$scope.wyh_ww;
   	
-  	
   	//获取执行人后台用户名
+  	if(sessionStorage.level==1){
 		$http({
-			url:"http://"+ip+":401/users",
+			url:"http://"+ip+":401/users/?level=2",
 			method:"get"
 		}).then(function(e){
 			$scope.arss=e.data;
-		})
-  	
-
+			
+		})	
+	}
+  	if(sessionStorage.level==0){
+		$http({
+			url:"http://"+ip+":401/users/?level=1",
+			method:"get"
+		}).then(function(e){
+			
+			$http({
+				url:"http://"+ip+":401/users/?level=2",
+				method:"get"
+			}).then(function(e){
+				$scope.arss2=e.data;
+			})	
+			$scope.arss=e.data;
+		})	
+	}
+		
+  		
   
 }])
 
