@@ -13,16 +13,16 @@
 		
 		<p>
 			<span>性&#x3000;&#x3000;别:</span>
-			<input type="radio" name="sex" ng-model="djsSex1"/><span>男</span>
-			<input type="radio" name="sex" ng-model="djsSex2"/><span>女</span>
+			<input type="radio" name="sex" ng-model="djsSex" value="男"/><span>男</span>
+			<input type="radio" name="sex" ng-model="djsSex" value="女"/><span>女</span>
 		</p>
 		<p>
 			<span>手&#x3000;&#x3000;机:</span>
-			<input type="text" class="form-control" ng-model="djsTel" />
+			<input type="text" class="form-control" ng-model="djsTel" ng-blur="djsTell()" />
 		</p>
 		<p>
 			<span>电子邮件:</span>
-			<input type="text" class="form-control" ng-model="djsEmail" />
+			<input type="text" class="form-control" ng-model="djsEmail" ng-blur="emailDjs()" />
 		</p>
 		<p>
 			<span>地&#x3000;&#x3000;址:</span>
@@ -30,20 +30,30 @@
 		</p>
 		<p>
 			<span>Q&#x3000;Q&#x3000;号:</span>
-			<input type="text" class="form-control" ng-model="djsQQ" />
+			<input type="text" class="form-control" ng-model="djsQQ" ng-blur="qqDjs()" />
 		</p>
 		<p>
 			<span>其它服务:</span>
-			<input type="text" class="form-control" ng-model="djsTeltwo" />
+			<input type="text" class="form-control" ng-model="djsTeltwo" ng-blur="djsTelltwo()" />
 		</p>
 	</div>
 	<lhq>
 	<div class="xiaoqiang-right" >
-		<div class="img"></div>
+		<div class="img">
+			<img class="djsImg" alt="" ng-src="{{djsImg}}" />
+		</div>
 		<input type="file" value="" style="display: none;" class="imginput"/>
 		<button class="xx-button">选择头像</button>
 	</div>
 	</lhq>
 	
 	<input type="button" class="xiaoqiang-but" value="保存" ng-click="djsBtn()"/>
+	
+	<div class="lhq-zezao" ng-show='djsShowtel'>
+		<div class="lhq-zezaobox modal-content">
+			<i class="iconfont icon-guanbi glyphicon glyphicon-remove-circle" ng-click='djsGuan()'></i>
+			<p>系统提示</p>
+			<span class="enText">{{djsTishi}}</span>
+		</div>
+	</div>
 </div>
