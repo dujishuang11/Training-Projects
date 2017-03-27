@@ -11,7 +11,7 @@ angular.module('trainingProjectsApp')
 	.controller('telCtrl', ["$scope", "$http", "$state","$location", function($scope, $http, $state,$location) {
 		var ddnum = 0;
 		$scope.djsShow = false;
-		if(!selssionStorage.username){
+		if(!sessionStorage.username){
 				$state.go('login')
 			}
 
