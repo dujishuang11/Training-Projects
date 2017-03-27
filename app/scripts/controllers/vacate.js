@@ -20,6 +20,7 @@ angular.module('trainingProjectsApp')
   		
   	}).then(function(e){
 		$scope.zhylist = e.data;
+		console.log($scope.zhylist)
 	})
   	//请求BOSS的
 	$http({

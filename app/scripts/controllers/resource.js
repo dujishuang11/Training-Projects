@@ -18,8 +18,8 @@ angular.module('trainingProjectsApp')
   		method:'get'
   		
   	}).then(function(e){
-		$scope.data = e.data;
-		console.log($scope.data)
+		$scope.zhydata = e.data;
+		console.log($scope.zhydata)
 	})
   	//请求BOSS的
 	$http({
@@ -27,9 +27,13 @@ angular.module('trainingProjectsApp')
 		method:'get'
 		
 	}).then(function(e){
-		$scope.data1 = e.data;
+		$scope.zhydata1 = e.data;
 //		console.log($scope.data)
 	})
+	$scope.zhyop = true;
+	if(sessionStorage.level==1){
+		$scope.zhyop = !$scope.zhyop;
+	}
   	
   	
   	
