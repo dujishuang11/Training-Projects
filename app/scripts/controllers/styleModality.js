@@ -8,7 +8,11 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('styleModalityCtrl', ["$scope",function ($scope) {
+  .controller('styleModalityCtrl',"$state", ["$scope",function ($scope,$state) {
+  	 	  	//判断是否登录
+  	if(!sessionStorage.username){
+			$state.go('login')
+		}
 		$scope.pingguolv=function(){
 			location.reload()
 			localStorage.setItem("Sbackground","#7fff00");
