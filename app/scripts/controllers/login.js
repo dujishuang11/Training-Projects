@@ -77,7 +77,7 @@ angular.module('trainingProjectsApp')
 					'password': $scope.passwold
 				}
 			}).then(function(e) {
-				console.log(e)
+//				console.log(e)
 				sessionStorage.username = $scope.username;
 				sessionStorage.userid = e.data.uid;
 				var a = e.data.uid;
