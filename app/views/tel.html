@@ -21,6 +21,10 @@
 			<span>操作</span>
 		</div>
 		<div class="wyh_allul">
+			<div class="lhq-lol" ng-show="zhc_zhy">
+				<p>loading...</p>
+				<img src="images/loading.gif"/>
+			</div>
 			<ul class='wyh_ul1' ng-repeat="ddata in data">
 				
 				<li ng-click="xiangqing(ddata)">{{ddata.name}}</li>
