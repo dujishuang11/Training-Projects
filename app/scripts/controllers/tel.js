@@ -10,10 +10,7 @@
 angular.module('trainingProjectsApp')
 	.controller('telCtrl', ["$scope", "$http", "$state","$location", function($scope, $http, $state,$location) {
 		var ddnum = 0;
-<<<<<<< HEAD
-=======
 		$scope.djsShow = false;
->>>>>>> origin/master
 		if(!sessionStorage.username){
 				$state.go('login')
 			}
