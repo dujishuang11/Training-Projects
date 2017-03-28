@@ -27,7 +27,8 @@ html,body {
 .doger-left {
 	width: 7.9rem;
 	height: 100%;
-	float: left;	
+	float: left;
+	background: #252628;	
 }
 
 .doger-left ul {
@@ -48,7 +49,7 @@ html,body {
 	font-size: .6rem;
 	/*line-height: 3rem;*/
 	/*vertical-align: middle;*/
-	background: #252628;
+	/*background: #252628;*/
 	position: relative;
 	border-top: 1px rgba(255,255,255,.2) solid;
 }
@@ -72,7 +73,6 @@ html,body {
 	transition: .2s;
 	background: rgba(255,255,255,.2);
 }
-
 
 .doger-left ul li:nth-child(1) {
 	border-top: none;

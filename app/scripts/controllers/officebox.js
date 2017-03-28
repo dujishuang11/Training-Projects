@@ -47,14 +47,16 @@ angular.module('trainingProjectsApp')
 				$scope.aaa();
     		}
 			var urll = 'http://'+ip+'shoujianxiang';	
+			$scope.lhq_zhc = true;
 			$scope.aaa = function(){
 				console.log(lhqnum)
 				$http({
 					url:'http://'+ip+'shoujianxiang/?{"uid":"'+sessionStorage.username+'","$skip":'+lhqnum+',"$limit":10}',
 					method:'GET'
 				}).then(function(data){
+					$scope.lhq_zhc = false;	
 					$scope.daat= data.data;
-					console.log($scope.daat)
+//					console.log($scope.daat)
 				})
 			}
 			$scope.aaa();
