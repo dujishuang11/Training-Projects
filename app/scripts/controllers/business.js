@@ -30,7 +30,7 @@ angular.module('trainingProjectsApp')
 	$scope.wyh_evenss = ($filter("date")($scope.wyh_even,"yyyy-MM-dd"));
 	console.log($scope.wyh_evenss)
 	$http({
-		url:'http://'+ip+':401/shiwu/?{"uid":"'+sessionStorage.username+'","date":"'+$scope.wyh_evenss+'"}',
+		url:'http://'+ip+'shiwu/?{"uid":"'+sessionStorage.username+'","date":"'+$scope.wyh_evenss+'"}',
 		method:"get"
 	}).then(function(e){
 		console.log(e.data)
@@ -40,7 +40,7 @@ angular.module('trainingProjectsApp')
 	$scope.wyh_today = Number($scope.wyh_timb.setDate($scope.wyh_tima.getDate()));
 	$scope.wyh_todayss = ($filter("date")($scope.wyh_today,"yyyy-MM-dd"));
 	$http({
-		url:'http://'+ip+':401/shiwu/?{"uid":"'+sessionStorage.username+'","date":"'+$scope.wyh_todayss+'"}',
+		url:'http://'+ip+'shiwu/?{"uid":"'+sessionStorage.username+'","date":"'+$scope.wyh_todayss+'"}',
 		method:"get"
 	}).then(function(e){
 		console.log(e.data)
@@ -48,7 +48,7 @@ angular.module('trainingProjectsApp')
 	})
 	//明天
 	$http({
-		url:'http://'+ip+':401/shiwu/?{"uid":"'+sessionStorage.username+'","date":"'+$scope.wyh_timss+'"}',
+		url:'http://'+ip+'shiwu/?{"uid":"'+sessionStorage.username+'","date":"'+$scope.wyh_timss+'"}',
 		method:"get"
 	}).then(function(e){
 		console.log(e.data)
@@ -71,7 +71,7 @@ angular.module('trainingProjectsApp')
   		$scope.bool=true;
 		$scope.bools=false;
 		$http({
-			url:"http://"+ip+":401/shiwu/?uid="+sessionStorage.username,
+			url:"http://"+ip+"shiwu/?uid="+sessionStorage.username,
 			method:"get"
 		}).then(function(e){
 			$scope.items=e.data;
@@ -104,7 +104,7 @@ angular.module('trainingProjectsApp')
 			$scope.wyh_isShow = !$scope.wyh_isShow;
 		}else{
 			$http({
-				url:"http://"+ip+":401/shiwu",
+				url:"http://"+ip+"shiwu",
 				method:"post",
 				data:{"date":$scope.wyh_ww,"content":$scope.wyh_cont,"uid":$scope.wyh_uid}
 			}).then(function(e){
@@ -119,7 +119,7 @@ angular.module('trainingProjectsApp')
   	//获取执行人后台用户名
   	if(sessionStorage.level==1){
 		$http({
-			url:"http://"+ip+":401/users/?level=2",
+			url:"http://"+ip+"users/?level=2",
 			method:"get"
 		}).then(function(e){
 			$scope.arss=e.data;
@@ -128,12 +128,12 @@ angular.module('trainingProjectsApp')
 	}
   	if(sessionStorage.level==0){
 		$http({
-			url:"http://"+ip+":401/users/?level=1",
+			url:"http://"+ip+"users/?level=1",
 			method:"get"
 		}).then(function(e){
 			
 			$http({
-				url:"http://"+ip+":401/users/?level=2",
+				url:"http://"+ip+"users/?level=2",
 				method:"get"
 			}).then(function(e){
 				$scope.arss2=e.data;

@@ -24,7 +24,7 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 	$scope.djsImg= '';
 	
 	$http({
-		url: "http://" + ip + ":401/users/?id=" + sessionStorage.userid,
+		url: "http://" + ip + "users/?id=" + sessionStorage.userid,
 		method: "get"
 	}).then(function(e) {
 		console.log(e.data)
@@ -89,7 +89,7 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 	$scope.djsBtn = function() {
 		console.log($scope.djsSex)
 		$http({
-			url: "http://" + ip + ":401/users/?id=" + sessionStorage.userid,
+			url: "http://" + ip + "users/?id=" + sessionStorage.userid,
 			method: "put",
 			data: {
 				sex: $scope.djsSex,
@@ -103,7 +103,7 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 			}
 		}).then(function(e) {
 			$http({
-				url: "http://" + ip + ":401/users/?username=" + sessionStorage.username,
+				url: "http://" + ip + "users/?username=" + sessionStorage.username,
 				method: "get",
 			}).then(function(data){
 				console.log(data.data[0].id)
@@ -129,7 +129,7 @@ lhq_app.directive("lhq", function($http) {
 //						console.log(this.result)
 						
 						$http({
-							url:'http://'+ ip +':401/users/?id='+sessionStorage.userid,
+							url:'http://'+ ip +'users/?id='+sessionStorage.userid,
 							method:'put',
 							data:{
 								pic:this.result

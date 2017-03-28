@@ -66,7 +66,7 @@
 		
 		
 var doger_app = angular.module('trainingProjectsApp')
-	var doger_url = 'http://'+ip+':401/kaoqin';
+	var doger_url = 'http://'+ip+'kaoqin';
 	doger_app.controller('firstPage',["$scope","$http","$state",function($scope,$http,$state) {
 		
 		if(!sessionStorage.username){
@@ -93,7 +93,7 @@ var doger_app = angular.module('trainingProjectsApp')
 		
 
 		$http({
-			url:'http://'+ip+':401/kaoqin/?{"uid":"'+sessionStorage.username+'","date":"'+doger_my_data+'"}',
+			url:'http://'+ip+'kaoqin/?{"uid":"'+sessionStorage.username+'","date":"'+doger_my_data+'"}',
 			method:'get'
 		}).then(function(data){
 			console.log(data)
@@ -125,7 +125,7 @@ var doger_app = angular.module('trainingProjectsApp')
 
 		function wtf(bmou,bmon,bafu,bafn){
 			$http({
-				url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
+				url:'http://'+ip+'kaoqin/'+localStorage.my_map+'',
 				method:'PUT',
 				data:{
 					date:doger_my_data,
@@ -157,8 +157,8 @@ var doger_app = angular.module('trainingProjectsApp')
 //				}
 //				if(my_on == true){
 //					$http({
-//						url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
-////						url:'http://'+ip+':401/kaoqin/'+my_id+'?{"uid":"'+sessionStorage.username+'","date":"'+doger_my_data+'"}',
+//						url:'http://'+ip+'kaoqin/'+localStorage.my_map+'',
+////						url:'http://'+ip+'kaoqin/'+my_id+'?{"uid":"'+sessionStorage.username+'","date":"'+doger_my_data+'"}',
 //						method:'PUT',
 //						data:{
 //							date:doger_my_data,
@@ -216,18 +216,18 @@ var doger_app = angular.module('trainingProjectsApp')
 			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map_big.innerHTML;
 			if(my_map_big.innerHTML != ''){
 //				$http({
-////				url:'http://'+ip+':401/kaoqin/'+$scope.my_id+'',
-//					url:'http://'+ip+':401/kaoqin/',
+////				url:'http://'+ip+'kaoqin/'+$scope.my_id+'',
+//					url:'http://'+ip+'kaoqin/',
 //					method:'get'
 //				}).then(function(data){
 //					$http({
-//						url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//						url:'http://'+ip+'kaoqin/'+my_id+'',
 //						method:'get'
 //					}).then(function(data1){
 //						setTimeout(function(){
 //							
 //							$http({
-//								url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//								url:'http://'+ip+'kaoqin/'+my_id+'',
 //								method:'get',
 //							}).then(function(data){
 //								console.log(my_id)
@@ -245,7 +245,7 @@ var doger_app = angular.module('trainingProjectsApp')
 //					})
 //				})
 							$http({
-								url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
+								url:'http://'+ip+'kaoqin/'+localStorage.my_map+'',
 								method:'get',
 							}).then(function(data){
 								console.log(data)
@@ -279,16 +279,16 @@ var doger_app = angular.module('trainingProjectsApp')
 			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map_big.innerHTML;
 			if(my_map_big.innerHTML != ''){
 //				$http({
-//					url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//					url:'http://'+ip+'kaoqin/'+my_id+'',
 //					method:'get'
 //				}).then(function(data){
 //					$http({
-//						url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//						url:'http://'+ip+'kaoqin/'+my_id+'',
 //						method:'get'
 //					}).then(function(data1){
 //						setTimeout(function(){
 //							$http({
-//								url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//								url:'http://'+ip+'kaoqin/'+my_id+'',
 //								method:'get',
 //							}).then(function(data){
 //								if(data.data.time2 != ''){
@@ -304,7 +304,7 @@ var doger_app = angular.module('trainingProjectsApp')
 //					})
 //				})
 							$http({
-								url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
+								url:'http://'+ip+'kaoqin/'+localStorage.my_map+'',
 								method:'get',
 							}).then(function(data){
 								if(data.data.time2 != ''){
@@ -338,16 +338,16 @@ var doger_app = angular.module('trainingProjectsApp')
 			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map_big.innerHTML;
 			if(my_map_big.innerHTML != ''){
 //				$http({
-//					url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//					url:'http://'+ip+'kaoqin/'+my_id+'',
 //					method:'get'
 //				}).then(function(data){
 //					$http({
-//						url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//						url:'http://'+ip+'kaoqin/'+my_id+'',
 //						method:'get'
 //					}).then(function(data1){
 //						setTimeout(function(){
 //							$http({
-//								url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//								url:'http://'+ip+'kaoqin/'+my_id+'',
 //								method:'get',
 //							}).then(function(data){
 //								if(data.data.time3 != ''){
@@ -363,7 +363,7 @@ var doger_app = angular.module('trainingProjectsApp')
 //					})
 //				})
 							$http({
-								url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
+								url:'http://'+ip+'kaoqin/'+localStorage.my_map+'',
 								method:'get',
 							}).then(function(data){
 								if(data.data.time3 != ''){
@@ -398,17 +398,17 @@ var doger_app = angular.module('trainingProjectsApp')
 			
 			if(my_map_big.innerHTML != ''){
 //				$http({
-//					url:'http://'+ip+':401/kaoqin/'+$scope.my_id+'',
-//					url:'http://'+ip+':401/kaoqin/',
+//					url:'http://'+ip+'kaoqin/'+$scope.my_id+'',
+//					url:'http://'+ip+'kaoqin/',
 //					method:'get'
 //				}).then(function(data){
 //					$http({
-//						url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//						url:'http://'+ip+'kaoqin/'+my_id+'',
 //						method:'get'
 //					}).then(function(data1){
 //						setTimeout(function(){
 //							$http({
-//								url:'http://'+ip+':401/kaoqin/'+my_id+'',
+//								url:'http://'+ip+'kaoqin/'+my_id+'',
 //								method:'get',
 //							}).then(function(data){
 //								if(data.data.time4 != ''){
@@ -425,7 +425,7 @@ var doger_app = angular.module('trainingProjectsApp')
 //				})
 
 							$http({
-								url:'http://'+ip+':401/kaoqin/'+localStorage.my_map+'',
+								url:'http://'+ip+'kaoqin/'+localStorage.my_map+'',
 								method:'get',
 							}).then(function(data){
 								if(data.data.time4 != ''){
@@ -461,7 +461,7 @@ var doger_app = angular.module('trainingProjectsApp')
 //				var my_pict = document.getElementsByClassName('.doger_myPhoto');
 				$('.doger_name').text(sessionStorage.username)
 				$http({
-					url:'http://'+ip+':401/users/?id='+sessionStorage.userid+'',
+					url:'http://'+ip+'users/?id='+sessionStorage.userid+'',
 					method:'get'
 				}).then(function(e){
 //					console.log(e.data.pic)
