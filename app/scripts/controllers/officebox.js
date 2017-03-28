@@ -54,7 +54,8 @@ angular.module('trainingProjectsApp')
 					url:'http://'+ip+'shoujianxiang/?{"uid":"'+sessionStorage.username+'","$skip":'+lhqnum+',"$limit":10}',
 					method:'GET'
 				}).then(function(data){
-					$scope.lhq_zhc = false;	
+					$scope.lhq_zhc = false;
+				
 					$scope.daat= data.data;
 //					console.log($scope.daat)
 				})
