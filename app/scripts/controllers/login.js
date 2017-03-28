@@ -55,14 +55,12 @@ angular.module('trainingProjectsApp')
 	 		$scope.passShow = false;
 	 	}
   	}
-
+  	 
+     	$scope.loginshow = false;
 //    点击登录   
      $scope.username='';
      $scope.passwold ='';
-     $scope.logining = function() {
-     	localStorage.setItem('Sbackground','');
-   	 	localStorage.setItem('Scolor','');
-     	$scope.loginshow = false;
+     $scope.logining = function() {    	
 		if($scope.username == '') {
 			$scope.loginshow = true;
 		}
@@ -70,7 +68,7 @@ angular.module('trainingProjectsApp')
 			$scope.loginshow = true;
 		}else {
 			$http({
-				url: "http://" + ip + ":401/users/login",
+				url: "http://" + ip + "users/login",
 				method: "post",
 				data: {
 					'username': $scope.username,
@@ -82,7 +80,7 @@ angular.module('trainingProjectsApp')
 				sessionStorage.userid = e.data.uid;
 				var a = e.data.uid;
 				$http({
-					url: "http://" + ip + ":401/users/?id=" + a,
+					url: "http://" + ip + "users/?id=" + a,
 					method: "get"
 				}).then(function(e) {
 					
