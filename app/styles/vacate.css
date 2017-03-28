@@ -79,3 +79,21 @@
 	margin-top: 5rem;
 }
 
+.zhy_sussesss{
+	width: 40%;
+	height: 2rem;
+	background: #252628;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	text-align: center;
+	line-height: 2rem;
+	color: white;
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	/*margin-left: -50%;*/
+	/*opacity: 1;*/
+	/*transition: 1.5s;*/
+}
+

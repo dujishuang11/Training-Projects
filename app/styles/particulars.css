@@ -38,7 +38,7 @@
 .xq-top p i{
 	list-style: none;
 	font-style: normal;
-	border-bottom: 0.1rem solid #CCCCCC;
+	/*border-bottom: 0.1rem solid #CCCCCC;*/
 }
 .xq-top p:nth-child(1) span{
 	font-size: 0.7rem;

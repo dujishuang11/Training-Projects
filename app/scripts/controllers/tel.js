@@ -15,14 +15,14 @@ angular.module('trainingProjectsApp')
 			}
 		$scope.djsShow = false;
 		$scope.djssShow = false;
-
+		$scope.zhc_zhy = true;
 		$scope.abcdef = function(){
 			$http({
 				url: 'http://'+ ip +'users/?{"$skip":"'+ddnum+'","$limit":10}',
 				method: "get"
 			}).then(function(e) {
-//				console.log(e.data)
-				$scope.data = e.data;
+						$scope.zhc_zhy = false;
+						$scope.data = e.data;
 			})
 		}
 		

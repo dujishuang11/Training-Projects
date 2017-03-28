@@ -55,14 +55,12 @@ angular.module('trainingProjectsApp')
 	 		$scope.passShow = false;
 	 	}
   	}
-
+  	 
+     	$scope.loginshow = false;
 //    点击登录   
      $scope.username='';
      $scope.passwold ='';
-     $scope.logining = function() {
-     	localStorage.setItem('Sbackground','');
-   	 	localStorage.setItem('Scolor','');
-     	$scope.loginshow = false;
+     $scope.logining = function() {    	
 		if($scope.username == '') {
 			$scope.loginshow = true;
 		}

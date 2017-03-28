@@ -180,3 +180,27 @@
 .lhq_black{
 	color: #000000;
 }
+.lhq-login{
+	width: 6rem;
+	height: 6rem;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	
+}
+.lhq-login p{
+	width: 100%;
+	height: 1rem;
+	text-align: center;
+	line-height: 1rem;
+	font-size: 1rem;
+	
+}
+.lhq-login img{
+	width: 4rem;
+	height: 4rem;
+	display: block;
+	margin: 30% auto 0;
+	transform: translateY(-30%);
+}
