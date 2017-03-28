@@ -70,19 +70,19 @@ angular.module('trainingProjectsApp')
 			$scope.loginshow = true;
 		}else {
 			$http({
-				url: "http://" + ip + "users/login",
+				url: "http://" + ip + ":401/users/login",
 				method: "post",
 				data: {
 					'username': $scope.username,
 					'password': $scope.passwold
 				}
 			}).then(function(e) {
-				console.log(e)
+//				console.log(e)
 				sessionStorage.username = $scope.username;
 				sessionStorage.userid = e.data.uid;
 				var a = e.data.uid;
 				$http({
-					url: "http://" + ip + "users/?id=" + a,
+					url: "http://" + ip + ":401/users/?id=" + a,
 					method: "get"
 				}).then(function(e) {
 					

@@ -150,10 +150,15 @@ angular.module('trainingProjectsApp')
 		$scope.enAddr = '';
 
 		$scope.enShodowshow = false;
+		$scope.entrue = false;
 		$scope.enregister = function(e) {
 			if($scope.enusername == '' || $scope.enpasswold == '' || $scope.enposition == '' || $scope.sex == '' || $scope.enemail == '' || $scope.ennphone == '' || $scope.QQ == '' || $scope.otherphone == '' || $scope.myNewName == '' || $scope.enAddr == '') {
 				$scope.enShodowshow = true;
+				$scope.entext='信息未填写完整！'
 			} else {
+				$scope.entrue=true;
+				$scope.zhj_Besure=function(){
+				$scope.entrue = false;
 				$http({
 					url: "http://" + ip + "users",
 					method: "post",
@@ -171,9 +176,9 @@ angular.module('trainingProjectsApp')
 						"pic": 'images/icon.png'
 					}
 				}).then(function(e) {
-					console.log(e)
+//					console.log(e);
+//					console.log(sessionStorage.myPic);
 					sessionStorage.myPic = 'images/icon.png';
-					console.log(sessionStorage.myPic)
 					$scope.enusername = '';
 					$scope.enpasswold = '';
 					$scope.enposition = '';
@@ -185,15 +190,22 @@ angular.module('trainingProjectsApp')
 					$scope.myNewName = '';
 					$scope.enAddr = '';
 					$location.path('/firstPage/tel');
+					
+					
 				}, function() {
 					$scope.enShodowshow = true;
-					$('.enText').text('用户名已被注册');
+					$scope.entext='用户名已注册！'
 				})
 			}
-		}
+		}							
+ 	  }
 
 		$scope.zhj_comeBack = function() {
 			$location.path('/firstPage/tel');
+		}
+		
+		$scope.zhj_BesureII = function() {
+    		$scope.entrue = false;
 		}
 
 		$scope.enrollHide = function() {
