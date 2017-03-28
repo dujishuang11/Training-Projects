@@ -81,11 +81,21 @@
 	</div>
 	</div>
 	
+	<div class="zhj-zezao" ng-show='entrue'>
+		<div class="zhj-zezaobox">
+			<i class="iconfont icon-guanbi glyphicon glyphicon-remove-circle" ng-click='zhj_BesureII()'></i>
+			<p ng-model='loginText'>确定添加此信息？</p>
+			<button ng-click='zhj_Besure()'>确定</button>
+		</div>
+	</div>
+	
+	
+	
 	<div class="lhq-zezao" ng-show='enShodowshow'>
 		<div class="lhq-zezaobox modal-content">
 			<i class="iconfont icon-guanbi glyphicon glyphicon-remove-circle" ng-click='enrollHide()'></i>
 			<p ng-model='loginText'>系统提示</p>
-			<span class="enText" ng-model='loginIfio'>注册内容未完善哦！</span>
+			<span class="enText" ng-model='loginIfio'>{{entext}}</span>
 		</div>
 	</div>
 </div>

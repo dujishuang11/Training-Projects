@@ -11,29 +11,49 @@ angular.module('trainingProjectsApp')
  .controller('businessCtrl',["$scope","$http","$interval","$filter","$state",function($scope,$http,$interval,$filter,$state){
  	  	//判断是否登录
   	if(!sessionStorage.username){
-			$state.go('login')
-		}
+		$state.go('login')
+	}
   	
   		//获取当前日期
   	$scope.wyh_tima = new Date();
     $scope.wyh_timb = new Date();
 	$scope.wyh_timmm = Number($scope.wyh_timb.setDate($scope.wyh_tima.getDate()+1));
 	$scope.wyh_timss = ($filter("date")($scope.wyh_timmm,"yyyy-MM-dd"));
-	$scope.wyh_nn = new Date($scope.wyh_timss);
-	$scope.wyh_ww = ($filter("date")($scope.wyh_nn,"yyyy-MM-dd"));
+	console.log($scope.wyh_timss); //明天日期  2017-03-29
 	//再将日期赋给min值
-	$scope.wyh_zhi=$scope.wyh_ww;
-	console.log($scope.wyh_tima)
+	$scope.wyh_zhi=$scope.wyh_timss;
+	
+	//获取执行人后台用户名
+  	if(sessionStorage.level==1){
+		$http({
+			url:"http://"+ip+"users/?level=2",
+			method:"get"
+		}).then(function(e){
+			$scope.arss=e.data;
+		})	
+	}
+  	if(sessionStorage.level==0){
+		$http({
+			url:"http://"+ip+"users/?level=1",
+			method:"get"
+		}).then(function(e){
+			$scope.arss=e.data;
+		})
+		$http({
+			url:"http://"+ip+"users/?level=2",
+			method:"get"
+		}).then(function(e){
+			$scope.arss2=e.data;
+		})	
+	}
 	
 	//昨天
 	$scope.wyh_even = Number($scope.wyh_timb.setDate($scope.wyh_tima.getDate()-1));
 	$scope.wyh_evenss = ($filter("date")($scope.wyh_even,"yyyy-MM-dd"));
-	console.log($scope.wyh_evenss)
 	$http({
 		url:'http://'+ip+'shiwu/?{"uid":"'+sessionStorage.username+'","date":"'+$scope.wyh_evenss+'"}',
 		method:"get"
 	}).then(function(e){
-		console.log(e.data)
 		$scope.itemeven=e.data;
 	})
 	//今天
@@ -43,7 +63,6 @@ angular.module('trainingProjectsApp')
 		url:'http://'+ip+'shiwu/?{"uid":"'+sessionStorage.username+'","date":"'+$scope.wyh_todayss+'"}',
 		method:"get"
 	}).then(function(e){
-		console.log(e.data)
 		$scope.itemtoday=e.data;
 	})
 	//明天
@@ -51,7 +70,6 @@ angular.module('trainingProjectsApp')
 		url:'http://'+ip+'shiwu/?{"uid":"'+sessionStorage.username+'","date":"'+$scope.wyh_timss+'"}',
 		method:"get"
 	}).then(function(e){
-		console.log(e.data)
 		$scope.items=e.data;
 	})
 	
@@ -60,7 +78,7 @@ angular.module('trainingProjectsApp')
 	$scope.bool=true;  //颜色切换
 	$scope.bools=false; //颜色切换
 //判断内容是否为空
-  	$scope.wyh_ww = ''; //日期
+  	$scope.wyh_mode = ''; //日期
   	$scope.wyh_uid = ''; //执行人
   	$scope.wyh_cont = ''; //内容
   	$scope.wyh_isShow=false;
@@ -100,47 +118,31 @@ angular.module('trainingProjectsApp')
   	}
   	//保存
   	$scope.wyhSave=function(){
-		if($scope.wyh_ww=='' || $scope.wyh_cont=="" || $scope.wyh_uid==""){
+  	//提示提交成功
+  		$scope.wyh_tscg = false;
+		$('.wyh_tscgcss').animate({bottom:'1rem',opacity:1},0);
+  	//获取input框的value值
+		$scope.wyh_mode = ($filter("date")($scope.wyh_mode,"yyyy-MM-dd"));
+		if($scope.wyh_mode=='' || $scope.wyh_cont=="" || $scope.wyh_uid==""){
 			$scope.wyh_isShow = !$scope.wyh_isShow;
 		}else{
 			$http({
 				url:"http://"+ip+"shiwu",
 				method:"post",
-				data:{"date":$scope.wyh_ww,"content":$scope.wyh_cont,"uid":$scope.wyh_uid}
+				data:{"date":$scope.wyh_mode,"content":$scope.wyh_cont,"uid":$scope.wyh_uid}
 			}).then(function(e){
+				//提示成功
+				$scope.wyh_tscg = !$scope.wyh_tscg;
+				$('.wyh_tscgcss').animate({bottom:'2.5rem',opacity:'0'},2000);
 				console.log(e)
-				$scope.wyh_ww=""; //清空
+				$scope.wyh_mode=""; //清空
 				$scope.wyh_cont="";
 				$scope.wyh_uid="";
 			})
 		}
   	}
   	
-  	//获取执行人后台用户名
-  	if(sessionStorage.level==1){
-		$http({
-			url:"http://"+ip+"users/?level=2",
-			method:"get"
-		}).then(function(e){
-			$scope.arss=e.data;
-			
-		})	
-	}
-  	if(sessionStorage.level==0){
-		$http({
-			url:"http://"+ip+"users/?level=1",
-			method:"get"
-		}).then(function(e){
-			
-			$http({
-				url:"http://"+ip+"users/?level=2",
-				method:"get"
-			}).then(function(e){
-				$scope.arss2=e.data;
-			})	
-			$scope.arss=e.data;
-		})	
-	}
+  	
 		
   		
   

@@ -55,14 +55,12 @@ angular.module('trainingProjectsApp')
 	 		$scope.passShow = false;
 	 	}
   	}
-
+  	 
+     	$scope.loginshow = false;
 //    点击登录   
      $scope.username='';
      $scope.passwold ='';
-     $scope.logining = function() {
-     	localStorage.setItem('Sbackground','');
-   	 	localStorage.setItem('Scolor','');
-     	$scope.loginshow = false;
+     $scope.logining = function() {    	
 		if($scope.username == '') {
 			$scope.loginshow = true;
 		}
@@ -77,7 +75,7 @@ angular.module('trainingProjectsApp')
 					'password': $scope.passwold
 				}
 			}).then(function(e) {
-				console.log(e)
+//				console.log(e)
 				sessionStorage.username = $scope.username;
 				sessionStorage.userid = e.data.uid;
 				var a = e.data.uid;
