@@ -8,74 +8,127 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('styleModalityCtrl', ["$scope","$state",function ($scope,$state) {
+  .controller('styleModalityCtrl', ["$scope","$state","$http",function ($scope,$state,$http) {
   	 	  	//判断是否登录
   	if(!sessionStorage.username){
 			$state.go('login')
 		}
 		$scope.pingguolv=function(){
-			location.reload()
-			localStorage.setItem("Sbackground","#7fff00");
-			localStorage.setItem("Scolor","black");
+			
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"#7fff00","color":"black"}
+			}).then(function(e){
+				location.reload()
+			})
 		}
 		$scope.fanxinglan=function(){
-			location.reload()
-			localStorage.setItem("Sbackground","#00FFFF");
-			localStorage.setItem("Scolor","black");
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"#00FFFF","color":"black"}
+			}).then(function(e){
+				location.reload()
+			})
 		}
 		$scope.zhuguangcheng=function(){
-			location.reload()
-			localStorage.setItem("Sbackground","#ff7f00");
-			localStorage.setItem("Scolor","black");
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"#ff7f00","color":"black"}
+			}).then(function(e){
+				location.reload()
+			})
 		}
 		$scope.wenshahong=function(){
-			location.reload()
-			localStorage.setItem("Sbackground","#bc1717");
-			localStorage.setItem("Scolor","white");
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"#bc1717","color":"white"}
+			}).then(function(e){
+				location.reload()
+			})
 		}
 		$scope.bingchuanlan=function(){
-			location.reload()
-			localStorage.setItem("Sbackground","#4d4dff");
-			localStorage.setItem("Scolor","black");
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"#4d4dff","color":"black"}
+			}).then(function(e){
+				location.reload()
+			})
 		}
 		$scope.dianyalv=function(){
-			location.reload()
-			localStorage.setItem("Sbackground","#32cd32");
-			localStorage.setItem("Scolor","black");
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"#32cd32","color":"black"}
+			}).then(function(e){
+				location.reload()
+			})
 		}
 		$scope.mingehuang=function(){
-			location.reload()
-			localStorage.setItem("Sbackground","yellow");
-			localStorage.setItem("Scolor","black");
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"yellow","color":"black"}
+			}).then(function(e){
+				location.reload()
+			})
 		}
 		$scope.shiliuhong=function(){
-			location.reload()
-			localStorage.setItem("Sbackground","#ff2400");
-			localStorage.setItem("Scolor","white");
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"#ff2400","color":"white"}
+			}).then(function(e){
+				location.reload()
+			})
 		}
 		$scope.husnxinghui=function(){
-			location.reload()
-			localStorage.setItem("Sbackground","#d9d9f3");
-			localStorage.setItem("Scolor","black");
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"#d9d9f3","color":"black"}
+			}).then(function(e){
+				location.reload()
+			})
 		}
 		$scope.mihongfen=function(){
-			location.reload()
-			localStorage.setItem("Sbackground","#FF6EC7");
-			localStorage.setItem("Scolor","black");
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"#FF6EC7","color":"black"}
+			}).then(function(e){
+				location.reload()
+			})
 		}
 		$scope.zangqingse=function(){
-			location.reload()
-			localStorage.setItem("Sbackground","#2F2F4F");
-			localStorage.setItem("Scolor","white");
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"#2F2F4F","color":"white"}
+			}).then(function(e){
+				location.reload()
+			})
 		}
 		$scope.lanhuazi=function(){
-			location.reload()
-			localStorage.setItem("Sbackground","#9370DB");
-			localStorage.setItem("Scolor","black");
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"#9370DB","color":"black"}
+			}).then(function(e){
+				location.reload()
+			})
 		}
 		$scope.wyh_backColor=function(){
-			localStorage.setItem("Sbackground","");
-			localStorage.setItem("Scolor","");
-			location.reload()
+			$http({
+				url:"http://"+ip+"users/?id="+sessionStorage.userid,
+				method:"put",
+				data:{"bgcolor":"","color":""}
+			}).then(function(e){
+				location.reload()
+			})
 		}
   }])

@@ -1,28 +1,30 @@
 <div class="doger-box" ng-controller="firstPage">
 	<lxmfrg>
 		<lxmlow>
-		<div class="doger-top" set-color>
+		<div class="doger-top">
 			<p class="doger-title">
 				<img class="img-thumbnail doger_myPhoto" alt="" />
 				<a class="exit" ui-sref = "login">退出</a>
-				<span class="doger_name" set-color>Username</span>
+				<span class="doger_name">Username</span>
 			</p>
 		</div>
 		<div class="doger_big_wrapper">
 		<div class="doger-wrapper">	
-			<div class="doger-left" set-color>
+			<!--<set-color>-->
+			<div class="doger-left">
 				<ul class="doger-list">
-					<li set-color><span><i class="glyphicon glyphicon-home" set-color></i><div set-color>首页</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = 'firstPage'></a></li>
-					<li set-color><span><i class="glyphicon glyphicon-list-alt" set-color></i><div set-color>考勤信息</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.salary'></a></li>
-					<li set-color><span><i class="glyphicon glyphicon-phone" set-color></i><div set-color>个人通讯录</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.tel'></a></li>
-					<li set-color><span><i class="glyphicon glyphicon-tasks" set-color></i><div set-color>日程事务</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.business'></a></li>
-					<li set-color><span><i class="glyphicon glyphicon-envelope" set-color></i><div set-color>收件箱</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.officebox'></a></li>
-					<li set-color><span><i class="glyphicon glyphicon-th-large" set-color></i><div set-color>资源申请</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.resource'></a></li>
-					<li set-color><span><i class="glyphicon glyphicon-user" set-color></i><div set-color>个人信息</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.personinfo'></a></li>
-					<li set-color><span><i class="glyphicon glyphicon-edit" set-color></i><div set-color>请假申请</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.vacate'></a></li>
-					<li set-color><span><i class="glyphicon glyphicon-leaf" set-color></i><div set-color>风格界面</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.styleModality'></a></li>
+					<li><span><i class="glyphicon glyphicon-home"></i><div>首页</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = 'firstPage'></a></li>
+					<li><span><i class="glyphicon glyphicon-list-alt"></i><div>考勤信息</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.salary'></a></li>
+					<li><span><i class="glyphicon glyphicon-phone"></i><div>个人通讯录</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.tel'></a></li>
+					<li><span><i class="glyphicon glyphicon-tasks"></i><div>日程事务</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.business'></a></li>
+					<li><span><i class="glyphicon glyphicon-envelope"></i><div>收件箱</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.officebox'></a></li>
+					<li><span><i class="glyphicon glyphicon-th-large"></i><div>资源申请</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.resource'></a></li>
+					<li><span><i class="glyphicon glyphicon-user"></i><div>个人信息</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.personinfo'></a></li>
+					<li><span><i class="glyphicon glyphicon-edit"></i><div>请假申请</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.vacate'></a></li>
+					<li><span><i class="glyphicon glyphicon-leaf"></i><div>风格界面</div></span><div class="doger-list-opac"></div><div class="doger-list-opac-right"></div><a ui-sref = '.styleModality'></a></li>
 				</ul>
 			</div>
+			<!--</set-color>-->
 			<!--</lxmfrg>-->
 			<div class="doger-right" ui-view="content">
 				<!--<ui-view>-->

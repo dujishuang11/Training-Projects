@@ -73,6 +73,15 @@ var doger_app = angular.module('trainingProjectsApp')
 			$state.go('login')
 		}
 		
+		//风格界面颜色变化
+		$http({
+			url:"http://"+ip+"users/?id="+sessionStorage.userid,
+			method:"get"
+		}).then(function(e){
+			$(".doger-top").css("background",e.data.bgcolor).css("color",e.data.color);
+			$(".doger-left").css("background",e.data.bgcolor).css("color",e.data.color);
+		})
+		
 		var doger_data = new Date();
 		var doger_my_data = doger_data.getFullYear()+"-"+(doger_data.getMonth()+1)+"-"+doger_data.getDate();
 		$('.exit')[0].addEventListener('touchstart',function(){
@@ -546,8 +555,4 @@ var doger_app = angular.module('trainingProjectsApp')
 			}
 		}	
 		
-	}).directive("setColor",function(){
-			return function(scope,element,attrs){
-				element.css("background",localStorage.Sbackground).css("color",localStorage.Scolor);
-			}
-	})
+})
