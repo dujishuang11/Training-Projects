@@ -40,10 +40,18 @@
 		</div>
 	</div>
 	<div class="lhq-zezao" ng-show="djsShow">
-		<div class="lhq-zezaobox modal-content">
+		<div class="lhq-zezaobox modal-content djsMeng">
 			<i class="iconfont icon-guanbi" ng-click="djsGuanbi()"></i>
 			<p>系统提示</p>
 			<span>您没有访问权限</span>
+		</div>
+	</div>
+	<div class="lhq-zezao" ng-show="djssShow">
+		<div class="modal-content djsMeng">
+			<i class="iconfont icon-guanbi" ng-click="djsGuanbi()"></i>
+			<p>系统提示</p>
+			<span>确定删除此员工吗？</span>
+			<button class="btn btn-primary djsButton" ng-click="djsQd()">确定</button>
 		</div>
 	</div>
 </div>
