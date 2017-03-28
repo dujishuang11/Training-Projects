@@ -9,9 +9,14 @@
  */
 angular.module('trainingProjectsApp')
   .controller('resourceCtrl', ["$scope","$http","$filter","$location","$state",function ($scope,$http,$filter,$location,$state) {
+  	
+  	
+  	//直接打url地址跳转登录页面
   	if(!sessionStorage.username){
 		$state.go('login')
 	}
+  	
+  	
   	//请求领导层的
   	$http({
   		url:"http://"+ip+"users/?level=1",
@@ -28,8 +33,9 @@ angular.module('trainingProjectsApp')
 		
 	}).then(function(e){
 		$scope.zhydata1 = e.data;
-//		console.log($scope.data)
+		console.log($scope.zhydata1)
 	})
+	
 	$scope.zhyop = true;
 	if(sessionStorage.level==1){
 		$scope.zhyop = !$scope.zhyop;
@@ -49,15 +55,16 @@ angular.module('trainingProjectsApp')
 	
 	$scope.now = new Date();
 	$scope.dt2 = $filter("date")($scope.now, "yyyy/MM/dd HH:mm:ss");
-	console.log($scope.dt2);
-	console.log($scope.now);
+//	console.log($scope.dt2);
+//	console.log($scope.now);
 	$scope.bg1 = true;
 	$scope.bg2 = false;
 	
-	
+	//判断如果是boss进入直接弹框
 	if(sessionStorage.level==0){
 		$scope.zhy_ss = !$scope.zhy_ss;
 	}
+	//点击×跳转首页
 	$scope.zhy_pa = function(){
 		$location.url('/firstPage');
 	}
@@ -74,7 +81,7 @@ angular.module('trainingProjectsApp')
 	$scope.toggle1=function(){
 		
 		if(sessionStorage.level==2){
-			console.log(sessionStorage.level)
+//			console.log(sessionStorage.level)
 			$scope.ZhyisHide = true;
 			$scope.bg1 = true;
 			$scope.bg2 = false;
@@ -89,6 +96,8 @@ angular.module('trainingProjectsApp')
 		
 	}
 	
+	
+	
 	//点击蒙版中的确定按钮
 	$scope.zhy_dis = function(){
 		$scope.ZhyisShow = !$scope.ZhyisShow
@@ -97,12 +106,18 @@ angular.module('trainingProjectsApp')
 		$scope.zhy_show = !$scope.zhy_show
 	}
 	
+//	$scope.zhy_xiaoshi = false;
+	
 	//点击办公用品的提交按钮
 	$scope.zhy_btn1 = function(){
-		console.log($scope.shenqingren)
-		console.log($scope.shoujianren)
-		console.log($scope.wuzi)
-		console.log($scope.yongtu)
+//		console.log($scope.shenqingren)
+//		console.log($scope.shoujianren)
+//		console.log($scope.wuzi)
+//		console.log($scope.yongtu)
+		$scope.zhy_xiaoshi = false;
+		$('.zhy_tishi').animate({bottom:'1rem',opacity:1},0);
+		
+		//判断是否为空
 		if($scope.shenqingren==''||$scope.shoujianren==''||$scope.wuzi==''||$scope.yongtu==''){
 			$scope.ZhyisShow = !$scope.ZhyisShow;
 		}else{
@@ -119,10 +134,14 @@ angular.module('trainingProjectsApp')
 					}
 			}).then(function(e){
 				console.log(e)
+				
 				$scope.shenqingren = sessionStorage.username;
 				$scope.shoujianren = '';
 				$scope.wuzi = '';
 				$scope.yongtu = '';
+				$scope.zhy_xiaoshi = !$scope.zhy_xiaoshi;
+				$('.zhy_tishi').animate({bottom:'2.5rem',opacity:'0'},2000);
+				
 			})
 			
 			
@@ -130,8 +149,20 @@ angular.module('trainingProjectsApp')
 		
 	}
 	
+	
+	
 	//点击福利的提交按钮
 	$scope.zhy_btn2 = function(){
+//		console.log($scope.shenqingren)
+//		console.log($scope.shoujianren)
+//		console.log($scope.wuzi)
+//		console.log($scope.yongtu)
+		
+		//
+		$scope.zhy_xiaoshi = false;
+		$('.zhy_tishi').animate({bottom:'1rem',opacity:1},0);
+		
+		//判断是否为空
 		
 		if($scope.shenqingren==''||$scope.shoujianren==''||$scope.wuzi==''||$scope.yongtu==''){
 			$scope.ZhyisShow = !$scope.ZhyisShow;
@@ -153,6 +184,9 @@ angular.module('trainingProjectsApp')
 				$scope.shoujianren = '';
 				$scope.wuzi = '';
 				$scope.yongtu = '';
+				$scope.zhy_xiaoshi = !$scope.zhy_xiaoshi;
+				$('.zhy_tishi').animate({bottom:'2.5rem',opacity:'0'},2000);
+				
 			})
 			
 			
