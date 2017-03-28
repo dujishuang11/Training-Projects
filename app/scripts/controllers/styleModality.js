@@ -8,7 +8,7 @@
  * Controller of the trainingProjectsApp
  */
 angular.module('trainingProjectsApp')
-  .controller('styleModalityCtrl',"$state", ["$scope",function ($scope,$state) {
+  .controller('styleModalityCtrl', ["$scope","$state",function ($scope,$state) {
   	 	  	//判断是否登录
   	if(!sessionStorage.username){
 			$state.go('login')

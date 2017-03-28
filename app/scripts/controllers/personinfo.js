@@ -13,7 +13,7 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 	if(!sessionStorage.username){
 	  	  $state.go('login');
 	  }
-	
+	$scope.djsShowtel = false;
 	$scope.djsSex = '';
 	$scope.djsName = '';
 	$scope.djsTel = '';
@@ -24,7 +24,7 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 	$scope.djsImg= '';
 	
 	$http({
-		url: "http://" + ip + ":401/users/?id=" + sessionStorage.userid,
+		url: "http://" + ip + "users/?id=" + sessionStorage.userid,
 		method: "get"
 	}).then(function(e) {
 		console.log(e.data)
@@ -89,7 +89,7 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 	$scope.djsBtn = function() {
 		console.log($scope.djsSex)
 		$http({
-			url: "http://" + ip + ":401/users/?id=" + sessionStorage.userid,
+			url: "http://" + ip + "users/?id=" + sessionStorage.userid,
 			method: "put",
 			data: {
 				sex: $scope.djsSex,
@@ -103,7 +103,7 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 			}
 		}).then(function(e) {
 			$http({
-				url: "http://" + ip + ":401/users/?username=" + sessionStorage.username,
+				url: "http://" + ip + "users/?username=" + sessionStorage.username,
 				method: "get",
 			}).then(function(data){
 				console.log(data.data[0].id)
@@ -118,7 +118,7 @@ lhq_app.directive("lhq", function($http) {
 		restrict: "ECMA",
 		link: function(scope, element, attr) {
 			element.find(".xx-button").bind("touchstart", function() {
-				alert('111')
+				//alert('111')
 				element.find(".imginput").click();
 				element.find(".imginput").change(function() {
 					var files = this.files[0],
@@ -126,10 +126,10 @@ lhq_app.directive("lhq", function($http) {
 					read.readAsDataURL(files);
 					read.onload = function() {
 						element.find(".djsImg").src=this.result
-						console.log(this.result)
+//						console.log(this.result)
 						
 						$http({
-							url:'http://'+ ip +':401/users/?id='+sessionStorage.userid,
+							url:'http://'+ ip +'users/?id='+sessionStorage.userid,
 							method:'put',
 							data:{
 								pic:this.result

@@ -29,6 +29,16 @@ angular.module('trainingProjectsApp')
   	 	}
   	 }
   	 
+  	 $scope.loginFocus=function(){
+  	 	$scope.loginShow = false;
+  	 }
+  	 
+  	 $scope.loginFocusPass=function(){
+  	 	$scope.passShow = false;
+  	 }
+  	 
+  	 
+  	 
 //   验证密码
     var pasExp = /^(?!\d+$)(?![A-Za-z]+$)[a-zA-Z0-9]{6,}$/;
     $scope.passShow = false;
@@ -60,7 +70,7 @@ angular.module('trainingProjectsApp')
 			$scope.loginshow = true;
 		}else {
 			$http({
-				url: "http://" + ip + ":401/users/login",
+				url: "http://" + ip + "users/login",
 				method: "post",
 				data: {
 					'username': $scope.username,
@@ -72,7 +82,7 @@ angular.module('trainingProjectsApp')
 				sessionStorage.userid = e.data.uid;
 				var a = e.data.uid;
 				$http({
-					url: "http://" + ip + ":401/users/?id=" + a,
+					url: "http://" + ip + "users/?id=" + a,
 					method: "get"
 				}).then(function(e) {
 					

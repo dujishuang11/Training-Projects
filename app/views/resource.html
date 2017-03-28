@@ -21,8 +21,8 @@
 				<div class="zhy_li_left">收件人：</div>
 				<div class="zhy_li_right">
 					<select ng-model="shoujianren">
-						<option ng-repeat="a in data">{{a.username}}</option>
-						<option ng-repeat="b in data1">{{b.username}}</option>
+						<option ng-repeat="zhya in zhydata" ng-show="zhyop">{{zhya.username}}</option>
+						<option ng-repeat="zhyb in zhydata1">{{zhyb.username}}</option>
 					</select>
 				</div>
 			</li>
@@ -57,7 +57,7 @@
 				<div class="zhy_li_right">
 					<select ng-model="shoujianren">
 						<!--<option ng-repeat="a in data">{{a.username}}</option>-->
-						<option ng-repeat="b in data1">{{b.username}}</option>
+						<option ng-repeat="zhyb in zhydata1">{{zhyb.username}}</option>
 					</select>
 				</div>
 			</li>

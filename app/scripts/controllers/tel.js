@@ -10,18 +10,19 @@
 angular.module('trainingProjectsApp')
 	.controller('telCtrl', ["$scope", "$http", "$state","$location", function($scope, $http, $state,$location) {
 		var ddnum = 0;
-		$scope.djsShow = false;
 		if(!sessionStorage.username){
 				$state.go('login')
 			}
+		$scope.djsShow = false;
 
 		$scope.abcdef = function(){
 			$http({
-			url: 'http://'+ ip +':401/users/?{"$skip":'+ddnum+',"$limit":10}',
-			method: "get"
-				}).then(function(e) {
-			$scope.data = e.data;
-		})
+				url: 'http://'+ ip +'users/?{"$skip":"'+ddnum+'","$limit":10}',
+				method: "get"
+			}).then(function(e) {
+				console.log(e.data)
+				$scope.data = e.data;
+			})
 		}
 		
 		$scope.abcdef();
@@ -53,7 +54,7 @@ angular.module('trainingProjectsApp')
 		//	关键字搜索
 		$scope.sousuo = function() {
 			$http({
-				url: "http://" + ip + ":401/users/?name=" + $scope.mainkey,
+				url: "http://" + ip + "users/?name=" + $scope.mainkey,
 				method: "get"
 			}).then(function(e) {
 				$scope.data = e.data;
@@ -67,7 +68,7 @@ angular.module('trainingProjectsApp')
 				$scope.djsShow = true;
 			}else{
 				$http({
-					url: "http://" + ip + ":401/users/"+idd,
+					url: "http://" + ip + "users/"+idd,
 					method: "delete"
 				}).then(function(e) {
 					$scope.data.splice(index,1)
@@ -91,11 +92,12 @@ angular.module('trainingProjectsApp')
 				sessionStorage.userid = id
 				$location.path('/firstPage/personinfo');
 			}else{
+				$scope.djsHtml = "您没有访问权限";
 				$scope.djsShow = true;
 			}
 		}
 		
-		$scope.djsGuan = function(){
+		$scope.djsGuanbi = function(){
 			$scope.djsShow = false;
 		}
 
