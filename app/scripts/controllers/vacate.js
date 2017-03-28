@@ -10,9 +10,12 @@
 angular.module('trainingProjectsApp')
   .controller('vacateCtrl', ['$scope','$http','$filter',"$location","$state",function ($scope,$http,$filter,$location,$state) {
   	
+  	//直接打url地址跳转登录页面
   	if(!sessionStorage.username){
 		$state.go('login')
 	}
+  	
+  	
   	//请求领导层的
   	$http({
   		url:"http://"+ip+"users/?level=1",
@@ -29,11 +32,14 @@ angular.module('trainingProjectsApp')
 		
 	}).then(function(e){
 		$scope.zhylist1 = e.data;
+		console.log($scope.zhylist1)
 	})
 	
 	
 	$scope.zhy_hihi = false;
 	$scope.zhy_mm = false;
+	
+	//判断是谁进入页面
 	if(sessionStorage.level==1){
 		$scope.zhy_hihi = !$scope.zhy_hihi;
 	}else if(sessionStorage.level==0){
@@ -46,14 +52,14 @@ angular.module('trainingProjectsApp')
 	}
 	
 	
-	function GetDateStr(AddDayCount) { 
-	    var dd = new Date(); 
-	        dd.setDate(dd.getDate()+AddDayCount);//获取AddDayCount天后的日期 
-	        var y = dd.getFullYear(); 
-	        var m = dd.getMonth()+1;//获取当前月份的日期 
-	        var d = dd.getDate(); 
-	        return y+"-"+m+"-"+d; 
-	} 
+//	function GetDateStr(AddDayCount) { 
+//	    var dd = new Date(); 
+//	        dd.setDate(dd.getDate()+AddDayCount);//获取AddDayCount天后的日期 
+//	        var y = dd.getFullYear(); 
+//	        var m = dd.getMonth()+1;//获取当前月份的日期 
+//	        var d = dd.getDate(); 
+//	        return y+"-"+m+"-"+d; 
+//	} 
 //	console.log("前天："+GetDateStr(-2)); 
 //	console.log("昨天："+GetDateStr(-1)); 
 //	console.log("今天："+GetDateStr(0)); 
@@ -94,7 +100,7 @@ angular.module('trainingProjectsApp')
 	$scope.zhybig=$scope.zhyt1;
 	
 	
-	console.log($scope.zhy_time)
+//	console.log($scope.zhy_time)
 //	console.log($scope.zhy_t1)
   	
   	//内容蒙版按钮
@@ -109,10 +115,18 @@ angular.module('trainingProjectsApp')
   	
   	//提交按钮
   	$scope.zhy_sub = function(){
+  		
+  		$scope.zhy_off = false;
+		$('.zhy_sussesss').animate({bottom:'1rem',opacity:1},0);
+  		
+  		
+  		//判断是否为空
   		if($scope.zhy_sqr ==''||$scope.zhy_sjr==''||$scope.zhy_yy==''||$scope.zhy_t2==''){
 			$scope.zhy_isShow = !$scope.zhy_isShow;
+			
 		}else if($scope.zhy_nnn>=$scope.zhy_nnn1){
 			$scope.zhy_tt = !$scope.zhy_tt;
+			
 		}else{
 			console.log('成功');
 			$scope.zhyt2 = ($filter("date")($scope.zhy_nnn1,"yyyy-MM-dd"));
@@ -123,7 +137,7 @@ angular.module('trainingProjectsApp')
 						fusername:$scope.zhy_sqr,
 						title:"请假申请",
 						date:$scope.zhy_time,
-						content:$scope.zhy_yy+"从"+$scope.zhyt1+"到"+$scope.zhyt2,
+						content:"从"+$scope.zhyt1+"到"+$scope.zhyt2+$scope.zhy_yy,
 						uid:$scope.zhy_sjr,
 						read:'false'
 					}
@@ -132,6 +146,10 @@ angular.module('trainingProjectsApp')
 				$scope.zhy_sqr = sessionStorage.username;
 				$scope.zhy_sjr = '';
 				$scope.zhy_yy = '';
+				$scope.zhy_off = !$scope.zhy_off;
+				$('.zhy_sussesss').animate({bottom:'2.5rem',opacity:'0'},2000);
+				
+				
 			})
 			
 		}
