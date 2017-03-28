@@ -68,7 +68,11 @@
 var doger_app = angular.module('trainingProjectsApp')
 	var doger_url = 'http://'+ip+'kaoqin';
 	doger_app.controller('firstPage',["$scope","$http","$state",function($scope,$http,$state) {
-		
+
+//	var a="123";
+//	var b=$.base64.btoa(a);
+//	var c=$.base64.atob(b);
+//	console.log(b,c);
 		if(!sessionStorage.username){
 			$state.go('login')
 		}
@@ -473,7 +477,8 @@ var doger_app = angular.module('trainingProjectsApp')
 					method:'get'
 				}).then(function(e){
 //					console.log(e.data.pic)
-					element.find('.doger_myPhoto')[0].src = e.data.pic
+					element.find('.doger_myPhoto')[0].src = $.base64.atob(e.data.pic);
+					
 				})
 		
 
