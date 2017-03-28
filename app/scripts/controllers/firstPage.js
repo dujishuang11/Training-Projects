@@ -212,7 +212,6 @@ var doger_app = angular.module('trainingProjectsApp')
 			var my_map_big = document.getElementsByClassName('doger_my_map')[0];
 			var my_map_erro = document.getElementsByClassName('doger_erro')[0];
 			var my_map_tip = document.getElementsByClassName('doger_my_map_nan')[0];
-			
 			var str = doub(iHour) + ':' + doub(iMin) + ':' + doub(iSec) + '-' + my_map_big.innerHTML;
 			if(my_map_big.innerHTML != ''){
 //				$http({
@@ -531,11 +530,16 @@ var doger_app = angular.module('trainingProjectsApp')
 	})
 	.directive("lxmlow",function(){
 		return{
-			restrict:"ECMA",
 			link:function($scope,element,attr){
-				var my_map_txt = document.getElementsByClassName('doger_my_map')[0];
-				if(my_map_txt.innerHTML != ''){
-					$scope.isShow = false;
+//				var my_map_txt = document.getElementsByClassName('doger_my_map')[0];
+//				if(my_map_txt.innerHTML != ''){
+//					$scope.isShow = false;
+//				}else{
+//					$scope.isShow = true;
+//				}
+//				console.log(element.find('.my_map_txt').text())
+				if(element.find('.my_map_txt').text() != ''){
+					scope.isShow = false;
 				}else{
 					$scope.isShow = true;
 				}

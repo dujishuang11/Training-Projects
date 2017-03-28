@@ -14,13 +14,14 @@ angular.module('trainingProjectsApp')
 				$state.go('login')
 			}
 		$scope.djsShow = false;
+		$scope.djssShow = false;
 
 		$scope.abcdef = function(){
 			$http({
 				url: 'http://'+ ip +'users/?{"$skip":"'+ddnum+'","$limit":10}',
 				method: "get"
 			}).then(function(e) {
-				console.log(e.data)
+//				console.log(e.data)
 				$scope.data = e.data;
 			})
 		}
@@ -63,17 +64,24 @@ angular.module('trainingProjectsApp')
 
 		//	所点击数据删除
 		$scope.del = function(idd,index) {
-			console.log(sessionStorage.level)
 			if(sessionStorage.level == '2') {
 				$scope.djsShow = true;
+				$scope.djsText = "您没有访问权限";
 			}else{
-				$http({
-					url: "http://" + ip + "users/"+idd,
-					method: "delete"
-				}).then(function(e) {
-					$scope.data.splice(index,1)
-				})
+				$scope.djssShow = true;
+				sessionStorage.delId = idd;
+				sessionStorage.delIndex = index;
 			}
+		}
+		
+		$scope.djsQd = function(){
+			$scope.djssShow = false;
+			$http({
+				url: "http://" + ip + "users/"+sessionStorage.delId,
+				method: "delete"
+			}).then(function(e) {
+				$scope.data.splice(sessionStorage.delIndex,1)
+			})
 		}
 		
 //		点击新增
