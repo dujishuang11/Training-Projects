@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
+	<name>djs</name>
+=======
 	<name>xgj</name>
+>>>>>>> origin/master
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +20,11 @@
 	</natures>
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
+			<id>1490661881266</id>
+=======
 			<id>1490661696122</id>
+>>>>>>> origin/master
 			<name></name>
 			<type>26</type>
 			<matcher>

@@ -14,7 +14,7 @@ angular.module('trainingProjectsApp')
 	}
   	//请求领导层的
   	$http({
-  		url:"http://"+ip+":401/users/?level=1",
+  		url:"http://"+ip+"users/?level=1",
   		method:'get'
   		
   	}).then(function(e){
@@ -23,7 +23,7 @@ angular.module('trainingProjectsApp')
 	})
   	//请求BOSS的
 	$http({
-		url:"http://"+ip+":401/users/?level=0",
+		url:"http://"+ip+"users/?level=0",
 		method:'get'
 		
 	}).then(function(e){
@@ -107,7 +107,7 @@ angular.module('trainingProjectsApp')
 			$scope.ZhyisShow = !$scope.ZhyisShow;
 		}else{
 			$http({
-				url:"http://"+ip+":401/shoujianxiang",
+				url:"http://"+ip+"shoujianxiang",
 				method:'post',
 				data:{
 						fusername:$scope.shenqingren,
@@ -137,7 +137,7 @@ angular.module('trainingProjectsApp')
 			$scope.ZhyisShow = !$scope.ZhyisShow;
 		}else{
 			$http({
-				url:"http://"+ip+":401/shoujianxiang",
+				url:"http://"+ip+"shoujianxiang",
 				method:'post',
 				data:{
 						fusername:$scope.shenqingren,

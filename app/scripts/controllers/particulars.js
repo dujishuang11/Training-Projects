@@ -39,7 +39,7 @@ var xq_app = angular.module('trainingProjectsApp')
     			}
     		}else{	
     			$http({
-    				url:'http://'+ip+':401/shoujianxiang',
+    				url:'http://'+ip+'shoujianxiang',
 					method:'POST',
     				data:{
     					fusername:$scope.Sender,

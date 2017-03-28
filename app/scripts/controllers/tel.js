@@ -10,17 +10,18 @@
 angular.module('trainingProjectsApp')
 	.controller('telCtrl', ["$scope", "$http", "$state","$location", function($scope, $http, $state,$location) {
 		var ddnum = 0;
-		$scope.djsShow = false;
 		if(!sessionStorage.username){
 				$state.go('login')
 			}
 		$scope.djsShow = false;
+		$scope.djssShow = false;
 
 		$scope.abcdef = function(){
 			$http({
-				url: 'http://'+ ip +':401/users/?{"$skip":'+ddnum+',"$limit":10}',
+				url: 'http://'+ ip +'users/?{"$skip":"'+ddnum+'","$limit":10}',
 				method: "get"
 			}).then(function(e) {
+//				console.log(e.data)
 				$scope.data = e.data;
 			})
 		}
@@ -54,7 +55,7 @@ angular.module('trainingProjectsApp')
 		//	关键字搜索
 		$scope.sousuo = function() {
 			$http({
-				url: "http://" + ip + ":401/users/?name=" + $scope.mainkey,
+				url: "http://" + ip + "users/?name=" + $scope.mainkey,
 				method: "get"
 			}).then(function(e) {
 				$scope.data = e.data;
@@ -63,17 +64,24 @@ angular.module('trainingProjectsApp')
 
 		//	所点击数据删除
 		$scope.del = function(idd,index) {
-			console.log(sessionStorage.level)
 			if(sessionStorage.level == '2') {
 				$scope.djsShow = true;
+				$scope.djsText = "您没有访问权限";
 			}else{
-				$http({
-					url: "http://" + ip + ":401/users/"+idd,
-					method: "delete"
-				}).then(function(e) {
-					$scope.data.splice(index,1)
-				})
+				$scope.djssShow = true;
+				sessionStorage.delId = idd;
+				sessionStorage.delIndex = index;
 			}
+		}
+		
+		$scope.djsQd = function(){
+			$scope.djssShow = false;
+			$http({
+				url: "http://" + ip + "users/"+sessionStorage.delId,
+				method: "delete"
+			}).then(function(e) {
+				$scope.data.splice(sessionStorage.delIndex,1)
+			})
 		}
 		
 //		点击新增

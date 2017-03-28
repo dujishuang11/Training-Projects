@@ -164,12 +164,11 @@
 		font-size: 0.7rem;
 		float: left;
 }
-.xq-bottom p:nth-child(1) input{
+.xq-bottom p:nth-child(1) i{
 	margin-left: 0.1rem;
 	font-size: 0.6rem;
-	height: 0.5rem;
-	padding-top: 0.45rem;
-	padding-bottom: 0.45rem;
+	height: 1rem;
+	line-height: 1rem;
 	width: 4.7rem;
 	display: inline-block;
 	float: left;
@@ -178,25 +177,28 @@
 	border: none;
 	border-radius: 0.3rem;
 	border-bottom: 0.1rem solid #CCCCCC;
+	background: #FFFFFF;
 	text-indent: 0.5em;
+	font-style: normal;
 	
 }
 .xq-bottom p:nth-child(2) span{
 		font-size: 0.7rem;
 		float: left;
 }
-.xq-bottom p:nth-child(2) input{
+.xq-bottom p:nth-child(2) i{
 	margin-left: 0.1rem;
 	font-size: 0.6rem;
-	height: 0.5rem;
-	padding-top: 0.45rem;
-	padding-bottom: 0.45rem;
+	height:1rem;
+	line-height: 1rem;
+	font-style: normal;
 	width: 4.7rem;
 	display: inline-block;
 	float: left;
 	margin-left: 0.3rem;
 	outline-style: none;
 	border: none;
+	background: #FFFFFF;
 	border-radius: 0.3rem;
 	border-bottom: 0.1rem solid #CCCCCC;
 	text-indent: 0.5em;
@@ -267,12 +269,11 @@
 }
 .lhq-zezaobox{
 	width: 50%;
-	height:5rem;
+	height: 5rem;
 	background: #FFFFFF;
 	margin: 0 auto;
 	margin-top: 60%;
 	border-radius: 0.2rem;
-	
 }
 .lhq-zezaobox i{
     font-size: 1rem;

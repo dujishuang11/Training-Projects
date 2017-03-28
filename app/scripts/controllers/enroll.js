@@ -160,7 +160,7 @@ angular.module('trainingProjectsApp')
 				$scope.zhj_Besure=function(){
 				$scope.entrue = false;
 				$http({
-					url: "http://" + ip + ":401/users",
+					url: "http://" + ip + "users",
 					method: "post",
 					data: {
 						"username": $scope.enusername,
