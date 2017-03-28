@@ -20,8 +20,8 @@
 	height: 2rem;
 }
 .xiaoqiang-left p:nth-child(5)>i{
-	overflow: scroll;
-	height:2.5rem;
+	overflow: auto;
+	height:1.5rem;
 	display: block;
 	width: 5rem;
 }
