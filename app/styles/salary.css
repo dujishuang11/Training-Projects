@@ -160,7 +160,7 @@
 }
 
 .zhj_doger_ipt div:nth-child(3) {
-	width: 20%;
+	width: calc(20% - 1px);
 	height: 2rem;
 	float: right;
 	text-align: center;
