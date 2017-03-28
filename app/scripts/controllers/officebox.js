@@ -46,11 +46,11 @@ angular.module('trainingProjectsApp')
 				}
 				$scope.aaa();
     		}
-			var urll = 'http://'+ip+':401/shoujianxiang';	
+			var urll = 'http://'+ip+'shoujianxiang';	
 			$scope.aaa = function(){
 				console.log(lhqnum)
 				$http({
-					url:'http://'+ip+':401/shoujianxiang/?{"uid":"'+sessionStorage.username+'","$skip":'+lhqnum+',"$limit":10}',
+					url:'http://'+ip+'shoujianxiang/?{"uid":"'+sessionStorage.username+'","$skip":'+lhqnum+',"$limit":10}',
 					method:'GET'
 				}).then(function(data){
 					$scope.daat= data.data;

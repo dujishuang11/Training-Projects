@@ -155,7 +155,7 @@ angular.module('trainingProjectsApp')
 				$scope.enShodowshow = true;
 			} else {
 				$http({
-					url: "http://" + ip + ":401/users",
+					url: "http://" + ip + "users",
 					method: "post",
 					data: {
 						"username": $scope.enusername,

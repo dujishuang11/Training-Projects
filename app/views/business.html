@@ -12,17 +12,29 @@
 				<span>工作内容</span>
 				<span>执行人</span>
 			</div>
-			<ul class="wyh_task" ng-repeat="item in items | orderBy:Paixu ">
+			<ul class="wyh_task" ng-repeat="itemev in itemeven">
+				<li>{{itemev.date | date:'yyyy-MM-dd'}}</li>
+				<li>{{itemev.content}}</li>
+				<li>{{itemev.uid}}</li>
+			</ul>
+			<ul class="wyh_task" ng-repeat="itemtod in itemtoday">
+				<li>{{itemtod.date | date:'yyyy-MM-dd'}}</li>
+				<li>{{itemtod.content}}</li>
+				<li>{{itemtod.uid}}</li>
+			</ul>
+			<ul class="wyh_task" ng-repeat="item in items">
 				<li>{{item.date | date:'yyyy-MM-dd'}}</li>
 				<li>{{item.content}}</li>
 				<li>{{item.uid}}</li>
 			</ul>
+			
+			
 		</div>
 		<!--任务分配-->
 		<div class="wyh_taskfp" ng-hide="wyh_isHide">
 			<div class="wyh_dat">
 				<span>选择日期：</span>
-				<input type="date" min="{{wyh_zhi}}"  class="wyh_tim" ng-model="wyh_nn" />
+				<input type="date" min="{{wyh_zhi}}"  class="wyh_tim" ng-model="wyh_ww" />
 			</div>
 			<div class="wyh_cont">
 				<span>工作内容：</span>

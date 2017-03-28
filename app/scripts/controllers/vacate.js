@@ -15,7 +15,7 @@ angular.module('trainingProjectsApp')
 	}
   	//请求领导层的
   	$http({
-  		url:"http://"+ip+":401/users/?level=1",
+  		url:"http://"+ip+"users/?level=1",
   		method:'get'
   		
   	}).then(function(e){
@@ -24,7 +24,7 @@ angular.module('trainingProjectsApp')
 	})
   	//请求BOSS的
 	$http({
-		url:"http://"+ip+":401/users/?level=0",
+		url:"http://"+ip+"users/?level=0",
 		method:'get'
 		
 	}).then(function(e){
@@ -117,7 +117,7 @@ angular.module('trainingProjectsApp')
 			console.log('成功');
 			$scope.zhyt2 = ($filter("date")($scope.zhy_nnn1,"yyyy-MM-dd"));
 			$http({
-				url:"http://"+ip+":401/shoujianxiang",
+				url:"http://"+ip+"shoujianxiang",
 				method:'post',
 				data:{
 						fusername:$scope.zhy_sqr,

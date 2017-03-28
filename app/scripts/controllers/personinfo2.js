@@ -15,7 +15,7 @@ lhq_app.controller('personinfoaCtrl', ["$scope", "$http","$location","$state", f
 	  }
 	
 	$http({
-		url: "http://" + ip + ":401/users/?name=" + sessionStorage.personinfo,
+		url: "http://" + ip + "users/?name=" + sessionStorage.personinfo,
 		method: "get"
 	}).then(function(e) {
 //		console.log(e.data[0].pic)

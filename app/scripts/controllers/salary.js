@@ -13,7 +13,7 @@ salary_app.controller('salaryCtrl', ["$scope","$http","$state",function($scope,$
 	if(!sessionStorage.username){
 		$state.go('login')
 	}
-	var doger_url = 'http://'+ip+':401/kaoqin/?uid='+sessionStorage.username+'';
+	var doger_url = 'http://'+ip+'kaoqin/?uid='+sessionStorage.username+'';
 	$http({
 		url:doger_url,
 		method:'GET'
@@ -47,7 +47,7 @@ salary_app.controller('salaryCtrl', ["$scope","$http","$state",function($scope,$
 					doger_txt[$index].innerHTML = '编辑'
 					e.find('.zhj_doger_why')[$index].setAttribute('readonly','true')
 					$http({
-						url:'http://'+ip+':401/kaoqin/'+id+'',
+						url:'http://'+ip+'kaoqin/'+id+'',
 						method:'PUT',
 						data:{
 							summary:e.find('.zhj_doger_why')[$index].value
