@@ -187,5 +187,45 @@
 	border:0;
 	color: #FFFFFF;
 	border-radius: 0.3rem;
-	
+}
+.djsMeng {
+	width: 50%;
+	height: 6.5rem;
+	background: #FFFFFF;
+	margin: 0 auto;
+	margin-top: 60%;
+	border-radius: 0.2rem;
+}
+.djsMeng i{
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-weight: 600;
+}
+.djsMeng p{
+    font-size: 0.8rem;
+	text-align: center;
+	line-height: 1.3rem;
+	color: #000000;
+	font-weight: 600;
+	clear: both;
+}
+.djsMeng span{
+	width: 85%;
+	height: 1rem;
+	line-height: 1rem;
+	text-align: center;
+	font-size: 0.6rem;
+	display: block;
+	letter-spacing: 0.1rem;
+	margin: 0 auto;
+	color: #FFFFFF;
+	margin-top: 0.3rem;
+	background: #000000;
+	cursor: pointer;
+}
+.djsButton {
+	display: block;
+	margin: 0.5rem auto;
 }
