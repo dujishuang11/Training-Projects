@@ -19,7 +19,7 @@ lhq_app.controller('personinfoaCtrl', ["$scope", "$http","$location","$state", f
 		method: "get"
 	}).then(function(e) {
 //		console.log(e.data[0].pic)
-		$scope.djsImg = e.data[0].pic
+		$scope.djsImg = $.base64.atob(e.data[0].pic)
 		$scope.djsData = e.data
 	})
 
