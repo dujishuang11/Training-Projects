@@ -60,6 +60,9 @@ angular.module('trainingProjectsApp')
 //    点击登录   
      $scope.username='';
      $scope.passwold ='';
+     
+     $scope.zhj_zhy=false;
+     
      $scope.logining = function() {    	
 		if($scope.username == '') {
 			$scope.loginshow = true;
@@ -67,6 +70,7 @@ angular.module('trainingProjectsApp')
 		else if($scope.passwold == '') {
 			$scope.loginshow = true;
 		}else {
+			$scope.zhj_zhy=true;
 			$http({
 				url: "http://" + ip + "users/login",
 				method: "post",
@@ -83,7 +87,7 @@ angular.module('trainingProjectsApp')
 					url: "http://" + ip + "users/?id=" + a,
 					method: "get"
 				}).then(function(e) {
-					
+					$scope.zhj_zhy=false;
 					sessionStorage.level = e.data.level;
 					// console.log(sessionStorage.level);
 					if(sessionStorage.level == '0') {
