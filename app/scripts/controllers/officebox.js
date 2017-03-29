@@ -48,6 +48,8 @@ angular.module('trainingProjectsApp')
     		}
 			var urll = 'http://'+ip+'shoujianxiang';	
 			$scope.lhq_zhc = true;
+			$scope.nonono = false;
+			$scope.lhq_aaabbb= true;
 			$scope.aaa = function(){
 				console.log(lhqnum)
 				$http({
@@ -55,7 +57,13 @@ angular.module('trainingProjectsApp')
 					method:'GET'
 				}).then(function(data){
 					$scope.lhq_zhc = false;
-				
+					if(data.data==''){
+						$scope.nonono = true;
+						$scope.lhq_aaabbb= false;
+					}else{
+						$scope.nonono = false;
+						$scope.lhq_aaabbb= true;
+					}
 					$scope.daat= data.data;
 //					console.log($scope.daat)
 				})
