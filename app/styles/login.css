@@ -2,7 +2,7 @@
 	width: 12rem;
 	height: 6rem;	
 	transform: translate(-50%,-50%);
-	position: fixed;
+	position: absolute;
 	left: 60%;
 	bottom: -4%;
 	z-index: 999;
