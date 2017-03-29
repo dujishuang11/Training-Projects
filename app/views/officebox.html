@@ -29,12 +29,15 @@
 				<span>{{q.date}}</span>
 				</div>
 			</li>
+			<div class="lhq_nono" ng-show="nonono">收件箱没有信息哦!</div>
 		</ul>
 		
 	</div>
 	
-	<div class="lhq-footer">
+	<div class="lhq-footer" ng-show = 'lhq_aaabbb'>
 		<input type="button" value="上一页" ng-click = 'top_lhq()'/>
 		<input type="button" value="下一页" ng-click = 'bottom_lhq()'/>
 	</div>
+	
+	
 </div>
