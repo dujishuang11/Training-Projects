@@ -91,11 +91,11 @@ angular.module('trainingProjectsApp')
 					sessionStorage.level = e.data.level;
 					// console.log(sessionStorage.level);
 					if(sessionStorage.level == '0') {
-						console.log('大boss')
+//						console.log('大boss')
 					} else if(sessionStorage.level == '1') {
-						console.log('经理')
+//						console.log('经理')
 					} else {
-						console.log('员工')
+//						console.log('员工')
 					}
 	   	  	       $state.go('firstPage');
 				})
