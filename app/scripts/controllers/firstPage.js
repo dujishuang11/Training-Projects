@@ -91,6 +91,7 @@ var doger_app = angular.module('trainingProjectsApp')
 		$('.exit')[0].addEventListener('touchstart',function(){
 			sessionStorage.clear()
 			localStorage.removeItem('my_map')
+			localStorage.removeItem('doger_pic')
 //			if(localStorage.my_map){
 //				localStorage.removeItem(my_map)
 //			}	
@@ -472,14 +473,18 @@ var doger_app = angular.module('trainingProjectsApp')
 			link:function($scope,element,attr){
 //				var my_pict = document.getElementsByClassName('.doger_myPhoto');
 				$('.doger_name').text(sessionStorage.username)
-				$http({
-					url:'http://'+ip+'users/?id='+sessionStorage.userid+'',
-					method:'get'
-				}).then(function(e){
-//					console.log(e.data.pic)
-					element.find('.doger_myPhoto')[0].src = $.base64.atob(e.data.pic);
-					
-				})
+				function aaa(){
+					$http({
+						url:'http://'+ip+'users/?id='+sessionStorage.userid+'',
+						method:'get'
+					}).then(function(e){
+	//					console.log(e.data.pic)
+						localStorage.doger_pic = $.base64.atob(e.data.pic);
+						element.find('.doger_myPhoto')[0].src = localStorage.doger_pic;
+						
+					})
+				}
+				aaa()
 		
 
 				var on = false;

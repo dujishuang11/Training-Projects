@@ -40,7 +40,9 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 		$scope.djsAdd = e.data.address;
 		$scope.djsQQ = e.data.qq;
 		$scope.djsTeltwo = e.data.others;
-		$scope.djsImg = $.base64.atob(e.data.pic);
+		
+		$scope.djsImg = localStorage.doger_pic;
+//		console.log($scope.djsImg)
 	})
 	var telExp = /^1[3'/4578]\d{9}$/;
 	$scope.djsTell = function(){
@@ -83,7 +85,16 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 			$scope.djsShowtel = true
 		}
 	}
-	
+//	function aaa(){
+//								$http({
+//									url:'http://'+ip+'users/?id='+sessionStorage.userid+'',
+//									method:'get'
+//								}).then(function(e){
+//				//					console.log(e.data.pic)
+//									element.find('.doger_myPhoto')[0].src = $.base64.atob(e.data.pic);
+//									
+//								})
+//							}
 	$scope.djsGuan = function(){
 		$scope.djsShowtel = false;
 	}
@@ -107,7 +118,6 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 				url: "http://" + ip + "users/?username=" + sessionStorage.username,
 				method: "get",
 			}).then(function(data){
-				console.log(data.data[0].id)
 				sessionStorage.userid = data.data[0].id
 				$location.path('/firstPage/tel');
 			})
@@ -117,30 +127,26 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 lhq_app.directive("lhq", function($http) {
 	return {
 		restrict: "ECMA",
-		link: function(scope, element, attr) {
+		link: function(scope, element, attr,$scope) {
 			element.find(".xx-button").bind("touchstart", function() {
-				//alert('111')
 				element.find(".imginput").click();
 				element.find(".imginput").change(function() {
 					var files = this.files[0],
 						read = new FileReader();
 					read.readAsDataURL(files);
 					read.onload = function() {
-						
 						element.find(".djsImg").src=this.result
 						var src_b=$.base64.btoa(this.result);
-//						console.log(this.result)
-//						console.log(src_b)
-						//	var a="123";
-							
-						//	var c=$.base64.atob(b);
-						//	console.log(b,c);
 						$http({
 							url:'http://'+ ip +'users/?id='+sessionStorage.userid,
 							method:'put',
 							data:{
 								pic:src_b
 							}
+						}).then(function(e){
+							localStorage.doger_pic = $.base64.atob(src_b);
+							$('.djsImg')[0].src = localStorage.doger_pic
+							$('.doger_myPhoto')[0].src = localStorage.doger_pic
 						})
 							
 					}

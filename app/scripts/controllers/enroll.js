@@ -173,12 +173,14 @@ angular.module('trainingProjectsApp')
 						"others": $scope.otherphone,
 						"address": $scope.enAddr,
 						"name": $scope.myNewName,
-						"pic": 'images/icon.png'
+						"pic": 'aW1hZ2VzL2ljb24ucG5n'
 					}
 				}).then(function(e) {
 //					console.log(e);
 //					console.log(sessionStorage.myPic);
-					sessionStorage.myPic = 'images/icon.png';
+//					sessionStorage.myPic = 'images/icon.png';
+								
+										
 					$scope.enusername = '';
 					$scope.enpasswold = '';
 					$scope.enposition = '';
