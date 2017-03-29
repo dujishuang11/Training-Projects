@@ -2,6 +2,8 @@
 	width:100%;
 	height:auto;
 	padding: 0.5rem 1rem 1.3rem 1rem;
+	overflow: hidden;
+	position: relative;
 }
 .wyh_wrap .wyh_til{
 	width:100%;
