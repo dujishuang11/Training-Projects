@@ -179,6 +179,10 @@ angular.module('trainingProjectsApp')
 //					console.log(e);
 //					console.log(sessionStorage.myPic);
 					sessionStorage.myPic = 'images/icon.png';
+					//   压缩图片
+					
+					
+					
 					$scope.enusername = '';
 					$scope.enpasswold = '';
 					$scope.enposition = '';
