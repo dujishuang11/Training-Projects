@@ -4,7 +4,7 @@
 	transform: translate(-50%,-50%);
 	position: absolute;
 	left: 60%;
-	bottom: 0%;
+	bottom: -1rem;
 	z-index: 999;
 }
 /*.zhj-lol p{
