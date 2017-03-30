@@ -40,9 +40,9 @@
 			</ul>
 		</div>
 		
-		<div class="djs-xiayiye">
-			<input type="button" value="上一页" ng-click ='DS()'/>
-			<input type="button" value="下一页" ng-click ='DX()'/>
+		<div class="djs-xiayiye" ng-show="ddShow">
+			<input type="button" value="上一页" ng-click ='DS()' ng-show="topShow"/>
+			<input type="button" value="下一页" ng-click ='DX()' ng-show="bottomShow"/>
 		</div>
 	</div>
 	<div class="lhq-zezao" ng-show="djsShow">

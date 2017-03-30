@@ -28,7 +28,7 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 		url: "http://" + ip + "users/?id=" + sessionStorage.userid,
 		method: "get"
 	}).then(function(e) {
-		console.log(e.data)
+//		console.log(e.data)
 		if(e.data.sex == '女'){
 			$scope.djsSex = '女';
 		}else{
@@ -99,7 +99,7 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 		$scope.djsShowtel = false;
 	}
 	$scope.djsBtn = function() {
-		console.log($scope.djsSex)
+//		console.log($scope.djsSex)
 		$http({
 			url: "http://" + ip + "users/?id=" + sessionStorage.userid,
 			method: "put",
