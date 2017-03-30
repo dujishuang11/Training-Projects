@@ -17,7 +17,7 @@ angular.module('trainingProjectsApp')
 		$scope.djssShow = false;
 		$scope.zhc_zhy = true;
 		$scope.ddShow = false;
-		$scope.topShow = true;
+		$scope.topShow = false;
 		$scope.bottomShow = true;
 		$scope.abcdef = function(){
 			$http({
@@ -28,6 +28,13 @@ angular.module('trainingProjectsApp')
 				$scope.ddShow = true;
 				if(e.data.length < 10){
 					$scope.bottomShow = false;
+				}else {
+					$scope.bottomShow = true;
+				}
+				if(ddnum == 0){
+					$scope.topShow = false
+				}else {
+					$scope.topShow = true
 				}
 				$scope.data = e.data;
 			})
@@ -46,10 +53,10 @@ angular.module('trainingProjectsApp')
 		//点击上一页
 		$scope.DS=function(){
 			ddnum-=10;
-				if(ddnum<0){
-					return ddnum = 0
-				}
-				$scope.abcdef();
+			if(ddnum<0){
+				return ddnum = 0
+			}
+			$scope.abcdef();
 		}
 
 		//	点击每条数据跳转到此数据的详情页
