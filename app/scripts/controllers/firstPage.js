@@ -86,8 +86,10 @@ var doger_app = angular.module('trainingProjectsApp')
 			url:"http://"+ip+"users/?id="+sessionStorage.userid,
 			method:"get"
 		}).then(function(e){
+			console.log
 			$(".doger-top").css("background",e.data.bgcolor).css("color",e.data.color);
-			$(".doger-left").css("background",e.data.bgcolor).css("color",e.data.color);
+			$(".doger-list").css("background",e.data.bgcolor).css("color",e.data.color);
+			$(".doger-title a").css("color",e.data.color);
 		})
 		
 		var doger_data = new Date();
@@ -505,7 +507,6 @@ var doger_app = angular.module('trainingProjectsApp')
 						element.find('.doger-wrapper').css('transform','translateX(0)')
 						element.find('.doger-list-opac').css('width','0%')
 						element.find('.doger-list-opac-right').css('width','0%')
-						element.find('.doger-list span').css('color','white')
 						on = true
 					}else{
 						element.find('.doger-wrapper').css('transform','translateX(-8rem)')

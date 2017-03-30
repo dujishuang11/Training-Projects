@@ -126,7 +126,7 @@ angular.module('trainingProjectsApp')
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
 				method:"put",
-				data:{"bgcolor":"","color":""}
+				data:{"bgcolor":"","color":"white"}
 			}).then(function(e){
 				location.reload()
 			})
