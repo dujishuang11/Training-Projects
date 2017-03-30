@@ -44,15 +44,19 @@
 		function showError(error){
 			switch(error.code) {
 				case error.PERMISSION_DENIED:
+					$('.doger_my_map_nan').text("定位失败,用户拒绝请求地理定位,请刷新重试")
 					console.log("定位失败,用户拒绝请求地理定位");
 					break;
 				case error.POSITION_UNAVAILABLE:
+					$('.doger_my_map_nan').text("定位失败,位置信息是不可用,请刷新重试")
 					console.log("定位失败,位置信息是不可用");
 					break;
 				case error.TIMEOUT:
+					$('.doger_my_map_nan').text("定位失败,请求获取用户位置超时,请刷新重试")
 					console.log("定位失败,请求获取用户位置超时");
 					break;
 				case error.UNKNOWN_ERROR:
+					$('.doger_my_map_nan').text("定位失败,定位系统失效,请刷新重试")
 					console.log("定位失败,定位系统失效");
 					break;
 		    }
