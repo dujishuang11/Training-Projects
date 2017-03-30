@@ -90,13 +90,13 @@ angular.module('trainingProjectsApp')
 					$scope.zhj_zhy=false;
 					sessionStorage.level = e.data.level;
 					// console.log(sessionStorage.level);
-					if(sessionStorage.level == '0') {
+//					if(sessionStorage.level == '0') {
 //						console.log('大boss')
-					} else if(sessionStorage.level == '1') {
+//					} else if(sessionStorage.level == '1') {
 //						console.log('经理')
-					} else {
+//					} else {
 //						console.log('员工')
-					}
+//					}
 	   	  	       $state.go('firstPage');
 				})
 			},function(){

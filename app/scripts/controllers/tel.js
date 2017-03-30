@@ -16,13 +16,20 @@ angular.module('trainingProjectsApp')
 		$scope.djsShow = false;
 		$scope.djssShow = false;
 		$scope.zhc_zhy = true;
+		$scope.ddShow = false;
+		$scope.topShow = true;
+		$scope.bottomShow = true;
 		$scope.abcdef = function(){
 			$http({
 				url: 'http://'+ ip +'users/?{"$skip":"'+ddnum+'","$limit":10}',
 				method: "get"
 			}).then(function(e) {
-						$scope.zhc_zhy = false;
-						$scope.data = e.data;
+				$scope.zhc_zhy = false;
+				$scope.ddShow = true;
+				if(e.data.length < 10){
+					$scope.bottomShow = false;
+				}
+				$scope.data = e.data;
 			})
 		}
 		

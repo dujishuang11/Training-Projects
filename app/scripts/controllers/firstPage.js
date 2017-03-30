@@ -100,7 +100,7 @@ var doger_app = angular.module('trainingProjectsApp')
 //				localStorage.removeItem(my_map)
 //			}	
 		})
-		console.log(sessionStorage.username)
+//		console.log(sessionStorage.username)
 		$scope.myShow = false;
 		$scope.isShow = false;
 		var my_on = false;
@@ -114,11 +114,11 @@ var doger_app = angular.module('trainingProjectsApp')
 			url:'http://'+ip+'kaoqin/?{"uid":"'+sessionStorage.username+'","date":"'+doger_my_data+'"}',
 			method:'get'
 		}).then(function(data){
-			console.log(data)
+//			console.log(data)
 			if(data.data.length > 0){
 				localStorage.my_map = data.data[0].id
 				whthfu()
-				console.log(localStorage.my_map)
+//				console.log(localStorage.my_map)
 			}else{
 					$http({
 						url:doger_url,
@@ -133,7 +133,7 @@ var doger_app = angular.module('trainingProjectsApp')
 							uid:sessionStorage.username
 						}
 					}).then(function(data){
-						console.log(data.data.id)
+//						console.log(data.data.id)
 						localStorage.my_map = data.data.id
 						whthfu()
 					})
@@ -265,7 +265,7 @@ var doger_app = angular.module('trainingProjectsApp')
 								url:'http://'+ip+'kaoqin/'+localStorage.my_map+'',
 								method:'get',
 							}).then(function(data){
-								console.log(data)
+//								console.log(data)
 								if(data.data.time1 != ''){
 									my_aa.innerHTML = '今天已经签到'
 									my_map_erro.innerHTML = ''

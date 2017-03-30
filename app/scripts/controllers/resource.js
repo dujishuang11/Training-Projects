@@ -24,7 +24,7 @@ angular.module('trainingProjectsApp')
   		
   	}).then(function(e){
 		$scope.zhydata = e.data;
-		console.log($scope.zhydata)
+//		console.log($scope.zhydata)
 	})
   	//请求BOSS的
 	$http({
@@ -33,7 +33,7 @@ angular.module('trainingProjectsApp')
 		
 	}).then(function(e){
 		$scope.zhydata1 = e.data;
-		console.log($scope.zhydata1)
+//		console.log($scope.zhydata1)
 	})
 	
 	$scope.zhyop = true;
@@ -133,7 +133,7 @@ angular.module('trainingProjectsApp')
 						read:'false'
 					}
 			}).then(function(e){
-				console.log(e)
+//				console.log(e)
 				
 				$scope.shenqingren = sessionStorage.username;
 				$scope.shoujianren = '';
@@ -179,7 +179,7 @@ angular.module('trainingProjectsApp')
 						read:'false'
 					}
 			}).then(function(e){
-				console.log(e)
+//				console.log(e)
 				$scope.shenqingren = sessionStorage.username;
 				$scope.shoujianren = '';
 				$scope.wuzi = '';

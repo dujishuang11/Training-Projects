@@ -51,7 +51,7 @@ var xq_app = angular.module('trainingProjectsApp')
     				}
 //  				}
     			}).then(function(e){
-    				console.log(e.data)
+//  				console.log(e.data)
     				if(e.data !==''){
 					$location.path('firstPage/officebox')
     				}
