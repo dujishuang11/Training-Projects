@@ -83,10 +83,9 @@ doger_app.controller('firstPage', ["$scope", "$http", "$state", function($scope,
 
 		//风格界面颜色变化
 		$http({
-			url: "http://" + ip + "users/?id=" + sessionStorage.userid,
-			method: "get"
-		}).then(function(e) {
-			sessionStorage.textColor = e.data.color;
+			url:"http://"+ip+"users/?id="+sessionStorage.userid,
+			method:"get"
+		}).then(function(e){
 			$(".doger-top").css("background", e.data.bgcolor).css("color", e.data.color);
 			$(".doger-list").css("background", e.data.bgcolor).css("color", e.data.color);
 			$(".doger-title a").css("color", e.data.color);

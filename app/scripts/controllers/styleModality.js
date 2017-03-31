@@ -10,18 +10,21 @@
 angular.module('trainingProjectsApp')
   .controller('styleModalityCtrl', ["$scope","$state","$http",function ($scope,$state,$http) {
   	 	  	//判断是否登录
-  	if(!sessionStorage.username){
-			$state.go('login')
+	  	if(!sessionStorage.username){
+				$state.go('login')
 		}
+	  	
 		$scope.pingguolv=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
 				method:"put",
 				data:{"bgcolor":"#7fff00","color":"black"}
 			}).then(function(e){
+				console.log(e)
 				location.reload()
 			})
 		}
+		
 		$scope.fanxinglan=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
@@ -31,6 +34,7 @@ angular.module('trainingProjectsApp')
 				location.reload()
 			})
 		}
+		
 		$scope.zhuguangcheng=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
@@ -40,6 +44,7 @@ angular.module('trainingProjectsApp')
 				location.reload()
 			})
 		}
+		
 		$scope.wenshahong=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
@@ -49,6 +54,7 @@ angular.module('trainingProjectsApp')
 				location.reload()
 			})
 		}
+		
 		$scope.bingchuanlan=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
@@ -58,6 +64,7 @@ angular.module('trainingProjectsApp')
 				location.reload()
 			})
 		}
+		
 		$scope.dianyalv=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
@@ -67,6 +74,7 @@ angular.module('trainingProjectsApp')
 				location.reload()
 			})
 		}
+		
 		$scope.mingehuang=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
@@ -76,6 +84,7 @@ angular.module('trainingProjectsApp')
 				location.reload()
 			})
 		}
+		
 		$scope.shiliuhong=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
@@ -85,6 +94,7 @@ angular.module('trainingProjectsApp')
 				location.reload()
 			})
 		}
+		
 		$scope.husnxinghui=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
@@ -94,6 +104,7 @@ angular.module('trainingProjectsApp')
 				location.reload()
 			})
 		}
+		
 		$scope.mihongfen=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
@@ -103,6 +114,7 @@ angular.module('trainingProjectsApp')
 				location.reload()
 			})
 		}
+		
 		$scope.zangqingse=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
@@ -112,6 +124,7 @@ angular.module('trainingProjectsApp')
 				location.reload()
 			})
 		}
+		
 		$scope.lanhuazi=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
@@ -121,6 +134,7 @@ angular.module('trainingProjectsApp')
 				location.reload()
 			})
 		}
+		
 		$scope.wyh_backColor=function(){
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
@@ -130,4 +144,5 @@ angular.module('trainingProjectsApp')
 				location.reload()
 			})
 		}
+		
   }])
