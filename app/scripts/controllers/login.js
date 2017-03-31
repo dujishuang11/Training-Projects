@@ -79,7 +79,8 @@ angular.module('trainingProjectsApp')
 					'password': $scope.passwold
 				}
 			}).then(function(e) {
-//				console.log(e)               
+//				$scope.zhj_zhy=true;
+//				console.log(e)  
 				sessionStorage.username = $scope.username;
 				sessionStorage.userid = e.data.uid;
 				var a = e.data.uid;
@@ -99,7 +100,8 @@ angular.module('trainingProjectsApp')
 //					}
 	   	  	       $state.go('firstPage');
 				})
-		},function(){	
+		},function(){
+//			    console.log(1);
 			    $scope.zhj_zhy=false;
 				$scope.loginshow = true;				
 			})
