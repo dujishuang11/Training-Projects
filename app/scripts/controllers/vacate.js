@@ -23,7 +23,7 @@ angular.module('trainingProjectsApp')
   		
   	}).then(function(e){
 		$scope.zhylist = e.data;
-//		console.log($scope.zhylist)
+		console.log($scope.zhylist)
 	})
   	//请求BOSS的
 	$http({
@@ -32,7 +32,7 @@ angular.module('trainingProjectsApp')
 		
 	}).then(function(e){
 		$scope.zhylist1 = e.data;
-//		console.log($scope.zhylist1)
+		console.log($scope.zhylist1)
 	})
 	
 	
@@ -128,7 +128,7 @@ angular.module('trainingProjectsApp')
 			$scope.zhy_tt = !$scope.zhy_tt;
 			
 		}else{
-//			console.log('成功');
+			console.log('成功');
 			$scope.zhyt2 = ($filter("date")($scope.zhy_nnn1,"yyyy-MM-dd"));
 			$http({
 				url:"http://"+ip+"shoujianxiang",
