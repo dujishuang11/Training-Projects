@@ -41,7 +41,6 @@ salary_app.controller('salaryCtrl', ["$scope","$http","$state",function($scope,$
 					e.find('.zhj_doger_why')[$index].removeAttribute('readonly')
 //					$scope.aa = '完成'
 					doger_txt[$index].innerHTML = '完成'
-					console.log()
 					off=false;
 				}else{
 					doger_txt[$index].innerHTML = '编辑'
@@ -53,7 +52,7 @@ salary_app.controller('salaryCtrl', ["$scope","$http","$state",function($scope,$
 							summary:e.find('.zhj_doger_why')[$index].value
 						}
 					}).then(function(data){
-						console.log(data)
+//						console.log(data)
 					})
 					off=true;
 				}

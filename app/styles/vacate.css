@@ -2,14 +2,13 @@
 	width: 100%;
 	height: 100%;
 	padding: 0.5rem 1rem 1.3rem 1rem;
-	background: #f3f3f3;
+	position: relative;
 }
 .zhy_tlt{
 	width: 100%;
 	height: 1.7rem;
 	font-size: 0.7rem;
 	line-height: 1.7rem;
-	/*background: red;*/
 }
 .zhy_content{
 	width: 100%;

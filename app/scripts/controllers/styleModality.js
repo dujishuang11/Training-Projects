@@ -36,7 +36,7 @@ angular.module('trainingProjectsApp')
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
 				method:"put",
-				data:{"bgcolor":"#ff7f00","color":"black"}
+				data:{"bgcolor":"#ff7f00","color":"white"}
 			}).then(function(e){
 				location.reload()
 			})
@@ -54,7 +54,7 @@ angular.module('trainingProjectsApp')
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
 				method:"put",
-				data:{"bgcolor":"#4d4dff","color":"black"}
+				data:{"bgcolor":"#4d4dff","color":"white"}
 			}).then(function(e){
 				location.reload()
 			})
@@ -63,7 +63,7 @@ angular.module('trainingProjectsApp')
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
 				method:"put",
-				data:{"bgcolor":"#32cd32","color":"black"}
+				data:{"bgcolor":"#32cd32","color":"white"}
 			}).then(function(e){
 				location.reload()
 			})
@@ -117,7 +117,7 @@ angular.module('trainingProjectsApp')
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
 				method:"put",
-				data:{"bgcolor":"#9370DB","color":"black"}
+				data:{"bgcolor":"#9370DB","color":"white"}
 			}).then(function(e){
 				location.reload()
 			})
@@ -126,7 +126,7 @@ angular.module('trainingProjectsApp')
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
 				method:"put",
-				data:{"bgcolor":"","color":""}
+				data:{"bgcolor":"","color":"white"}
 			}).then(function(e){
 				location.reload()
 			})
