@@ -14,12 +14,12 @@ angular.module('trainingProjectsApp')
 			$state.go('login')
 		}
 		$scope.pingguolv=function(){
-			
 			$http({
 				url:"http://"+ip+"users/?id="+sessionStorage.userid,
 				method:"put",
 				data:{"bgcolor":"#7fff00","color":"black"}
 			}).then(function(e){
+				console.log(e)
 				location.reload()
 			})
 		}

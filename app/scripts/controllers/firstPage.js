@@ -82,6 +82,7 @@ var doger_app = angular.module('trainingProjectsApp')
 			url:"http://"+ip+"users/?id="+sessionStorage.userid,
 			method:"get"
 		}).then(function(e){
+			
 			$(".doger-top").css("background",e.data.bgcolor).css("color",e.data.color);
 			$(".doger-left").css("background",e.data.bgcolor).css("color",e.data.color);
 		})
