@@ -51,7 +51,7 @@ angular.module('trainingProjectsApp')
 			$scope.nonono = false;
 			$scope.lhq_aaabbb= true;
 			$scope.aaa = function(){
-				console.log(lhqnum)
+//				console.log(lhqnum)
 				$http({
 					url:'http://'+ip+'shoujianxiang/?{"uid":"'+sessionStorage.username+'","$skip":'+lhqnum+',"$limit":10}',
 					method:'GET'

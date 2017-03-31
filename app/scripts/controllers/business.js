@@ -19,7 +19,7 @@ angular.module('trainingProjectsApp')
     $scope.wyh_timb = new Date();
 	$scope.wyh_timmm = Number($scope.wyh_timb.setDate($scope.wyh_tima.getDate()+1));
 	$scope.wyh_timss = ($filter("date")($scope.wyh_timmm,"yyyy-MM-dd"));
-	console.log($scope.wyh_timss); //明天日期  2017-03-29
+//	console.log($scope.wyh_timss); //明天日期  2017-03-29
 	//再将日期赋给min值
 	$scope.wyh_zhi=$scope.wyh_timss;
 	
@@ -101,7 +101,7 @@ angular.module('trainingProjectsApp')
   	//任务分配
   	$scope.toggleb=function(){
 		if(sessionStorage.level=="2"){ //员工没权限访问
-			console.log(sessionStorage.level)
+//			console.log(sessionStorage.level)
 			$scope.wyh_toShow = !$scope.wyh_toShow;
 		}else{
 		  	$scope.wyh_isHide=false;
@@ -134,7 +134,7 @@ angular.module('trainingProjectsApp')
 				//提示成功
 				$scope.wyh_tscg = !$scope.wyh_tscg;
 				$('.wyh_tscgcss').animate({bottom:'2.5rem',opacity:'0'},2000);
-				console.log(e)
+//				console.log(e)
 				$scope.wyh_mode=""; //清空
 				$scope.wyh_cont="";
 				$scope.wyh_uid="";

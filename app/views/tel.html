@@ -1,4 +1,5 @@
-<div ng-controller="telCtrl">
+<div ng-controller="telCtrl" class="djsWrapper">
+	<!--<div>-->
 	<div class="wyh_wrapper">
 		<div>
 			<i class="glyphicon glyphicon-phone"></i>
@@ -28,7 +29,7 @@
 			<div class=""></div>
 			<ul class='wyh_ul1' ng-repeat="ddata in data">
 				
-				<li ng-click="xiangqing(ddata)">{{ddata.name}}</li>
+				<li ng-click="xiangqing(ddata)">{{ddata.username}}</li>
 				<li ng-click="xiangqing(ddata)">{{ddata.tel}}</li>
 				<li ng-click="xiangqing(ddata)">{{ddata.email}}</li>
 				<!--<a ui-serf=".personinfo"></a>-->
@@ -39,9 +40,9 @@
 			</ul>
 		</div>
 		
-		<div class="djs-xiayiye">
-			<input type="button" value="上一页" ng-click ='DS()'/>
-			<input type="button" value="下一页" ng-click ='DX()'/>
+		<div class="djs-xiayiye" ng-show="ddShow">
+			<input type="button" value="上一页" ng-click ='DS()' ng-show="topShow"/>
+			<input type="button" value="下一页" ng-click ='DX()' ng-show="bottomShow"/>
 		</div>
 	</div>
 	<div class="lhq-zezao" ng-show="djsShow">
@@ -59,4 +60,5 @@
 			<button class="btn btn-primary djsButton" ng-click="djsQd()">确定</button>
 		</div>
 	</div>
+	<!--</div>-->
 </div>
