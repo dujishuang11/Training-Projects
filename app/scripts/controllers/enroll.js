@@ -178,7 +178,8 @@ angular.module('trainingProjectsApp')
 						"others": $scope.otherphone,
 						"address": $scope.enAddr,
 						"name": $scope.myNewName,
-						"pic": 'aW1hZ2VzL2ljb24ucG5n'
+						"pic": 'aW1hZ2VzL2ljb24ucG5n',
+						"color": 'white'
 					}
 				}).then(function(e) {
 //					console.log(e);

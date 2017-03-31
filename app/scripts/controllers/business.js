@@ -32,6 +32,7 @@ angular.module('trainingProjectsApp')
 			$scope.arss=e.data;
 		})	
 	}
+  	
   	if(sessionStorage.level==0){
 		$http({
 			url:"http://"+ip+"users/?level=1",
@@ -56,6 +57,7 @@ angular.module('trainingProjectsApp')
 	}).then(function(e){
 		$scope.itemeven=e.data;
 	})
+	
 	//今天
 	$scope.wyh_today = Number($scope.wyh_timb.setDate($scope.wyh_tima.getDate()));
 	$scope.wyh_todayss = ($filter("date")($scope.wyh_today,"yyyy-MM-dd"));
@@ -65,6 +67,7 @@ angular.module('trainingProjectsApp')
 	}).then(function(e){
 		$scope.itemtoday=e.data;
 	})
+	
 	//明天
 	$http({
 		url:'http://'+ip+'shiwu/?{"uid":"'+sessionStorage.username+'","date":"'+$scope.wyh_timss+'"}',
