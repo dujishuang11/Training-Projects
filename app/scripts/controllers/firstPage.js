@@ -46,19 +46,19 @@ function showError(error) {
 	switch(error.code) {
 		case error.PERMISSION_DENIED:
 			$('.doger_my_map_nan').text("定位失败,用户拒绝请求地理定位,请刷新重试")
-			console.log("定位失败,用户拒绝请求地理定位");
+//			console.log("定位失败,用户拒绝请求地理定位");
 			break;
 		case error.POSITION_UNAVAILABLE:
 			$('.doger_my_map_nan').text("定位失败,位置信息是不可用,请刷新重试")
-			console.log("定位失败,位置信息是不可用");
+//			console.log("定位失败,位置信息是不可用");
 			break;
 		case error.TIMEOUT:
 			$('.doger_my_map_nan').text("定位失败,请求获取用户位置超时,请刷新重试")
-			console.log("定位失败,请求获取用户位置超时");
+//			console.log("定位失败,请求获取用户位置超时");
 			break;
 		case error.UNKNOWN_ERROR:
 			$('.doger_my_map_nan').text("定位失败,定位系统失效,请刷新重试")
-			console.log("定位失败,定位系统失效");
+//			console.log("定位失败,定位系统失效");
 			break;
 	}
 }
@@ -86,6 +86,7 @@ doger_app.controller('firstPage', ["$scope", "$http", "$state", function($scope,
 			url:"http://"+ip+"users/?id="+sessionStorage.userid,
 			method:"get"
 		}).then(function(e){
+			sessionStorage.textColor = e.data.color;
 			$(".doger-top").css("background", e.data.bgcolor).css("color", e.data.color);
 			$(".doger-list").css("background", e.data.bgcolor).css("color", e.data.color);
 			$(".doger-title a").css("color", e.data.color);
@@ -101,7 +102,7 @@ doger_app.controller('firstPage', ["$scope", "$http", "$state", function($scope,
 				//				localStorage.removeItem(my_map)
 				//			}	
 		})
-		console.log(sessionStorage.username)
+//		console.log(sessionStorage.username)
 		$scope.myShow = false;
 		$scope.isShow = false;
 		var my_on = false;
@@ -114,11 +115,11 @@ doger_app.controller('firstPage', ["$scope", "$http", "$state", function($scope,
 			url: 'http://' + ip + 'kaoqin/?{"uid":"' + sessionStorage.username + '","date":"' + doger_my_data + '"}',
 			method: 'get'
 		}).then(function(data) {
-			console.log(data)
+//			console.log(data)
 			if(data.data.length > 0) {
 				localStorage.my_map = data.data[0].id
 				whthfu()
-				console.log(localStorage.my_map)
+//				console.log(localStorage.my_map)
 			} else {
 				$http({
 					url: doger_url,
@@ -133,7 +134,7 @@ doger_app.controller('firstPage', ["$scope", "$http", "$state", function($scope,
 						uid: sessionStorage.username
 					}
 				}).then(function(data) {
-					console.log(data.data.id)
+//					console.log(data.data.id)
 					localStorage.my_map = data.data.id
 					whthfu()
 				})
@@ -259,7 +260,7 @@ doger_app.controller('firstPage', ["$scope", "$http", "$state", function($scope,
 						url: 'http://' + ip + 'kaoqin/' + localStorage.my_map + '',
 						method: 'get',
 					}).then(function(data) {
-						console.log(data)
+//						console.log(data)
 						if(data.data.time1 != '') {
 							my_aa.innerHTML = '今天已经签到'
 							my_map_erro.innerHTML = ''
