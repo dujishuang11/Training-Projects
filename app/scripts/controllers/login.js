@@ -100,6 +100,7 @@ angular.module('trainingProjectsApp')
 	   	  	       $state.go('firstPage');
 				})
 			},function(){
+//				$scope.zhj_zhy=false;
 				$scope.loginshow = true;
 			})
 		}
