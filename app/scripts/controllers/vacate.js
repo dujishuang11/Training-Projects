@@ -23,7 +23,7 @@ angular.module('trainingProjectsApp')
   		
   	}).then(function(e){
 		$scope.zhylist = e.data;
-		console.log($scope.zhylist)
+//		console.log($scope.zhylist)
 	})
   	//请求BOSS的
 	$http({
@@ -32,7 +32,7 @@ angular.module('trainingProjectsApp')
 		
 	}).then(function(e){
 		$scope.zhylist1 = e.data;
-		console.log($scope.zhylist1)
+//		console.log($scope.zhylist1)
 	})
 	
 	
@@ -91,7 +91,7 @@ angular.module('trainingProjectsApp')
 	//转化之后当前日期加3天
 	$scope.zhy_nnn = new Date($scope.zhytimer);
 	$scope.zhy_nnn1 = new Date($scope.zhytimer);
-	console.log($scope.zhy_nnn)
+//	console.log($scope.zhy_nnn)
 	
 //	$scope.zhy_t1 = GetDateStr(3);
 	//将三天后的日期转化格式yyyy-MM-dd
@@ -186,7 +186,7 @@ angular.module('trainingProjectsApp')
 		}else if($('#txtBeginDate').val()>=$('#txtEndDate').val()){
 			$scope.zhy_tt = true;
 		}else{
-			console.log('成功');
+//			console.log('成功');
 			$scope.zhyt2 = ($filter("date")($scope.zhy_nnn1,"yyyy-MM-dd"));
 			$http({
 				url:"http://"+ip+"shoujianxiang",

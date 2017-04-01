@@ -20,7 +20,6 @@ angular.module('trainingProjectsApp')
 				method:"put",
 				data:{"bgcolor":"#7fff00","color":"black"}
 			}).then(function(e){
-				console.log(e)
 				location.reload()
 			})
 		}
