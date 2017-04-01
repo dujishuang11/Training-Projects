@@ -72,7 +72,7 @@ angular.module('trainingProjectsApp')
 	$scope.zhy_sjr = '';
 	$scope.zhy_yy = '';
 	$scope.zhy_isShow = false;
-	$scope.zhy_tt = false;
+	
   	
     $scope.zhy_time1 = new Date();
     $scope.zhy_time2 = new Date();
@@ -105,7 +105,7 @@ angular.module('trainingProjectsApp')
 	$scope.zhybig1=$scope.zhyt3;
 	
 //	console.log($scope.zhy_time)
-	console.log($scope.zhyt3)
+//	console.log($scope.zhyt3)
 
 	$("#txtBeginDate").calendar({
 
@@ -145,8 +145,8 @@ angular.module('trainingProjectsApp')
 
 
 
-var start = document.getElementById("txtBeginDate").value;
-		var end = document.getElementById("txtEndDate").value;
+//var start = document.getElementById("txtBeginDate").value;
+//		var end = document.getElementById("txtEndDate").value;
 
 //	$scope.juge = function ($scope){
 //		var start = document.getElementById("txtBeginDate").value;
@@ -164,9 +164,12 @@ var start = document.getElementById("txtBeginDate").value;
   		$scope.zhy_isShow = !$scope.zhy_isShow;
   	}
   	
+  	
+  	$scope.zhy_tt = false;
+  	
   	//日期蒙版按钮
   	$scope.zhy_xiao = function(){
-  		$scope.zhy_tt = !$scope.zhy_tt;
+  		$scope.zhy_tt = false;
   	}
   	
   	//提交按钮
@@ -181,7 +184,7 @@ var start = document.getElementById("txtBeginDate").value;
 			$scope.zhy_isShow = !$scope.zhy_isShow;
 			
 		}else if($('#txtBeginDate').val()>=$('#txtEndDate').val()){
-			$scope.zhy_tt = !$scope.zhy_tt;
+			$scope.zhy_tt = true;
 		}else{
 			console.log('成功');
 			$scope.zhyt2 = ($filter("date")($scope.zhy_nnn1,"yyyy-MM-dd"));
