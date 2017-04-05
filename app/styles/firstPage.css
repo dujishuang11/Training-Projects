@@ -126,6 +126,7 @@ html,body {
 }
 
 .doger-main {
+	transform-style: preserve-3d;
 	position: relative;
 	z-index: 99;
 }
@@ -205,6 +206,8 @@ html,body {
 .doger-work {
 	width: 60%;
 	margin: 2rem auto 0;
+	opacity: 0;
+	transition: 2s 1.8s;
 }
 
 .doger-work button {
@@ -238,6 +241,11 @@ html,body {
 .doger-map p:nth-child(2) {
 	text-align: center;
 	font-size: .8rem;
+}
+
+.doger-map{
+	opacity: 0;
+	transition: 2s 1.8s;
 }
 
 .doger_tip {
@@ -316,7 +324,18 @@ html,body {
 	margin-top: 1rem;
 }
 
-
+.time_anima {
+	/*height: 0;
+	overflow: hidden;
+	margin-bottom: 7.3rem;*/
+	/*background: red;*/
+	transform-origin: top;
+	perspective: 100px;
+	transform: rotateX(180deg);
+	opacity: 0;
+	
+	transition: all 2s;
+}
 
 
 

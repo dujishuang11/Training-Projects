@@ -531,6 +531,22 @@ var doger_app = angular.module('trainingProjectsApp')
 					})
 //					console.log(element.find('.doger-list li').length)
 				}
+				
+				function anmiate(){
+					setTimeout(function(){
+						$('.time_anima').css('perspective','300px')
+						$('.time_anima').css('transform-origin','top')
+						$('.time_anima').css('transform','rotateX(0)')
+						$('.time_anima').css('opacity',"1")
+						$('.doger-work').css("opacity","1")
+						$('.doger-map').css("opacity","1")
+					},200)
+				}
+				$('.annum')[0].addEventListener('touchstart',function(){
+					anmiate()
+				})
+				anmiate()
+				
 //				for(var i = 0; i < myBtn.length; i++){
 //					myBtn[i].addEventListener('touchstart',function(){
 //						element.find('.doger_tip')[0].style.opacity = '1'

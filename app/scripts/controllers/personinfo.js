@@ -40,7 +40,6 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 		$scope.djsAdd = e.data.address;
 		$scope.djsQQ = e.data.qq;
 		$scope.djsTeltwo = e.data.others;
-		
 		$scope.djsImg = localStorage.doger_pic;
 //		console.log($scope.djsImg)
 	})
@@ -88,13 +87,13 @@ lhq_app.controller('personinfoCtrl', ["$scope", "$http","$location","$state", fu
 //	function aaa(){
 //								$http({
 //									url:'http://'+ip+'users/?id='+sessionStorage.userid+'',
-//									method:'get'
-//								}).then(function(e){
-//				//					console.log(e.data.pic)
-//									element.find('.doger_myPhoto')[0].src = $.base64.atob(e.data.pic);
+//			method:'get'
+//		}).then(function(e){
+//			console.log(e.data.pic)
+//			element.find('.doger_myPhoto')[0].src = $.base64.atob(e.data.pic);
 //									
-//								})
-//							}
+//		})
+//	}
 	$scope.djsGuan = function(){
 		$scope.djsShowtel = false;
 	}
@@ -177,7 +176,7 @@ lhq_app.directive("lhq", function($http) {
 	                            ctx.drawImage(this, 0, 0, cvs.width, cvs.height);     
 	                            var newImageData = cvs.toDataURL(fileType, 0.8);   //重新生成图片，<span style="font-family: Arial, Helvetica, sans-serif;">fileType为用户选择的图片类型</span>  
 	                            var sendData = newImageData.replace("data:"+fileType+";base64,",'');  
-//	                            console.log($.base64.btoa(newImageData))
+	                            console.log(newImageData)
 	                            $http({
 									url:'http://'+ ip +'users/?id='+sessionStorage.userid,
 									method:'put',
