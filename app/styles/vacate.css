@@ -17,7 +17,7 @@
 }
 .zhy_content_li{
 	width: 100%;
-	overflow: hidden;
+	position: relative;
 }
 .zhy_content_li_l{
 	float: left;
@@ -39,12 +39,14 @@
 	padding: 0.2rem 0;
 	border-bottom: 0.1rem solid #ccc;
 }
-/*.zhy_content_li:nth-child(1){
+.zhy_content_li:nth-child(1){
 	margin-top: 0.2rem;
-}*/
+	overflow: hidden;
+}
 
 .zhy_content_li:nth-child(2){
 	margin-top: 0.7rem;
+	overflow: hidden;
 }
 .zhy_content_li:nth-child(2) .zhy_content_li_r select{
 	width: 80%;
@@ -56,9 +58,9 @@
 	font-size: 0.8rem;
 	border:0.1rem solid #ccc;
 }
-
 .zhy_content_li:nth-child(3){
 	margin-top: 1rem;
+	overflow: hidden;
 }
 .zhy_content_li:nth-child(3) .zhy_content_li_r textarea{
 	width: 100%;
@@ -67,6 +69,7 @@
 }
 .zhy_content_li:nth-child(4){
 	margin-top: 1rem;
+	overflow: hidden;
 }
 .zhy_content_li:nth-child(4) .zhy_content_li_r input{
 	width: 90%;

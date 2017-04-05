@@ -152,7 +152,7 @@ lhq_app.directive("lhq", function($http) {
 				element.find(".imginput").change(function() {
                     var	_file = this.files[0],  
                    		fileType = _file.type;  
-                    console.log(_file.size);  
+//                  console.log(_file.size);  
 	                if(/image\/\w+/.test(fileType)){
 	                    var fileReader = new FileReader();  
 	                    fileReader.readAsDataURL(_file);  

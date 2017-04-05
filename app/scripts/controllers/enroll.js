@@ -120,6 +120,11 @@ angular.module('trainingProjectsApp')
 		$scope.enfocusQQ = function() {
 			$scope.enq = false;
 		}
+		
+		
+		//   详细地址
+		
+		
 
 		//   验证其他手机号  	
 		var othExp = /^1[3'/4578]\d{9}$/;
@@ -173,7 +178,8 @@ angular.module('trainingProjectsApp')
 						"others": $scope.otherphone,
 						"address": $scope.enAddr,
 						"name": $scope.myNewName,
-						"pic": 'aW1hZ2VzL2ljb24ucG5n'
+						"pic": 'aW1hZ2VzL2ljb24ucG5n',
+						"color": 'white'
 					}
 				}).then(function(e) {
 //					console.log(e);

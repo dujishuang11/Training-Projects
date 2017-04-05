@@ -79,7 +79,6 @@ html,body {
 }
 
 .doger-left ul li span {
-	color: white;
 	display: inline-block;
 	position: relative;
 	z-index: 233;
@@ -172,7 +171,6 @@ html,body {
 
 .doger-top span {
 	float: left;
-	color: white;
 	line-height: 2.4rem;
 	font-size: 1rem;
 }
@@ -182,7 +180,7 @@ html,body {
 }*/
 
 .doger-title a {
-	color: white;
+	/*color: white;*/
 	line-height: 2.6rem;
 	float: right;
 	margin-right: .5rem;

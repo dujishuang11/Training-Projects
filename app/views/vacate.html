@@ -32,7 +32,9 @@
 			<li class="zhy_content_li">
 				<div class="zhy_content_li_l">请假日期：</div>
 				<div class="zhy_content_li_r">
-					从<input type="date" ng-model="zhy_nnn" min="{{zhybig}}"/>至<input type="date" ng-model="zhy_nnn1" min="{{zhybig}}" />
+					<!--从<input type="date" ng-model="zhy_nnn" min="{{zhybig}}"/>至<input type="date" ng-model="zhy_nnn1" min="{{zhybig}}" />-->
+					
+					从<input type="text" id="txtBeginDate" ng-model="zhyt1" />至<input type="text" id="txtEndDate" ng-model="zhyt3"/>
 					<!--{{date:"yyyy年MM月dd日"}}-->
 				</div>
 			</li>
@@ -47,27 +49,27 @@
 		</div>
 		
 		<div class="lhq-zezao" ng-show = "zhy_isShow">
-		<div class="lhq-zezaobox modal-content">
-			<i class="glyphicon glyphicon-remove-circle"  ng-click="zhy_none()"></i>
-			<p>系统提示</p>
-			<span>输入内容不能为空</span>
+			<div class="lhq-zezaobox modal-content">
+				<i class="glyphicon glyphicon-remove-circle"  ng-click="zhy_none()"></i>
+				<p>系统提示</p>
+				<span>输入内容不能为空</span>
+			</div>
 		</div>
-	</div>
-	
-	<div class="lhq-zezao" ng-show = "zhy_mm">
-		<div class="lhq-zezaobox modal-content">
-			<i class="glyphicon glyphicon-remove-circle"  ng-click="zhy_href()"></i>
-			<p>系统提示</p>
-			<span>您是Boss,不用申请</span>
+		
+		<div class="lhq-zezao" ng-show = "zhy_mm">
+			<div class="lhq-zezaobox modal-content">
+				<i class="glyphicon glyphicon-remove-circle"  ng-click="zhy_href()"></i>
+				<p>系统提示</p>
+				<span>您是Boss,不用申请</span>
+			</div>
 		</div>
-	</div>
-	
-	<div class="lhq-zezao" ng-show = "zhy_tt">
-		<div class="lhq-zezaobox modal-content">
-			<i class="glyphicon glyphicon-remove-circle"  ng-click="zhy_xiao()"></i>
-			<p>系统提示</p>
-			<span>您的日期格式不对</span>
+		
+		<div class="lhq-zezao" ng-show = "zhy_tt">
+			<div class="lhq-zezaobox modal-content">
+				<i class="glyphicon glyphicon-remove-circle"  ng-click="zhy_xiao()"></i>
+				<p>系统提示</p>
+				<span>您的日期格式不对</span>
+			</div>
 		</div>
-	</div>
 	</div>
 </div>
